@@ -1,0 +1,58 @@
+
+//SURFACING
+
+
+
+tallstack{
+	"\0\s[100]"
+	--
+	//all the pancakes
+	if pancakes > 0{
+		"\i[3000]"
+	}
+	--
+	if pancakes > 10{
+		"\i[3100]"
+	}
+	--
+	if pancakes > 100{
+		"\i[3200]"
+	}
+	--
+	if pancakes > 1000{
+		"\i[3300]"
+	}
+	--
+	if pancakes > 10000{
+		"\i[3400]"
+	}
+	--
+	if pancakes > 100000{
+		"\i[3500]"
+	}
+	--
+	if pancakes > 1000000{
+		"\i[3600]"
+	}
+	--
+	if pancakes > 10000000{
+		"\i[3700]"
+	}
+	--
+	if pancakes > 100000000{
+		"\i[3800]"
+	}
+	--
+	if pancakes > 1000000000{
+		"\i[3900]"
+	}
+
+}
+
+
+
+shelf{
+	"\1\s[10]"
+
+
+}

@@ -16,3 +16,10 @@ RandomTalk : nonoverlap_pool
 
 	
 }
+
+
+
+OnMinuteChange{
+
+	"%(tallstack)"
+}

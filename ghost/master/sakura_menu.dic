@@ -1,3 +1,11 @@
+
+//MENUS!
+
+//quick back
+nvm{
+	"\![*]\q[Nevermind,blank]"	
+}
+
 SakuraMenuGreetings : nonoverlap
 {
 	"Hello."
@@ -7,7 +15,7 @@ SakuraMenuGreetings : nonoverlap
 //Because there is an all modifier here, you don't need to write -- between menu options
 OnMainMenu : all
 {
-	"\0\s[0]\b2\![set,autoscroll,disable]"
+	"%(tallstack)\b2\![set,autoscroll,disable]"
 //	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
 	"\_q"
@@ -20,11 +28,22 @@ OnMainMenu : all
 	"\![*]\q[Upgrades,OnUpgradesMenu]\n\n"
 
 	
-	"\![*]\q[Change Talk Rate,OnTalkRateMenu]\n\n"
+	"\![*]\q[Change Talk Rate,OnTalkRateMenu]       \![*]\q[Settings,OnSettingsMenu]\n\n"
 	
-	"\![*]\q[Nevermind,blank]"	
-	"\n\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %pancakes Mult: %clickmultiplier\n%(getSecCakes) pancakes per sec"
+	"%(nvm)"	
+	"\n\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %TOINT(pancakes) Per Click: %FormatTwoDec(clickmultiplier)\n%FormatTwoDec(getSecCakes) pancakes per sec\n%(phoneFriendAmt(toolsarray[0])) helping click"
 	
+}
+
+phoneFriendAmt{
+	if _argv[0] == 1{
+		"1 friend"
+		"1 kid"
+	}else{
+		"%_argv[0] friends"
+		"%_argv[0] friends' kid"
+	}
+
 }
 
 OnLastTalk
@@ -42,7 +61,7 @@ OnTalkRateMenu : all
 	elseif aitalkinterval == 300; _talkrate = "5 minutes"
 	elseif aitalkinterval == 600; _talkrate = "10 minutes"
 	
-	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
+	"%(tallstack)\b2\![set,autoscroll,disable]\_q"
 	"Current interval: %(_talkrate)\n\n"
 	
 	"\![*]\q[Off,OnTalkRateChange,0]\n"
@@ -62,17 +81,55 @@ OnTalkRateChange
 }
 
 
-OnUpgradesMenu : all {
+
+
+OnSettingsMenu{
 	"\_q"
+	--
+	"Font Size: %fontheight (not yet implemented)\n"
+	--
+	if clicktype == 0{
+		"Click Type: \![*]\q[Single,OnFlipClickType]"
+	}else{
+		"Click Type: \![*]\q[Double,OnFlipClickType]"
+	}
+	--
+	"\n\n[half]\![*]\q[Back,OnMainMenu]     %(nvm) "
+	
+
+}
+
+OnFlipClickType{
+	if clicktype == 0{
+		clicktype = 1
+	}else{
+		clicktype = 0
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+OnUpgradesMenu : all {
+	"\_q%(tallstack)"
 	for _i = 0; _i < ARRAYSIZE(UpgradeData); _i++{
 		_thisitem = IARRAY
 		_thisitem = UpgradeData[_i]
 		//"%_thisitem\n"
 		if upgradearray[_i] == 0 {
-			//if the user has at least 1
+			//if the user has not bought any
 				
 			if pancakes >= TOINT(_thisitem[3] * (upgradearray[_i]+1)){
-				//can buy more
+				//can buy it
 				"\![*]\q[Buy %(_thisitem[0]),OnBuyUpgrade,%_i] for %TOINT(_thisitem[3]*(upgradearray[_i]+1)) \n"
 			}else{
 				//broke
@@ -80,32 +137,56 @@ OnUpgradesMenu : all {
 			}
 			
 		}else { //bought
-			//not unlocked
-				"Owned: %(_thisitem[0])\n"
+			"Owned: %(_thisitem[0])\n"
 			
 		}
 	
 	}
+	"\n[half]%(nvm)    \![*]\q[Refresh,OnUpgradesMenu]"
 
 }
 
-
+ 
 
 OnBuyUpgrade{
 	_index = TOINT(reference0)
-	_thisitem = ToolsData[_index]
+	_thisitem = IARRAY
+	_thisitem = UpgradeData[_index]
 	upgradearray[_index] = 1
 	pancakes -= TOINT(_thisitem[3])
 	
 	//change click multiplier
-	clickmultiplier = TOINT(TOINT(clickmultiplier) + TOINT(_thisitem[2]))
+	clickmultiplier = TOREAL(clickmultiplier + TOREAL(TOREAL(_thisitem[2])/100))
 	
 	OnUpgradesMenu
 }
 
 OnToolsMenu : all {
-	"\_q"
-	for _i = 0; _i < ARRAYSIZE(ToolsData); _i++{
+	"\_q%(tallstack)"
+	//HANDLE PHONE
+	_thisitem = ToolsData[0]
+	if toolsarray[0] > 0 {
+		//if the user has at least 1
+			
+		if pancakes >= TOINT(_thisitem[2] * (toolsarray[0]+1)){
+			//can buy more
+			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2]*(toolsarray[0]+1)) (%(toolsarray[0]) Times)\n"
+		}else{
+			//broke
+			"Phone a Friend for %TOINT(_thisitem[2]*(toolsarray[0]+1)) (%(toolsarray[0]) Times)\n"
+		}
+		
+	}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
+		//not unlocked
+			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2])\n"
+		
+	}else{
+		"Can't Afford To Fix Your Phone\n"
+	}
+	
+	
+	//HANDLE REST
+	for _i = 1; _i < ARRAYSIZE(ToolsData); _i++{
 		_thisitem = ToolsData[_i]
 		if toolsarray[_i] > 0 {
 			//if the user has at least 1
@@ -127,6 +208,7 @@ OnToolsMenu : all {
 		}
 	
 	}
+	"\n[half]%(nvm)    \![*]\q[Refresh,OnToolsMenu]"
 
 }
 
@@ -136,6 +218,16 @@ OnBuyTool{
 	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
 	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
 	OnToolsMenu
+
+}
+
+
+OnPhoneBuy{
+	_index = TOINT(reference0)
+	_thisitem = ToolsData[_index]
+	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
+	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+	"\_qRingading! \n\n[half]\_q%(OnToolsMenu)"
 
 }
 

@@ -27,3 +27,14 @@ favoredcolors
 */
 
 //And if you're not interested in making word lists like this at all, you can just remove this whole file! Or use it for something else, you do you
+
+
+
+
+FormatTwoDec{
+	_number = TOSTR(_argv[0])
+	_pointindex = STRSTR(_number,".",0)
+	SUBSTR(_number,0,_pointindex+3)
+	
+
+}
