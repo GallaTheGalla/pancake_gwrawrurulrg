@@ -1,8 +1,8 @@
 charset,UTF-8
 type,shell
 
-name,Default Shell
-craftman,
+name,The Original Pancake
+craftman,Galla & Ecclysium
 craftmanurl,
 
 seriko.alignmenttodesktop,free
