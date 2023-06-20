@@ -5,20 +5,26 @@ SakuraMenuGreetings : nonoverlap
 }
 
 //Because there is an all modifier here, you don't need to write -- between menu options
-OnSakuraMenu : all
+OnMainMenu : all
 {
 	"\0\s[0]\b2\![set,autoscroll,disable]"
-	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
+//	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
-	"\n\n\_q"
+	"\_q"
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
+	"\![*]\q[Tools,OnToolsMenu]\n"	
+	//"\![*]\q[Autoclickers,OnTalkRateMenu]\n"
+	"\![*]\q[Upgrades,OnUpgradesMenu]\n\n"
+
 	
-	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+	"\![*]\q[Change Talk Rate,OnTalkRateMenu]\n\n"
 	
 	"\![*]\q[Nevermind,blank]"	
+	"\n\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %pancakes Mult: %clickmultiplier\n%(getSecCakes) pancakes per sec"
+	
 }
 
 OnLastTalk
@@ -49,7 +55,88 @@ OnTalkRateMenu : all
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
 }
 
+
 OnTalkRateChange
 {
 	aitalkinterval = TOINT(reference0)
 }
+
+
+OnUpgradesMenu : all {
+	"\_q"
+	for _i = 0; _i < ARRAYSIZE(UpgradeData); _i++{
+		_thisitem = IARRAY
+		_thisitem = UpgradeData[_i]
+		//"%_thisitem\n"
+		if upgradearray[_i] == 0 {
+			//if the user has at least 1
+				
+			if pancakes >= TOINT(_thisitem[3] * (upgradearray[_i]+1)){
+				//can buy more
+				"\![*]\q[Buy %(_thisitem[0]),OnBuyUpgrade,%_i] for %TOINT(_thisitem[3]*(upgradearray[_i]+1)) \n"
+			}else{
+				//broke
+				"Buy %(_thisitem[0]) for %TOINT(_thisitem[3]*(upgradearray[_i]+1)) \n"
+			}
+			
+		}else { //bought
+			//not unlocked
+				"Owned: %(_thisitem[0])\n"
+			
+		}
+	
+	}
+
+}
+
+
+
+OnBuyUpgrade{
+	_index = TOINT(reference0)
+	_thisitem = ToolsData[_index]
+	upgradearray[_index] = 1
+	pancakes -= TOINT(_thisitem[3])
+	
+	//change click multiplier
+	clickmultiplier = TOINT(TOINT(clickmultiplier) + TOINT(_thisitem[2]))
+	
+	OnUpgradesMenu
+}
+
+OnToolsMenu : all {
+	"\_q"
+	for _i = 0; _i < ARRAYSIZE(ToolsData); _i++{
+		_thisitem = ToolsData[_i]
+		if toolsarray[_i] > 0 {
+			//if the user has at least 1
+				
+			if pancakes >= TOINT(_thisitem[2] * (toolsarray[_i]+1)){
+				//can buy more
+				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2]*(toolsarray[_i]+1)) (%(toolsarray[_i]) Owned)\n"
+			}else{
+				//broke
+				"Buy %(_thisitem[0]) for %TOINT(_thisitem[2]*(toolsarray[_i]+1)) (%(toolsarray[_i]) Owned)\n"
+			}
+			
+		}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
+			//not unlocked
+				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2])\n"
+			
+		}else{
+			"????\n"
+		}
+	
+	}
+
+}
+
+OnBuyTool{
+	_index = TOINT(reference0)
+	_thisitem = ToolsData[_index]
+	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
+	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+	OnToolsMenu
+
+}
+
+

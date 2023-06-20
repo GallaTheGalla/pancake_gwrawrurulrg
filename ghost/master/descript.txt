@@ -1,15 +1,15 @@
 charset,UTF-8
 
-name,Pancake GWRAWRURULRG
+name,Panclicker
 type,ghost
 
 shiori,yaya.dll
 
-craftman,
+craftman,Galla & Ecclysium
 craftmanurl,
 
-sakura.name,
-kero.name,
+sakura.name,TallStack
+kero.name,Tool Shelf
 
 icon,icon.ico
 

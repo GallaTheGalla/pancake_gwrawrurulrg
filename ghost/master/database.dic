@@ -1,0 +1,39 @@
+//database
+
+//_argv[0] is length
+initZeroArray{
+	_arr = IARRAY	
+	for _i = 0; _i < _argv[0]; _i++{
+		_arr ,= 0
+	}
+	_arr
+}
+
+//Clicks
+UpgradeData  : array{
+	"Spoons,0,.05,1000,img/bowl.png,Stirstirstir."
+	"Bowls,0,.05,6000,img/pan.png,Bowling for soup... battering for bowls..."
+	"Pans,0,.05,10000,img/stove.png,Flip flop!"
+
+}
+
+
+
+
+ToolsData : array{
+	"Phone A Friend,0,10,img/phone.png,Ringading!"
+	"Fridge,0,100,img/fridge.png,Brrrrrrrrr...atter"
+	"Stove,0,1000,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
+	"Wheat Field,0,10000,img/field.png,They slowly wave..."
+	"Pancake Batter Shooter,0,100000,img/shooter.png,Swing batta batta!"
+	"Weird Looking Trashbot,0,1000000,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
+
+}
+
+
+
+
+AutoclickerData{
+
+
+}

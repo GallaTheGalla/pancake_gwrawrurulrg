@@ -7,13 +7,21 @@ OnMouseDoubleClick
 		//If you want to add double click interactions, reference4 will be the name of the hitbox the mouse is over
 		if reference3 == 0
 		{
-			OnSakuraMenu
+			//OnSakuraMenu
+			OnClick
 		}
 		else
 		{
-			OnKeroMenu
+			//OnKeroMenu
+			OnMainMenu
 		}
 	}
+}
+
+OnClick{
+	pancakes += getTotalClickMult
+	--
+	"\_qtotal pancakes: %pancakes"
 }
 
 OnMouseMove
@@ -50,3 +58,23 @@ OnMouseLeaveAll
 {
 	stroke = 0
 }
+
+
+
+OnSecondChange{
+	pancakes += getSecCakes
+
+}
+
+getSecCakes{
+	_res = 0
+	for _i = 0; _i < ARRAYSIZE(ToolsData); _i++{
+		_info = ToolsData[_i]
+		_res += toolsarray[_i] * TOINT(_info[2]/10) 
+	
+	}
+	_res
+}
+
+
+
