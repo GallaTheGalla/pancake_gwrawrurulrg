@@ -18,7 +18,7 @@ OnFirstBoot_VARIABLES{
 	
 	//settings
 	clicktype = 1 //0 is single click
-	fontheight = 12
+	fontheight = 13
 	
 	clickmultiplier = 1.0
 	clickmultbonus = 0.0
