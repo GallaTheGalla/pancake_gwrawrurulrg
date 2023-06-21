@@ -19,7 +19,7 @@ RandomTalk : nonoverlap_pool
 
 
 
-OnMinuteChange{
-
+OnMinuteChange
+{
 	"%(tallstack)"
 }

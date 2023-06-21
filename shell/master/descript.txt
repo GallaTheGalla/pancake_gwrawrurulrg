@@ -3,7 +3,7 @@ type,shell
 
 name,The Original Pancake
 craftman,Galla & Ecclysium
-craftmanurl,
+craftmanurl,https://github.com/GallaTheGalla/pancake_gwrawrurulrg
 
 seriko.alignmenttodesktop,free
 seriko.use_self_alpha,1

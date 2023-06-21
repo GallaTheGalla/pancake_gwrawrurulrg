@@ -6,7 +6,7 @@ type,ghost
 shiori,yaya.dll
 
 craftman,Galla & Ecclysium
-craftmanurl,
+craftmanurl,https://github.com/GallaTheGalla/pancake_gwrawrurulrg
 
 sakura.name,TallStack
 kero.name,Tool Shelf
@@ -14,3 +14,5 @@ kero.name,Tool Shelf
 icon,icon.ico
 
 sstp.allowunspecifiedsend,0
+
+balloon,Dine-In Breakfast

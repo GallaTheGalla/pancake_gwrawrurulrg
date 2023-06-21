@@ -3,3 +3,5 @@ type,ghost
 
 name,Pancake GWRAWRUULRG
 directory,pancake_gwrawrurulrg
+
+balloon.directory,dine_in_breakfast
