@@ -1,6 +1,7 @@
 //Separate from the menus because you could put other interactions here, like poking or booping or punching or asking about various hotspots
 OnMouseDoubleClick
 {
+	inmenu = 0
 	if reference5 == 0 //reference5 is the mouse button being clicked, in this case a left click
 	{
 		//reference3 is which character is being clicked
@@ -26,6 +27,7 @@ OnMouseDoubleClick
 
 OnMouseClick
 {
+	inmenu = 0
 	if reference5 == 0 //reference5 is the mouse button being clicked, in this case a left click
 	{
 		//reference3 is which character is being clicked
@@ -46,6 +48,7 @@ OnMouseClick
 
 OnClick{
 	pancakes += getTotalClickMult * TOINT(_argv[0])
+	
 
 }
 
@@ -88,9 +91,24 @@ OnMouseLeaveAll
 
 OnSecondChange{
 	pancakes += getSecCakes
-	if second % 10 == 0{
+	if second % 5 == 0{
 		OnClick(TOINT(toolsarray[0]))
 	}
+	/*
+	if second % 3 == 0{
+		case inmenu{
+			when 1{
+				"\![unlock,balloonrepaint]%(OnMainMenu)"
+			}
+			when 2{
+				"\![unlock,balloonrepaint]%(OnUpgradesMenu)"
+			}	
+			when 3{
+				"\![unlock,balloonrepaint]%(OnToolsMenu)"
+			}
+		}
+	}
+	*/
 
 }
 

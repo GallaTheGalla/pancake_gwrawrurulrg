@@ -3,7 +3,11 @@
 
 //quick back
 nvm{
-	"\![*]\q[Nevermind,blank]"	
+	"\n[half]You have %TOINT(pancakes) pancakes.\n\n[half]\![*]\q[Nevermind,blank]"	
+}
+
+blank{
+	inmenu = 0
 }
 
 SakuraMenuGreetings : nonoverlap
@@ -15,24 +19,28 @@ SakuraMenuGreetings : nonoverlap
 //Because there is an all modifier here, you don't need to write -- between menu options
 OnMainMenu : all
 {
-	"%(tallstack)\b2\![set,autoscroll,disable]"
+	inmenu = 1
+	"\C\![lock,balloonrepaint]\c\_q%(tallstack)\b2\![set,autoscroll,disable]"
 //	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
-	"\_q"
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
 	"\![*]\q[Tools,OnToolsMenu]\n"	
-	//"\![*]\q[Autoclickers,OnTalkRateMenu]\n"
+	"\![*]\q[Shinies,OnShiniesMenu]\n"
 	"\![*]\q[Upgrades,OnUpgradesMenu]\n\n"
 
 	
 	"\![*]\q[Change Talk Rate,OnTalkRateMenu]       \![*]\q[Settings,OnSettingsMenu]\n\n"
 	
-	"%(nvm)"	
+	"\![*]\q[Nevermind,blank]"	
 	"\n\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %TOINT(pancakes) Per Click: %FormatTwoDec(clickmultiplier)\n%FormatTwoDec(getSecCakes) pancakes per sec\n%(phoneFriendAmt(toolsarray[0])) helping click"
 	
+}
+
+OnChoiceTimeOut{
+	inmenu = 0
 }
 
 phoneFriendAmt{
@@ -41,7 +49,7 @@ phoneFriendAmt{
 		"1 kid"
 	}else{
 		"%_argv[0] friends"
-		"%_argv[0] friends' kid"
+		"%_argv[0] friends' kids"
 	}
 
 }
@@ -86,7 +94,7 @@ OnTalkRateChange
 OnSettingsMenu{
 	"\_q"
 	--
-	"Font Size: %fontheight (not yet implemented)\n"
+	"Font Size: \q[ - ,OnDecFont]%fontheight\q[ + ,OnIncFont] \n"
 	--
 	if clicktype == 0{
 		"Click Type: \![*]\q[Single,OnFlipClickType]"
@@ -94,9 +102,25 @@ OnSettingsMenu{
 		"Click Type: \![*]\q[Double,OnFlipClickType]"
 	}
 	--
-	"\n\n[half]\![*]\q[Back,OnMainMenu]     %(nvm) "
+	"\n\n[half]\![*]\q[Reset,OnReset]"
+	--
+	if incarnations > 0{
+		" (You're on your %incarnations run.)"
+	}
+	--
+	"\n%(nvm)     \![*]\q[Back,OnMainMenu]"
 	
 
+}
+
+OnDecFont{
+	fontheight--
+	OnSettingsMenu
+}
+
+OnIncFont{
+	fontheight++
+	OnSettingsMenu
 }
 
 OnFlipClickType{
@@ -105,8 +129,24 @@ OnFlipClickType{
 	}else{
 		clicktype = 0
 	}
+	OnSettingsMenu
 }
 
+
+OnReset{
+	"\_qAre you sure?\n"
+	--
+	"\n\![*]\q[Reset,OnResetConfirm]"
+	--
+	"\n\n[half]%(nvm)     \![*]\q[Back,OnMainMenu]"
+	
+}
+
+OnResetConfirm{
+	_incarnations = incarnations
+	OnFirstBoot
+	incarnations = _incarnations
+}
 
 
 
@@ -120,7 +160,8 @@ OnFlipClickType{
 
 
 OnUpgradesMenu : all {
-	"\_q%(tallstack)"
+	"\C\![lock,balloonrepaint]\c\_q%(tallstack)"
+	inmenu = 2
 	for _i = 0; _i < ARRAYSIZE(UpgradeData); _i++{
 		_thisitem = IARRAY
 		_thisitem = UpgradeData[_i]
@@ -158,11 +199,12 @@ OnBuyUpgrade{
 	//change click multiplier
 	clickmultiplier = TOREAL(clickmultiplier + TOREAL(TOREAL(_thisitem[2])/100))
 	
-	OnUpgradesMenu
+	"%(OnUpgradesMenu)\![unlock,balloonrepaint]"
 }
 
 OnToolsMenu : all {
-	"\_q%(tallstack)"
+	"\C\![lock,balloonrepaint]\c\_q%(tallstack)"
+	inmenu = 3
 	//HANDLE PHONE
 	_thisitem = ToolsData[0]
 	if toolsarray[0] > 0 {
@@ -217,7 +259,7 @@ OnBuyTool{
 	_thisitem = ToolsData[_index]
 	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
 	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
-	OnToolsMenu
+	"%(OnToolsMenu)\![unlock,balloonrepaint]"
 
 }
 
@@ -227,8 +269,30 @@ OnPhoneBuy{
 	_thisitem = ToolsData[_index]
 	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
 	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
-	"\_qRingading! \n\n[half]\_q%(OnToolsMenu)"
+	
+	//random achievements
+	if toolsarray[0] == 1 ||toolsarray[0] == 10 ||toolsarray[0] == 100 ||toolsarray[0] == 1000 ||toolsarray[0] == 10000 ||toolsarray[0] == 100000 ||toolsarray[0] == 1000000{
+		_rand = RAND(ARRAYSIZE(CallFriendShinyData))
+		PhoneAchievement(_rand)
+		callfriendarray[_rand] += 1
+	
+	}
+	--
+	
+	
+	"%(OnToolsMenu)\![unlock,balloonrepaint]"
 
 }
 
+
+PhoneAchievement{
+	_index = TOINT(_argv[0])
+	
+	if callfriendarray[_index] == 0{
+		callfriendarray[_index] += 1
+		_shiny = CallFriendShinyData[_index]
+		"\C%(shelf)Congratulations! You've earned the %(_shiny[0]) shiny!\0\c"
+	}
+	
+}
 

@@ -1,6 +1,6 @@
 OnTranslate
 {
-	_talk = reference0
+	_talk = "\f[height,%fontheight]" + reference0
 	
 	//This is what makes %(embedded_elements) work in script input
 	if reference1 == "" && reference2 == "" //If this is from the input box

@@ -9,42 +9,73 @@ tallstack{
 	//all the pancakes
 	if pancakes > 0{
 		"\i[3000]"
+		
+		--
+		//butter and syrup
+		"\i[3010]\i[3020]"
 	}
 	--
 	if pancakes > 10{
 		"\i[3100]"
+		--
+		//butter and syrup
+		"\i[3110]\i[3120]"
 	}
 	--
 	if pancakes > 100{
 		"\i[3200]"
+		--
+		//butter and syrup
+		"\i[3210]\i[3220]"
 	}
 	--
 	if pancakes > 1000{
 		"\i[3300]"
+		--
+		//butter and syrup
+		"\i[3310]\i[3320]"
 	}
 	--
 	if pancakes > 10000{
 		"\i[3400]"
+		--
+		//butter and syrup
+		"\i[3410]\i[3420]"
 	}
 	--
 	if pancakes > 100000{
 		"\i[3500]"
+		--
+		//butter and syrup
+		"\i[3510]\i[3520]"
 	}
 	--
 	if pancakes > 1000000{
 		"\i[3600]"
+		--
+		//butter and syrup
+		"\i[3610]\i[3620]"
 	}
 	--
 	if pancakes > 10000000{
 		"\i[3700]"
+		--
+		//butter and syrup
+		"\i[3710]\i[3720]"
 	}
 	--
 	if pancakes > 100000000{
 		"\i[3800]"
+		--
+		//butter and syrup
+		"\i[3810]\i[3820]"
 	}
 	--
 	if pancakes > 1000000000{
 		"\i[3900]"
+		--
+		//butter and syrup
+		"\i[3910]\i[3920]"
 	}
 
 }

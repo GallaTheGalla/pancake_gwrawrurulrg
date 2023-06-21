@@ -29,3 +29,43 @@ OnSomeMenu : all
 	"\![*]\q[Nevermind,blank]"
 }
 */
+
+strToQuestionMarks{
+	_res = ""
+	_start = _argv[0]
+	for _i = 0; _i < STRLEN(_start); _i++{
+		if SUBSTR(_start,_i,1) == " "{
+			_res += " "
+		}else{
+			_res += "?"
+		}
+	}
+	_res
+}
+
+
+OnShiniesMenu : all {
+	"\_q\b2"
+	for _i = 0; _i < ARRAYSIZE(CallFriendShinyData); _i++{
+		_thisitem = CallFriendShinyData[_i]
+		if callfriendarray[_i] == 0{
+			_qver = strToQuestionMarks(_thisitem[0])
+			"%_qver\n"
+		}else{
+			"%(_thisitem[0])\n"
+		}
+	
+	}
+	for _i = 0; _i < ARRAYSIZE(ShiniesDataData); _i++{
+		_thisitem = ShiniesData[_i]
+		if shiniesarray[_i] >= 0{
+			_qver = strToQuestionMarks(_thisitem[0])
+			"%_qver\n"
+		}else{
+			"%(_thisitem[0])\n"
+		}
+		
+	
+	}
+
+}

@@ -27,6 +27,7 @@ OnFirstBoot_VARIABLES{
 	toolsarray = initZeroArray(10)
 	
 	shiniesarray = initZeroArray(50)
+	callfriendarray = initZeroArray(50)
 	
 	
 

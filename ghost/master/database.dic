@@ -31,9 +31,32 @@ ToolsData : array{
 }
 
 
+CallFriendShinyData : array{
+	"Maintenance Man,Jerry from maintenance."
+	"Joe Mama,Really going to make this joke here?"
+	"The Void,You called the void. The void called back."
+	"McStealing Your Employees,You pay better anyway. Even if it is only in pancakes."
+	"Gutter Clowns,Hey\, if they're willing to work."
+	"That's Just A Microwave??,Call a microwave on the phone."
+	"Hacking To The Gate,El Psy Kongroo"
+	"Off To See The Wizard,Called down the yellow brick road."
+	"Here Kitty Kitty!,So long as they wear a hairnet."
+	"Child Labor,Listen\, these pancakes aren't going to flip themselves."
+	"The Zuck,Get Zucked!"
+	"Mirror Mirror,You called your own phone number."
+	"Spaghetti Monster,It's real????"
+	"Sans!? Sans Undertale!?,Someone's having a bad time."
+	
+
+}
 
 
-AutoclickerData{
-
+ShinyData : array{
+	"Joe Mama,0,10,10,img/phone.png,Ringading!"
+	"Fridge,0,100,25,img/fridge.png,Brrrrrrrrr...atter"
+	"Stove,0,1000,50,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
+	"Wheat Field,0,10000,125,img/field.png,They slowly wave..."
+	"Pancake Batter Shooter,0,100000,200,img/shooter.png,Swing batta batta!"
+	"Weird Looking Trashbot,0,1000000,400,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
 
 }
