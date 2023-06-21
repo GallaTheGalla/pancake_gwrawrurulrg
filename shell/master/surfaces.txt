@@ -12,9 +12,108 @@ descript
 
 //—————————————————————————————— Sakura surfaces ——————————————————————————————
 
-surface0
+surface100
 {
-	collision,0,0,130,65,head
+	collision,0,0,130,65,plate
+	
+	animation0.interval,runonce
+	animation0.pattern1,overlay,10000,0,0,0
+	
+	
+	//pancake 0
+	animation3000.interval,never
+	animation3000.pattern1,overlay,30000,0,0,0
+	
+	animation3010.interval,never
+	animation3010.pattern1,overlay,40000,0,0,0
+	
+	animation3020.interval,never
+	animation3020.pattern1,overlay,50000,0,0,0
+	
+	//pancake 1
+	animation3100.interval,never
+	animation3100.pattern1,overlay,30000,0,0,-28
+	
+	animation3110.interval,never
+	animation3110.pattern1,overlay,40000,0,0,-28
+	
+	animation3120.interval,never
+	animation3120.pattern1,overlay,50000,0,0,-28
+	
+	//pancake 2
+	animation3200.interval,never
+	animation3200.pattern1,overlay,30000,0,0,-56
+	
+	animation3210.interval,never
+	animation3210.pattern1,overlay,40000,0,0,-56
+	
+	animation3220.interval,never
+	animation3220.pattern1,overlay,50000,0,0,-56
+	//pancake 3
+	animation3300.interval,never
+	animation3300.pattern1,overlay,30000,0,0,-84
+	
+	animation3310.interval,never
+	animation3310.pattern1,overlay,40000,0,0,-84
+	
+	animation3320.interval,never
+	animation3320.pattern1,overlay,50000,0,0,-84
+	//pancake 4
+	animation3400.interval,never
+	animation3400.pattern1,overlay,30000,0,0,-112
+	
+	animation3410.interval,never
+	animation3410.pattern1,overlay,40000,0,0,-112
+	
+	animation3420.interval,never
+	animation3420.pattern1,overlay,50000,0,0,-112
+	//pancake 5
+	animation3500.interval,never
+	animation3500.pattern1,overlay,30000,0,0,-140
+	
+	animation3510.interval,never
+	animation3510.pattern1,overlay,40000,0,0,-140
+	
+	animation3520.interval,never
+	animation3520.pattern1,overlay,50000,0,0,-140
+	//pancake 6
+	animation3600.interval,never
+	animation3600.pattern1,overlay,30000,0,0,-168
+	
+	animation3610.interval,never
+	animation3610.pattern1,overlay,40000,0,0,-168
+	
+	animation3620.interval,never
+	animation3620.pattern1,overlay,50000,0,0,-168
+	//pancake 7
+	animation3700.interval,never
+	animation3700.pattern1,overlay,30000,0,0,-196
+	
+	animation3710.interval,never
+	animation3710.pattern1,overlay,40000,0,0,-196
+	
+	animation3720.interval,never
+	animation3720.pattern1,overlay,50000,0,0,-196
+	//pancake 8
+	animation3800.interval,never
+	animation3800.pattern1,overlay,30000,0,0,-224
+	
+	animation3810.interval,never
+	animation3810.pattern1,overlay,40000,0,0,-224
+	
+	animation3820.interval,never
+	animation3820.pattern1,overlay,50000,0,0,-224
+	//pancake 9
+	animation3900.interval,never
+	animation3900.pattern1,overlay,30000,0,0,-252
+	
+	animation3910.interval,never
+	animation3910.pattern1,overlay,40000,0,0,-252
+	
+	animation3920.interval,never
+	animation3920.pattern1,overlay,50000,0,0,-252
+	
+	
 	
 	//Example code for blink animation - uncomment if you want it
 	//animation0.interval,random,4
