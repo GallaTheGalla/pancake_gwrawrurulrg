@@ -68,11 +68,16 @@ OnUpdateComplete
 {
 	if reference0 == "none"
 	{
-		"%(tallstack)There are no new recipes.\![update,balloon]"
+		"%(tallstack)There are no new recipes."
 	}
 	else
 	{
-		"%(tallstack)Update complete.\![update,balloon]"
+		"%(tallstack)Update complete."
+	}
+	
+	--
+	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
+		"\![update,balloon]"
 	}
 }
 

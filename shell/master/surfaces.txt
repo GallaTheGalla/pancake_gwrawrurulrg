@@ -218,7 +218,19 @@ surface200
 	
 	//egg
 	animation1010.interval,never
-	animation1010.pattern1,overlay,95010,0,0,0
+	animation1010.pattern1,overlay,95100,0,0,0
+	
+	//pan
+	animation1020.interval,never
+	animation1020.pattern1,overlay,95200,0,0,0
+	
+	//a secret third option
+	animation1030.interval,never
+	animation1030.pattern1,overlay,95300,0,0,0
+	
+	//a secret fourth option?!
+	animation1040.interval,never
+	animation1040.pattern1,overlay,95400,0,0,0
 	
 	
 
