@@ -10,7 +10,9 @@ OnMouseDoubleClick
 		{
 			//OnSakuraMenu
 			
-			if clicktype == 1{
+			if reference4 == "Settings"{
+				OnSettingsMenu
+			}elseif clicktype == 1{
 				OnClick(1)
 				--
 				"\_q%(tallstack)total pancakes: %TOINT(pancakes)"
@@ -31,14 +33,14 @@ OnMouseClick
 	if reference5 == 0 //reference5 is the mouse button being clicked, in this case a left click
 	{
 		//reference3 is which character is being clicked
-		if reference3 == 0
+		if reference3 == 0 && reference4 != "Settings"
 		{
 			//OnSakuraMenu
 			
 			if clicktype == 0{
 				OnClick(1)
 				--
-				"\_q%(tallstack)total pancakes: %TOINT(pancakes)"
+				"\_q%(shelf)%(tallstack)total pancakes: %TOINT(pancakes)"
 			}
 			
 		}
@@ -78,7 +80,7 @@ OnMouseMove.Kero
 {
 	if reference4 == "head"
 	{
-		"\1\s[10]Petting..."
+		"%(shelf)Petting..."
 	}
 }
 
@@ -94,21 +96,21 @@ OnSecondChange{
 	if second % 5 == 0{
 		OnClick(TOINT(toolsarray[0]))
 	}
-	/*
-	if second % 3 == 0{
+	
+	if second % 2 == 0{
 		case inmenu{
 			when 1{
-				"\![unlock,balloonrepaint]%(OnMainMenu)"
+				"\1\0%(OnMainMenu)\![unlock,balloonrepaint]"
 			}
 			when 2{
-				"\![unlock,balloonrepaint]%(OnUpgradesMenu)"
+				"\1\0%(OnUpgradesMenu)\![unlock,balloonrepaint]"
 			}	
 			when 3{
-				"\![unlock,balloonrepaint]%(OnToolsMenu)"
+				"\1\0%(OnToolsMenu)\![unlock,balloonrepaint]"
 			}
 		}
 	}
-	*/
+	
 
 }
 
@@ -116,7 +118,7 @@ getSecCakes{
 	_res = 0
 	for _i = 1; _i < ARRAYSIZE(ToolsData); _i++{
 		_info = ToolsData[_i]
-		_res += toolsarray[_i] * TOREAL(_info[3]/10) 
+		_res += toolsarray[_i] * TOREAL(_info[3]/10)  * pertoolmult[_i]
 	
 	}
 	_res

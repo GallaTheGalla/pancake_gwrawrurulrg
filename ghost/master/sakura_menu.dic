@@ -3,7 +3,7 @@
 
 //quick back
 nvm{
-	"\n[half]You have %TOINT(pancakes) pancakes.\n\n[half]\![*]\q[Nevermind,blank]"	
+	"\n[half]You have %TOINT(pancakes) pancakes.\n\n[half]\![*]\q[Nevermind,OnBlank]"	
 }
 
 blank{
@@ -20,7 +20,7 @@ SakuraMenuGreetings : nonoverlap
 OnMainMenu : all
 {
 	inmenu = 1
-	"\C\![lock,balloonrepaint]\c\_q%(tallstack)\b2\![set,autoscroll,disable]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b2\![set,autoscroll,disable]\f[height,%fontheight]"
 //	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
 	
@@ -34,12 +34,20 @@ OnMainMenu : all
 	
 	"\![*]\q[Change Talk Rate,OnTalkRateMenu]       \![*]\q[Settings,OnSettingsMenu]\n\n"
 	
-	"\![*]\q[Nevermind,blank]"	
+	"\![*]\q[Nevermind,OnBlank]"	
 	"\n\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %TOINT(pancakes) Per Click: %FormatTwoDec(clickmultiplier)\n%FormatTwoDec(getSecCakes) pancakes per sec\n%(phoneFriendAmt(toolsarray[0])) helping click"
 	
 }
 
+OnBlank{
+	inmenu = 0
+}
+
 OnChoiceTimeOut{
+	inmenu = 0
+}
+
+OnBalloonTimeOut{
 	inmenu = 0
 }
 
@@ -153,14 +161,10 @@ OnResetConfirm{
 
 
 
-
-
-
-
-
-
+//OLD
+/*
 OnUpgradesMenu : all {
-	"\C\![lock,balloonrepaint]\c\_q%(tallstack)"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)"
 	inmenu = 2
 	for _i = 0; _i < ARRAYSIZE(UpgradeData); _i++{
 		_thisitem = IARRAY
@@ -183,8 +187,103 @@ OnUpgradesMenu : all {
 		}
 	
 	}
+
+	
 	"\n[half]%(nvm)    \![*]\q[Refresh,OnUpgradesMenu]"
 
+}
+
+*/
+
+
+
+
+OnUpgradesMenu : all {
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)UPGRADES\n\n[half]"
+	inmenu = 2
+	//SPOONS
+	_this = SpoonUpgradeData[0]
+	if toolsarray[0] >= TOINT(_this[2]){
+		"   SPOONS\n"
+		_current = upgradelevels[0]
+		_next = SpoonUpgradeData[_current]
+		_this = SpoonUpgradeData[_current-1]
+		if _current == ARRAYSIZE(SpoonUpgradeData){
+			"      Owns: %(_this[0])       (Maxed Out)"
+		}
+		elseif _this != ""{
+			if pancakes >= TOINT(_next[3]){
+				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuySpoonUpgrade,%_current]"
+			}else{
+				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+			}
+			
+		}else{
+			if pancakes >= TOINT(_next[3]){
+				"      \![*]\q[Buy %(_next[0]),OnBuySpoonUpgrade,%_current]"
+			}else{
+				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+			}
+		}
+		
+	}
+	
+	//ICE CUBES
+	_this = CubeUpgradeData[0]
+	if toolsarray[1] >= TOINT(_this[2]){
+		"\n\n[half]   ICE CUBES\n"
+		_current = upgradelevels[1]
+		_next = CubeUpgradeData[_current]
+		_this = CubeUpgradeData[_current-1]
+		if _current == ARRAYSIZE(CubeUpgradeData){
+			"      Owns: %(_this[0])       (Maxed Out)"
+		}
+		elseif _this != ""{
+			if pancakes >= TOINT(_next[3]){
+				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyCubeUpgrade,%_current]"
+			}else{
+				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+			}
+			
+		}else{
+			if pancakes >= TOINT(_next[3]){
+				"      \![*]\q[Buy %(_next[0]),OnBuyCubeUpgrade,%_current]"
+			}else{
+				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	"\n\n[half]%(nvm)    \![*]\q[Refresh,OnUpgradesMenu]"
+
+}
+
+OnBuySpoonUpgrade{
+	_thisupgrade = SpoonUpgradeData[TOINT(reference0)]
+	_spooncost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _spooncost
+	upgradelevels[0] = TOINT(upgradelevels[0]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+OnBuyCubeUpgrade{
+	_thisupgrade = CubeUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[1] = TOINT(upgradelevels[1]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
 }
 
  
@@ -203,7 +302,7 @@ OnBuyUpgrade{
 }
 
 OnToolsMenu : all {
-	"\C\![lock,balloonrepaint]\c\_q%(tallstack)"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)"
 	inmenu = 3
 	//HANDLE PHONE
 	_thisitem = ToolsData[0]
@@ -212,10 +311,10 @@ OnToolsMenu : all {
 			
 		if pancakes >= TOINT(_thisitem[2] * (toolsarray[0]+1)){
 			//can buy more
-			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2]*(toolsarray[0]+1)) (%(toolsarray[0]) Times)\n"
+			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2]*(toolsarray[0]+1))     (%(toolsarray[0]) Times)\n"
 		}else{
 			//broke
-			"Phone a Friend for %TOINT(_thisitem[2]*(toolsarray[0]+1)) (%(toolsarray[0]) Times)\n"
+			"Phone a Friend for %TOINT(_thisitem[2]*(toolsarray[0]+1))     (%(toolsarray[0]) Times)\n"
 		}
 		
 	}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
@@ -235,10 +334,10 @@ OnToolsMenu : all {
 				
 			if pancakes >= TOINT(_thisitem[2] * (toolsarray[_i]+1)){
 				//can buy more
-				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2]*(toolsarray[_i]+1)) (%(toolsarray[_i]) Owned)\n"
+				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2]*(toolsarray[_i]+1))     (%(toolsarray[_i]) Owned)  (x%FormatTwoDec(pertoolmult[_i]) pancakes)\n"
 			}else{
 				//broke
-				"Buy %(_thisitem[0]) for %TOINT(_thisitem[2]*(toolsarray[_i]+1)) (%(toolsarray[_i]) Owned)\n"
+				"Buy %(_thisitem[0]) for %TOINT(_thisitem[2]*(toolsarray[_i]+1))     (%(toolsarray[_i]) Owned)      (x%FormatTwoDec(pertoolmult[_i]) pancakes)\n"
 			}
 			
 		}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
@@ -270,6 +369,8 @@ OnPhoneBuy{
 	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
 	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
 	
+	"%(OnToolsMenu)\![unlock,balloonrepaint]"
+	--
 	//random achievements
 	if toolsarray[0] == 1 ||toolsarray[0] == 10 ||toolsarray[0] == 100 ||toolsarray[0] == 1000 ||toolsarray[0] == 10000 ||toolsarray[0] == 100000 ||toolsarray[0] == 1000000{
 		_rand = RAND(ARRAYSIZE(CallFriendShinyData))
@@ -277,11 +378,7 @@ OnPhoneBuy{
 		callfriendarray[_rand] += 1
 	
 	}
-	--
 	
-	
-	"%(OnToolsMenu)\![unlock,balloonrepaint]"
-
 }
 
 
@@ -291,7 +388,7 @@ PhoneAchievement{
 	if callfriendarray[_index] == 0{
 		callfriendarray[_index] += 1
 		_shiny = CallFriendShinyData[_index]
-		"\C%(shelf)Congratulations! You've earned the %(_shiny[0]) shiny!\0\c"
+		"\C%(shelf)Congratulations! You've earned the %(_shiny[0]) shiny!\0"
 	}
 	
 }

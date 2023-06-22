@@ -82,8 +82,41 @@ tallstack{
 
 
 
+
+
 shelf{
-	"\1\s[10]"
+	"\1\s[200]"
+	--
+	"\i[9000]" //shelf
+	--
+	//for each item
+	_res = ""
+	for _i = 0; _i < 8; _i++ {
+		//if it is owned
+		if toolsarray[_i] > 0{
+			_tooldata = ToolsData[_i]
+			_surf = 1 + _i*2
+			
+			//can buy more
+			if pancakes > TOINT(_tooldata[2]) * toolsarray[_i]{
+				if _surf < 10{
+					_surf = "0%_surf"
+				}
+				_res += "\i[9%(_surf)]"
+			}else{ //can't buy more
+				_surf++
+				if _surf < 10{
+				_surf = "0%_surf"
+				}
+				_res += "\i[9%(_surf)]"
+			}
+			
+		}
+	
+	}
+	_res
+	--
+
 
 
 }

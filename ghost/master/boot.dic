@@ -17,7 +17,7 @@ OnFirstBoot_VARIABLES{
 	incarnations = 0
 	
 	//settings
-	clicktype = 1 //0 is single click
+	clicktype = 0 //0 is single click
 	fontheight = 13
 	
 	clickmultiplier = 1.0
@@ -27,6 +27,20 @@ OnFirstBoot_VARIABLES{
 	toolsarray = initZeroArray(10)
 	
 	shiniesarray = initZeroArray(50)
+	upgradelevels = initZeroArray(8)
+	
+	//fridgemult = 1
+	//stovemult = 1
+	//wheatmult = 1
+	//shootermult = 1
+	//botmult = 1
+	//circusmult = 1
+	//capitalismmult = 1
+	
+	pertoolmult = initOnesArray(13)
+	
+	
+	
 	callfriendarray = initZeroArray(50)
 	
 	
@@ -60,7 +74,7 @@ OnBoot
 	_user_birthday = "%(_temp[1])/%(_temp[2])" //M/D, if you want it D/M you can switch it around
 	_today = "%(month)/%(day)" //Again, switch this around if using D/M
 	
-	"\1\s[10]%(tallstack)"
+	"%(shelf)%(tallstack)"
 	--
 	if _today == _user_birthday
 	{

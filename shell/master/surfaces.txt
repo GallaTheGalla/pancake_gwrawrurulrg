@@ -114,6 +114,12 @@ surface100
 	animation3920.pattern1,overlay,50000,0,0,-252
 	
 	
+		
+	animation7000.interval,runonce
+	animation7000.pattern1,overlay,70000,0,0,0
+	
+	collision7000,270,190,300,325,Settings
+	
 	
 	//Example code for blink animation - uncomment if you want it
 	//animation0.interval,random,4
@@ -128,3 +134,96 @@ surface10
 {
 	collision,0,0,130,65,head
 }
+
+
+surface200
+{
+	//Shelf base
+	animation100.interval,runonce
+	animation100.pattern1,overlay,90000,0,0,0
+	
+	//available - phone
+	animation901.interval,never
+	animation901.pattern1,overlay,90010,0,0,0
+	
+	//not available - phone
+	animation902.interval,never
+	animation902.pattern1,overlay,90020,0,0,0
+	
+	//available 2
+	animation903.interval,never
+	animation903.pattern1,overlay,90030,0,0,0
+	
+	//not available 2
+	animation904.interval,never
+	animation904.pattern1,overlay,90040,0,0,0
+	
+	//available 3
+	animation905.interval,never
+	animation905.pattern1,overlay,90050,0,0,0
+	
+	//not available 3
+	animation906.interval,never
+	animation906.pattern1,overlay,90060,0,0,0
+	
+	
+	//available 4
+	animation907.interval,never
+	animation907.pattern1,overlay,90070,0,0,0
+	
+	//not available 4
+	animation908.interval,never
+	animation908.pattern1,overlay,90080,0,0,0
+	
+	
+	//available 5
+	animation909.interval,never
+	animation909.pattern1,overlay,90090,0,0,0
+	
+	//not available 5
+	animation910.interval,never
+	animation910.pattern1,overlay,90100,0,0,0
+	
+	
+	//available 6
+	animation911.interval,never
+	animation911.pattern1,overlay,90110,0,0,0
+	
+	//not available 6
+	animation912.interval,never
+	animation912.pattern1,overlay,90120,0,0,0
+	
+	
+	//available 7
+	animation913.interval,never
+	animation913.pattern1,overlay,90130,0,0,0
+	
+	//not available 7
+	animation914.interval,never
+	animation914.pattern1,overlay,90140,0,0,0
+	
+	
+	//available 8
+	animation915.interval,never
+	animation915.pattern1,overlay,90150,0,0,0
+	
+	//not available 8
+	animation916.interval,never
+	animation916.pattern1,overlay,90160,0,0,0
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
