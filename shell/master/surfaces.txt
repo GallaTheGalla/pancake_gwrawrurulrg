@@ -138,6 +138,9 @@ surface10
 
 surface200
 {
+	collisionex0,tool,region,collision0.png,255,0,0
+	collisionex1,upgrade,region,collision0.png,0,0,255
+	
 	//Shelf base
 	animation100.interval,runonce
 	animation100.pattern1,overlay,90000,0,0,0
