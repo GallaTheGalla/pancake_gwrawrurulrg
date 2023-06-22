@@ -30,6 +30,42 @@ favoredcolors
 
 
 
+normalBalloon{
+	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
+		"\b[0]"
+	}else{
+		"\b[0]"
+	}
+
+}
+
+menuBalloon{
+	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
+		"\b[1]"
+	}else{
+		"\b[2]"
+	}
+
+}
+
+bigBalloon{
+	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
+		"\b[2]"
+	}else{
+		"\b[2]"
+	}
+
+}
+
+tinyBalloon{
+	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
+		"\b[3]"
+	}else{
+		"\b[1]"
+	}
+
+}
+
 
 FormatTwoDec{
 	_number = TOSTR(_argv[0])

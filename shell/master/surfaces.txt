@@ -212,6 +212,15 @@ surface200
 	animation916.pattern1,overlay,90160,0,0,0
 	
 	
+	//spoon
+	animation1000.interval,never
+	animation1000.pattern1,overlay,95000,0,0,0
+	
+	//egg
+	animation1010.interval,never
+	animation1010.pattern1,overlay,95010,0,0,0
+	
+	
 
 }
 

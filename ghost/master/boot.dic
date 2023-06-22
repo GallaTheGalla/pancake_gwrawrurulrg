@@ -7,7 +7,7 @@ OnFirstBoot
 	
 	OnFirstBoot_VARIABLES
 	
-	"%(shelf)%(tallstack)Take me to your pancakes."
+	"\![reload,shell]%(shelf)%(tallstack)Take me to your pancakes."
 }
 
 
@@ -18,7 +18,7 @@ OnFirstBoot_VARIABLES{
 	
 	//settings
 	clicktype = 0 //0 is single click
-	fontheight = 13
+	fontheight = "+0" //relative
 	
 	clickmultiplier = 1.0
 	clickmultbonus = 0.0

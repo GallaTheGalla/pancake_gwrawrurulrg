@@ -23,3 +23,32 @@ OnMinuteChange{
 
 	"%(shelf)%(tallstack)"
 }
+
+OnTranslate
+{
+	_talk = "\f[height,%fontheight]" + reference0
+	
+	
+	if SHIORI3FW.BalloonName != "Dine-In Breakfast"{
+		_talk = REPLACE(_talk,"\b[0]","\b[0]")
+		_talk = REPLACE(_talk,"\b[2]","\b[2]")
+		_talk = REPLACE(_talk,"\b[4]","\b[4]")
+		_talk = REPLACE(_talk,"\b[6]","\b[6]")
+	}else{
+		_talk = REPLACE(_talk,"\b[0]","\b[0]")
+		_talk = REPLACE(_talk,"\b[2]","\b[2]")
+		_talk = REPLACE(_talk,"\b[4]","\b[4]")
+		_talk = REPLACE(_talk,"\b[6]","\b[6]")
+	}
+	
+	
+	//This is what makes %(embedded_elements) work in script input
+	if reference1 == "" && reference2 == "" //If this is from the input box
+	{ //send input box : no event (ref2) , no special flag (ref1)
+		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
+	}
+	//"
+	//If you want to add anything to OnTranslate, like text replacement, I would put it after this point, generally. Just make sure it's before the TOSTR(_talk)
+	
+	TOSTR(_talk)
+}

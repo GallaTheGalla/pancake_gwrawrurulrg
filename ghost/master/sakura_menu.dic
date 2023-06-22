@@ -20,7 +20,7 @@ SakuraMenuGreetings : nonoverlap
 OnMainMenu : all
 {
 	inmenu = 1
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b2\![set,autoscroll,disable]\f[height,%fontheight]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\![set,autoscroll,disable]\f[height,%fontheight]"
 //	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
 	
@@ -77,7 +77,7 @@ OnTalkRateMenu : all
 	elseif aitalkinterval == 300; _talkrate = "5 minutes"
 	elseif aitalkinterval == 600; _talkrate = "10 minutes"
 	
-	"%(tallstack)\b2\![set,autoscroll,disable]\_q"
+	"%(tallstack)\b[0]\![set,autoscroll,disable]\_q"
 	"Current interval: %(_talkrate)\n\n"
 	
 	"\![*]\q[Off,OnTalkRateChange,0]\n"
@@ -122,12 +122,52 @@ OnSettingsMenu{
 }
 
 OnDecFont{
-	fontheight--
+	if "-" _in_ fontheight{
+		fontheight = REPLACE(fontheight,"-","")
+		fontheight = TOINT(fontheight)
+		fontheight++
+		if fontheight != 0{
+			fontheight = "-" + fontheight
+		}else{
+			fontheight = "+0"
+		}
+
+	}else{
+		fontheight = REPLACE(fontheight,"+","")
+		fontheight = TOINT(fontheight)
+		fontheight--
+		
+		if fontheight != 0{
+			fontheight = "+" + fontheight
+		}else{
+			fontheight = "-1"
+		}
+	}
 	OnSettingsMenu
 }
 
 OnIncFont{
-	fontheight++
+	if "-" _in_ fontheight{
+		fontheight = REPLACE(fontheight,"-","")
+		fontheight = TOINT(fontheight)
+		fontheight--
+		if fontheight != 0{
+			fontheight = "-" + fontheight
+		}else{
+			fontheight = "+0"
+		}
+
+	}else{
+		fontheight = REPLACE(fontheight,"+","")
+		fontheight = TOINT(fontheight)
+		fontheight++
+
+		if fontheight != 1{
+			fontheight = "+" + fontheight
+		}else{
+			fontheight = "+1"
+		}
+	}
 	OnSettingsMenu
 }
 
@@ -199,7 +239,7 @@ OnUpgradesMenu : all {
 
 
 OnUpgradesMenu : all {
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)UPGRADES\n\n[half]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\![set,autoscroll,disable]\f[height,%fontheight]UPGRADES\n\n[half]"
 	inmenu = 2
 	//SPOONS
 	_this = SpoonUpgradeData[0]
@@ -302,7 +342,7 @@ OnBuyUpgrade{
 }
 
 OnToolsMenu : all {
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\f[height,%fontheight]\![set,autoscroll,disable]"
 	inmenu = 3
 	//HANDLE PHONE
 	_thisitem = ToolsData[0]
@@ -388,7 +428,7 @@ PhoneAchievement{
 	if callfriendarray[_index] == 0{
 		callfriendarray[_index] += 1
 		_shiny = CallFriendShinyData[_index]
-		"\C%(shelf)Congratulations! You've earned the %(_shiny[0]) shiny!\0"
+		"\C%(shelf)\b[6]Congratulations! You've earned the %(_shiny[0]) shiny!\x\0"
 	}
 	
 }

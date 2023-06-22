@@ -98,7 +98,7 @@ shelf{
 			_surf = 1 + _i*2
 			
 			//can buy more
-			if pancakes > TOINT(_tooldata[2]) * toolsarray[_i]{
+			if pancakes > TOINT(_tooldata[2]) * (toolsarray[_i]+1){
 				if _surf < 10{
 					_surf = "0%_surf"
 				}
@@ -111,6 +111,23 @@ shelf{
 				_res += "\i[9%(_surf)]"
 			}
 			
+		}
+	
+	}
+	_res
+	--
+	//charms
+	//for each item
+	_res = ""
+	for _i = 0; _i < 4; _i++ {
+		//if it is owned
+		if upgradelevels[_i] > 0{
+			_surf = _i
+
+			if _surf < 10{
+				_surf = "0%_surf"
+			}
+			_res += "\i[1%(_surf)%(upgradelevels[_i]-1)]"	
 		}
 	
 	}

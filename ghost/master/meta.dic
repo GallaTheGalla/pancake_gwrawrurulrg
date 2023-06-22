@@ -68,11 +68,11 @@ OnUpdateComplete
 {
 	if reference0 == "none"
 	{
-		"%(tallstack)There are no new recipes."
+		"%(tallstack)There are no new recipes.\![update,balloon]"
 	}
 	else
 	{
-		"%(tallstack)Update complete."
+		"%(tallstack)Update complete.\![update,balloon]"
 	}
 }
 
