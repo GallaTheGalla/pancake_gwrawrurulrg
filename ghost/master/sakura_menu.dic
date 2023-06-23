@@ -170,6 +170,12 @@ OnSettingsMenu{
 		"Click Type: \![*]\q[Double,OnFlipClickType]"
 	}
 	--
+	if goreallowed == 0{
+		"Gore Allowed: \![*]\q[Off,OnFlipGore]"
+	}else{
+		"Gore Allowed: \![*]\q[On,OnFlipGore]"
+	}
+	--
 	"\n%(OnTalkRateDisplay)"
 	--
 	"\n\n[half]\![*]\q[Reset,OnReset]"
@@ -244,6 +250,14 @@ OnFlipClickType{
 	OnSettingsMenu
 }
 
+OnFlipGore{
+	if goreallowed == 0{
+		goreallowed = 1
+	}else{
+		goreallowed = 0
+	}
+	OnSettingsMenu
+}
 
 OnReset{
 	"\_qAre you sure?\n"

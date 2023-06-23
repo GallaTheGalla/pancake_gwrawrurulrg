@@ -24,10 +24,12 @@ surface100
 	animation3000.interval,never
 	animation3000.pattern1,overlay,30000,0,0,0
 	
-	animation3010.interval,never //butter
+	//butter
+	animation3010.interval,never 
 	animation3010.pattern1,overlay,40000,0,0,0
 	
-	animation3020.interval,never //syrup (maple)
+	//syrup (maple)
+	animation3020.interval,never 
 	animation3020.pattern1,overlay,50000,0,0,0
 	
 	//pancake 1
@@ -154,6 +156,10 @@ surface200
 	animation9020.interval,never
 	animation9020.pattern1,overlay,90020,0,0,0
 	
+	//silhouette phone
+	animation9021.interval,never
+	animation9021.pattern1,overlay,90021,0,0,0
+	
 	//available 2
 	animation9030.interval,never
 	animation9030.pattern1,overlay,90030,0,0,0
@@ -161,6 +167,10 @@ surface200
 	//not available 2
 	animation9040.interval,never
 	animation9040.pattern1,overlay,90040,0,0,0
+	
+	//silhouette fridge
+	animation9041.interval,never
+	animation9041.pattern1,overlay,90041,0,0,0
 	
 	//available 3
 	animation9050.interval,never
@@ -170,6 +180,9 @@ surface200
 	animation9060.interval,never
 	animation9060.pattern1,overlay,90060,0,0,0
 	
+	//silhouette stove
+	animation9061.interval,never
+	animation9061.pattern1,overlay,90061,0,0,0
 	
 	//available 4
 	animation9070.interval,never
@@ -178,6 +191,10 @@ surface200
 	//not available 4
 	animation9080.interval,never
 	animation9080.pattern1,overlay,90080,0,0,0
+	
+	//silhouette garden
+	animation9081.interval,never
+	animation9081.pattern1,overlay,90081,0,0,0
 	
 	
 	//available 5
@@ -188,6 +205,10 @@ surface200
 	animation9100.interval,never
 	animation9100.pattern1,overlay,90100,0,0,0
 	
+	//silhouette shooter
+	animation9101.interval,never
+	animation9101.pattern1,overlay,90101,0,0,0
+	
 	
 	//available 6
 	animation9110.interval,never
@@ -197,6 +218,9 @@ surface200
 	animation9120.interval,never
 	animation9120.pattern1,overlay,90120,0,0,0
 	
+	//silhouette bot
+	animation9121.interval,never
+	animation9121.pattern1,overlay,90121,0,0,0
 	
 	//available 7
 	animation9130.interval,never
@@ -206,6 +230,10 @@ surface200
 	animation9140.interval,never
 	animation9140.pattern1,overlay,90140,0,0,0
 	
+	//silhouette circus
+	animation9141.interval,never
+	animation9141.pattern1,overlay,90141,0,0,0
+	
 	
 	//available 8
 	animation9150.interval,never
@@ -214,6 +242,10 @@ surface200
 	//not available 8
 	animation9160.interval,never
 	animation9160.pattern1,overlay,90160,0,0,0
+	
+	//silhouette shooter
+	animation9161.interval,never
+	animation9161.pattern1,overlay,90161,0,0,0
 	
 	
 	
@@ -230,13 +262,37 @@ surface200
 	animation9700.interval,never
 	animation9700.pattern1,overlay,97000,0,0,0
 	
-	//a secret third option
+	//hat
 	animation9800.interval,never
 	animation9800.pattern1,overlay,98000,0,0,0
 	
-	//a secret fourth option?!
+	//bat
 	animation9900.interval,never
 	animation9900.pattern1,overlay,99000,0,0,0
+	
+	//googly
+	animation10000.interval,never
+	animation10000.pattern1,overlay,100000,0,0,0
+	
+	//balloon
+	animation10100.interval,never
+	animation10100.pattern1,overlay,101000,0,0,0
+	
+	//heart
+	animation10200.interval,never
+	animation10200.pattern0,overlay,102000,0,0,0
+	animation10200.pattern1,overlay,102001,120,0,0
+	animation10200.pattern2,overlay,102002,120,0,0
+	animation10200.pattern3,overlay,102003,120,0,0
+	animation10200.pattern4,overlay,102004,120,0,0
+	animation10200.pattern5,overlay,102005,120,0,0
+	animation10200.pattern6,overlay,102000,120,0,0
+	animation10200.pattern6,overlay,102000,2000,0,0
+	animation10200.pattern8,start,10200
+	
+	//knife
+	animation10201.interval,never
+	animation10201.pattern0,overlay,102010,0,0,0
 	
 	
 
