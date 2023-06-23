@@ -47,26 +47,95 @@ strToQuestionMarks{
 OnShiniesMenu : all {
 	inmenu = 0
 	"\_q\b[2]\![set,autoscroll,disable]"
-	for _i = 0; _i < ARRAYSIZE(CallFriendShinyData); _i++{
-		_thisitem = CallFriendShinyData[_i]
-		if callfriendarray[_i] == 0{
-			_qver = strToQuestionMarks(_thisitem[0])
-			"%_qver\n"
-		}else{
-			"%(_thisitem[0])\n"
-		}
-	
-	}
-	for _i = 0; _i < ARRAYSIZE(ShiniesDataData); _i++{
-		_thisitem = ShiniesData[_i]
-		if shiniesarray[_i] >= 0{
-			_qver = strToQuestionMarks(_thisitem[0])
-			"%_qver\n"
-		}else{
-			"%(_thisitem[0])\n"
-		}
+	_database = "ShinyData" + origin
+	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
 		
+		_thisitem = EVAL("%(_database)[_i]")
+		if _thisitem == ""{
+			_thisitem = ShinyDataNormal[_i]
+		}
+		if shiniesarray[_i] == 0{
+			_qver = strToQuestionMarks(_thisitem[0])
+			"%_qver\n"
+		}else{
+			"%(_thisitem[0])\n"
+		}
 	
 	}
 
+}
+
+
+
+
+OnAdditionsMenu : all{
+	inmenu = 0
+	_database = "ShinyData" + origin
+	//SYRUPS
+	"\b[2]\_qSYRUPS%(tallstack)\n"
+	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+		_thisitem = EVAL("%(_database)[_i]")
+		if _thisitem == ""{
+			_thisitem = ShinyDataNormal[_i]
+		}
+		if _thisitem[2] == "Syrups"{
+			if shiniesarray[_i] == 0{
+				_qver = strToQuestionMarks(_thisitem[3])
+				"%_qver\n"
+			}else{
+				if syrup != _thisitem[4]{
+					"\![*]\q[%(_thisitem[3]),OnChangeSyrup,%(_thisitem[2]),%(_thisitem[4])]\n"
+				}else{
+					"\![*]\q[%(_thisitem[3]),OnChangeSyrup,%(_thisitem[2]),'']\n"
+				}
+				
+			}
+			
+		}
+	
+	}
+	"\n\n[half]TOPPINGS\n"
+	//TOPPINGS
+	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+		_thisitem = EVAL("%(_database)[_i]")
+		if _thisitem == ""{
+			_thisitem = ShinyDataNormal[_i]
+		}
+		if _thisitem[2] == "Toppings"{
+			if shiniesarray[_i] == 0{
+				_qver = strToQuestionMarks(_thisitem[3])
+				"%_qver\n"
+			}else{
+				if topping != _thisitem[4]{
+					"\![*]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),%(_thisitem[4])]\n"
+				}else{
+					"\![*]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),'']\n"
+				}
+				
+			}
+			
+		}
+	
+	}
+		
+	
+	
+	"\n\n[half]%(nvm)    \![*]\q[Back,OnMainMenu]"
+
+}
+
+//Argv[0] is the category, argv[1] is the addition ending
+OnChangeAddition{
+	EVAL(_argv[0] + "=" + '"' + _argv[1] + '"')
+
+}
+
+OnChangeSyrup{
+	syrup = reference1
+	OnAdditionsMenu
+}
+
+OnChangeTopping{
+	topping = reference1
+	OnAdditionsMenu
 }

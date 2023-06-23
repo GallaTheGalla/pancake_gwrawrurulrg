@@ -24,10 +24,10 @@ surface100
 	animation3000.interval,never
 	animation3000.pattern1,overlay,30000,0,0,0
 	
-	animation3010.interval,never
+	animation3010.interval,never //butter
 	animation3010.pattern1,overlay,40000,0,0,0
 	
-	animation3020.interval,never
+	animation3020.interval,never //syrup (maple)
 	animation3020.pattern1,overlay,50000,0,0,0
 	
 	//pancake 1
@@ -138,102 +138,105 @@ surface10
 
 surface200
 {
-	collisionex0,tool,region,collision0.png,255,0,0
-	collisionex1,upgrade,region,collision0.png,0,0,255
-	
+	//collisions
+	collisionex0,Tools,region,collision0.png,255,0,0
+	collisionex2,Charms,region,collision0.png,0,0,255
+
 	//Shelf base
 	animation100.interval,runonce
 	animation100.pattern1,overlay,90000,0,0,0
 	
 	//available - phone
-	animation901.interval,never
-	animation901.pattern1,overlay,90010,0,0,0
+	animation9010.interval,never
+	animation9010.pattern1,overlay,90010,0,0,0
 	
 	//not available - phone
-	animation902.interval,never
-	animation902.pattern1,overlay,90020,0,0,0
+	animation9020.interval,never
+	animation9020.pattern1,overlay,90020,0,0,0
 	
 	//available 2
-	animation903.interval,never
-	animation903.pattern1,overlay,90030,0,0,0
+	animation9030.interval,never
+	animation9030.pattern1,overlay,90030,0,0,0
 	
 	//not available 2
-	animation904.interval,never
-	animation904.pattern1,overlay,90040,0,0,0
+	animation9040.interval,never
+	animation9040.pattern1,overlay,90040,0,0,0
 	
 	//available 3
-	animation905.interval,never
-	animation905.pattern1,overlay,90050,0,0,0
+	animation9050.interval,never
+	animation9050.pattern1,overlay,90050,0,0,0
 	
 	//not available 3
-	animation906.interval,never
-	animation906.pattern1,overlay,90060,0,0,0
+	animation9060.interval,never
+	animation9060.pattern1,overlay,90060,0,0,0
 	
 	
 	//available 4
-	animation907.interval,never
-	animation907.pattern1,overlay,90070,0,0,0
+	animation9070.interval,never
+	animation9070.pattern1,overlay,90070,0,0,0
 	
 	//not available 4
-	animation908.interval,never
-	animation908.pattern1,overlay,90080,0,0,0
+	animation9080.interval,never
+	animation9080.pattern1,overlay,90080,0,0,0
 	
 	
 	//available 5
-	animation909.interval,never
-	animation909.pattern1,overlay,90090,0,0,0
+	animation9090.interval,never
+	animation9090.pattern1,overlay,90090,0,0,0
 	
 	//not available 5
-	animation910.interval,never
-	animation910.pattern1,overlay,90100,0,0,0
+	animation9100.interval,never
+	animation9100.pattern1,overlay,90100,0,0,0
 	
 	
 	//available 6
-	animation911.interval,never
-	animation911.pattern1,overlay,90110,0,0,0
+	animation9110.interval,never
+	animation9110.pattern1,overlay,90110,0,0,0
 	
 	//not available 6
-	animation912.interval,never
-	animation912.pattern1,overlay,90120,0,0,0
+	animation9120.interval,never
+	animation9120.pattern1,overlay,90120,0,0,0
 	
 	
 	//available 7
-	animation913.interval,never
-	animation913.pattern1,overlay,90130,0,0,0
+	animation9130.interval,never
+	animation9130.pattern1,overlay,90130,0,0,0
 	
 	//not available 7
-	animation914.interval,never
-	animation914.pattern1,overlay,90140,0,0,0
+	animation9140.interval,never
+	animation9140.pattern1,overlay,90140,0,0,0
 	
 	
 	//available 8
-	animation915.interval,never
-	animation915.pattern1,overlay,90150,0,0,0
+	animation9150.interval,never
+	animation9150.pattern1,overlay,90150,0,0,0
 	
 	//not available 8
-	animation916.interval,never
-	animation916.pattern1,overlay,90160,0,0,0
+	animation9160.interval,never
+	animation9160.pattern1,overlay,90160,0,0,0
+	
+	
 	
 	
 	//spoon
-	animation1000.interval,never
-	animation1000.pattern1,overlay,95000,0,0,0
+	animation9500.interval,never
+	animation9500.pattern1,overlay,95000,0,0,0
 	
 	//egg
-	animation1010.interval,never
-	animation1010.pattern1,overlay,95100,0,0,0
+	animation9600.interval,never
+	animation9600.pattern1,overlay,96000,0,0,0
 	
 	//pan
-	animation1020.interval,never
-	animation1020.pattern1,overlay,95200,0,0,0
+	animation9700.interval,never
+	animation9700.pattern1,overlay,97000,0,0,0
 	
 	//a secret third option
-	animation1030.interval,never
-	animation1030.pattern1,overlay,95300,0,0,0
+	animation9800.interval,never
+	animation9800.pattern1,overlay,98000,0,0,0
 	
 	//a secret fourth option?!
-	animation1040.interval,never
-	animation1040.pattern1,overlay,95400,0,0,0
+	animation9900.interval,never
+	animation9900.pattern1,overlay,99000,0,0,0
 	
 	
 

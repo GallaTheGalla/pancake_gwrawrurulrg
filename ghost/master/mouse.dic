@@ -21,8 +21,14 @@ OnMouseDoubleClick
 		}
 		else
 		{
-			//OnKeroMenu
-			OnMainMenu
+		
+			if reference4 == "Tools"{
+				OnToolsMenu
+			}elseif reference4 == "Charms"{
+				OnUpgradesMenu
+			}else{
+				OnMainMenu
+			}
 		}
 	}
 }
@@ -93,11 +99,13 @@ OnMouseLeaveAll
 
 OnSecondChange{
 	pancakes += getSecCakes
-	if second % 5 == 0{
-		OnClick(TOINT(toolsarray[0]))
-	}
 	
-	if second % 2 == 0{
+	if second % 4 == 0{
+	/*
+		if inmenu != 0{
+			"\C"
+		}
+		--
 		case inmenu{
 			when 1{
 				"\1\0%(OnMainMenu)\![unlock,balloonrepaint]"
@@ -109,6 +117,16 @@ OnSecondChange{
 				"\1\0%(OnToolsMenu)\![unlock,balloonrepaint]"
 			}
 		}
+		*/
+	}elseif second % 4 == 1{
+		checkAchievements
+	}elseif second % 4 == 2{
+		if inmenu == 0{
+			"%(shelf)%(tallstack)"
+		}
+		
+	}else{
+		OnClick(TOINT(toolsarray[0]))
 	}
 	
 
@@ -124,5 +142,19 @@ getSecCakes{
 	_res
 }
 
+//Non caller achievements
+checkAchievements{
+	_database = "ShinyData" + origin
+	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+		_thisitem = EVAL("%(_database)[_i]")
+		if _thisitem == ""{
+			_thisitem = ShinyDataNormal[_i]
+		}
+		_eval = EVAL(_thisitem[1])
+		if _eval && shiniesarray[_i] == 0{
+			AchievementPopup(_i)
+		}
+	}
+}
 
 

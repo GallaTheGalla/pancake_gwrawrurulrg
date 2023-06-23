@@ -29,7 +29,7 @@ favoredcolors
 //And if you're not interested in making word lists like this at all, you can just remove this whole file! Or use it for something else, you do you
 
 
-
+//these are not used currently
 normalBalloon{
 	if SHIORI3FW.BalloonName == "Dine-In Breakfast"{
 		"\b[0]"

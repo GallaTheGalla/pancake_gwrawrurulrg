@@ -6,77 +6,19 @@
 tallstack{
 	"\0\s[100]"
 	--
-	//all the pancakes
-	if pancakes > 0{
-		"\i[3000]"
+	_res = ""
+	for _i = 0; _i < 10; _i++{
+		_this = 30 + _i
+		_this = "%_this"
 		
-		--
-		//butter and syrup
-		"\i[3010]\i[3020]"
+		if pancakes >= POW(10,_i){
+			_res += "\i[" + _this + "00]"
+			_res += "\i[" + _this + topping + "]"
+			_res += "\i[" + _this + syrup + "]"
+		}
+	
 	}
-	--
-	if pancakes > 10{
-		"\i[3100]"
-		--
-		//butter and syrup
-		"\i[3110]\i[3120]"
-	}
-	--
-	if pancakes > 100{
-		"\i[3200]"
-		--
-		//butter and syrup
-		"\i[3210]\i[3220]"
-	}
-	--
-	if pancakes > 1000{
-		"\i[3300]"
-		--
-		//butter and syrup
-		"\i[3310]\i[3320]"
-	}
-	--
-	if pancakes > 10000{
-		"\i[3400]"
-		--
-		//butter and syrup
-		"\i[3410]\i[3420]"
-	}
-	--
-	if pancakes > 100000{
-		"\i[3500]"
-		--
-		//butter and syrup
-		"\i[3510]\i[3520]"
-	}
-	--
-	if pancakes > 1000000{
-		"\i[3600]"
-		--
-		//butter and syrup
-		"\i[3610]\i[3620]"
-	}
-	--
-	if pancakes > 10000000{
-		"\i[3700]"
-		--
-		//butter and syrup
-		"\i[3710]\i[3720]"
-	}
-	--
-	if pancakes > 100000000{
-		"\i[3800]"
-		--
-		//butter and syrup
-		"\i[3810]\i[3820]"
-	}
-	--
-	if pancakes > 1000000000{
-		"\i[3900]"
-		--
-		//butter and syrup
-		"\i[3910]\i[3920]"
-	}
+	_res
 
 }
 
@@ -98,17 +40,17 @@ shelf{
 			_surf = 1 + _i*2
 			
 			//can buy more
-			if pancakes > TOINT(_tooldata[2]) * (toolsarray[_i]+1){
+			if pancakes >= TOINT(_tooldata[2]) * (toolsarray[_i]+1){
 				if _surf < 10{
 					_surf = "0%_surf"
 				}
-				_res += "\i[9%(_surf)]"
+				_res += "\i[9%(_surf)0]"
 			}else{ //can't buy more
 				_surf++
 				if _surf < 10{
 				_surf = "0%_surf"
 				}
-				_res += "\i[9%(_surf)]"
+				_res += "\i[9%(_surf)0]"
 			}
 			
 		}
@@ -119,15 +61,11 @@ shelf{
 	//charms
 	//for each item
 	_res = ""
-	for _i = 0; _i < 4; _i++ {
+	for _i = 0; _i < 8; _i++ {
 		//if it is owned
 		if upgradelevels[_i] > 0{
-			_surf = _i
-
-			if _surf < 10{
-				_surf = "0%_surf"
-			}
-			_res += "\i[1%(_surf)%(upgradelevels[_i]-1)]"	
+			_surf = 95 + _i
+			_res += "\i[%(_surf)%(upgradelevels[_i]-1)0]"	
 		}
 	
 	}

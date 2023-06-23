@@ -17,16 +17,6 @@ initOnesArray{
 	_arr
 }
 
-UpgradeSectionTitles : array{
-	"Spoon"
-	"Egg"
-	"Pans"
-	"Tractor"
-	"Baseball Bat"
-	"Googly Eye"
-	
-
-}
 
 
 
@@ -42,15 +32,77 @@ SpoonUpgradeData : array{
 }
 
 //same structure as above
-CubeUpgradeData : array{
-	"I Can't Believe It's Not Ice,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.05),Horrendously flimsy."
-	"Ice Cube,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.1),Made of melted pennies."
-	"Reusable Ice Cube,0,100,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.2),At least this one is normal?"
-	"Reinforced Ice Cube,0,200,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Cube Charm,0,400,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Cube Charm,0,666,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(2.0),Ascend."
+EggUpgradeData : array{
+	"An Egg,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Egg,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.1),Made of melted pennies."
+	"Eggilouasrgibsfdas,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.2),At least this one is normal?"
+	"shit it hatched,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.3),At least this one is normal?"
+	"this. this is a goose,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.5),At least this one is normal?"
+	"A PHOENIX????,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(2.0),Ascend."
 
 }
+
+
+//same structure as above
+PanUpgradeData : array{
+	"Pan,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.05),Horrendously flimsy."
+	"Pansexual,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.1),Made of melted pennies."
+	"Silver Pan,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.2),At least this one is normal?"
+	"Gold Pan,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Pan,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Pan,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+HatUpgradeData : array{
+	"Sunny Hat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.05),Horrendously flimsy."
+	"Hat With Flower,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.1),Made of melted pennies."
+	"Silver Hat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.2),At least this one is normal?"
+	"Gold Hat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Hat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Hat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+BatUpgradeData : array{
+	"Bat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.05),Horrendously flimsy."
+	"Live Bats The Animal,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.1),Made of melted pennies."
+	"Silver Bat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.2),At least this one is normal?"
+	"Gold Bat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Bat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Bat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+GooglyUpgradeData : array{
+	"Googly Eyes,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Googly,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
+	"Silver Googly,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
+	"Gold Googly,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Googly,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Googly,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
+
+}
+
+
+
+//same structure as above
+BalloonUpgradeData : array{
+	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.1),Made of melted pennies."
+	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.2),At least this one is normal?"
+	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(2.0),Ascend."
+
+}
+
 
 //Clicks -- deprecated
 UpgradeData  : array{
@@ -75,7 +127,7 @@ ToolsData : array{
 
 }
 
-
+/*
 CallFriendShinyData : array{
 	"Maintenance Man,Jerry from maintenance."
 	"Joe Mama,Really going to make this joke here?"
@@ -91,17 +143,41 @@ CallFriendShinyData : array{
 	"Mirror Mirror,You called your own phone number."
 	"Spaghetti Monster,It's real????"
 	"Sans!? Sans Undertale!?,Someone's having a bad time."
-	
+	"Who Will Pay The Toll?,Called three abstract concepts having an argument."
+
+}
+*/
+
+//Shinies all origin specific overloads
+
+Origins : array{
+	"Normal"
+	"Supervillain"
+}
+
+
+//name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
+ShinyDataNormal : array{
+	"Call Your Pet,toolsarray[0]>0,N/A,N/A,img,img,Kitty?"
+	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,img,img,Down the streeeet"
+	"Iiiiits TONY!,toolsarray[0]>100,N/A,N/A,img,img,TONY???"
+	"First Pancake,pancakes>0,N/A,N/A,img,img,Start your pancake shop."
+	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,Cook 50 pancakes."
+	"Spam Caller,toolsarray[0]>=200,N/A,N/A,img,img,Call friends for help 200 times."
+	"Chilly!,toolsarray[1]>=50,N/A,N/A,img,img,Buy 50 whole refrigerators. Why? I wish I knew."
+	"Heating Up,toolsarray[2]>=50,Syrups,Maple,10,img,img,Buy 50 stoves. You could build a robot out of these."
 
 }
 
-//deprecated for now, will be separate from callfriend shinies
-ShinyData : array{
-	"Joe Mama,0,10,10,img/phone.png,Ringading!"
-	"Fridge,0,100,25,img/fridge.png,Brrrrrrrrr...atter"
-	"Stove,0,1000,50,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
-	"Wheat Field,0,10000,125,img/field.png,They slowly wave..."
-	"Pancake Batter Shooter,0,100000,200,img/shooter.png,Swing batta batta!"
-	"Weird Looking Trashbot,0,1000000,400,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
+
+ShinyDataSupervillain : array{
+	"Call Your Evil Pet,toolsarray[0]>0,N/A,N/A,img,img,YOUR PIRHANA"
+	"In The Evil Neighborhood,toolsarray[0]>10,N/A,N/A,img,img,YO"
+	"Iiiiits (Evil) TONY!,toolsarray[0]>100,N/A,N/A,img,img,TONY!!!!!!!!???"
+	""
+	""
+	""
+	""
+	""
 
 }
