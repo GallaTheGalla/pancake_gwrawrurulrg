@@ -23,6 +23,8 @@ OnFirstBoot_VARIABLES{
 	fontheight = "+0" //relative
 	goreallowed = 0
 	
+	columnoverride = 0
+	
 	clickmultiplier = 1.0
 	clickmultbonus = 0.0
 	
@@ -30,7 +32,7 @@ OnFirstBoot_VARIABLES{
 	toolsarray = initZeroArray(10)
 	
 	shiniesarray = initZeroArray(50)
-	upgradelevels = initZeroArray(8)
+	upgradelevels = initZeroArray(15)
 	
 	//fridgemult = 1
 	//stovemult = 1
@@ -50,8 +52,11 @@ OnFirstBoot_VARIABLES{
 	topping = ""
 	syrup = ""
 	
-	
 
+}
+
+checkColumnSetup{
+	columnoverride || (SHIORI3FW.BalloonName == "Dine-In Breakfast" && TOINT(REPLACE(fontheight,"+","")) <= 2)
 }
 
 getTotalClickMult{

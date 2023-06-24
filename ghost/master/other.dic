@@ -161,3 +161,19 @@ OnNotifyUserInfo : void
 	}
 	SHIORI3FW.UserSex = reference[3]
 }
+
+
+
+checkBalloonOpen{
+	_index = ASEARCH(var.req.key,"Status")
+	if var.req.value[_index] == "talking" || var.req.value[_index] == "choosing"{
+		1
+	}else{
+		0
+	}
+
+}
+
+
+
+

@@ -33,6 +33,12 @@ OnMouseDoubleClick
 	}
 }
 
+OnNeedlePoke{
+	OnClick(1)
+	--
+	"\_q%(tallstack)total pancakes: %TOINT(pancakes)"
+}
+
 OnMouseClick
 {
 	inmenu = 0
@@ -122,7 +128,7 @@ OnSecondChange{
 		checkAchievements
 	}elseif second % 4 == 2{
 		if inmenu == 0{
-			"%(shelf)%(tallstack)"
+			if checkBalloonOpen == 0; "%(shelf)%(tallstack)"
 		}
 		
 	}else{

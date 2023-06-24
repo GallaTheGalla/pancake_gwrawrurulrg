@@ -3,7 +3,7 @@
 
 //quick back
 nvm{
-	"\n[half]You have %TOINT(pancakes) pancakes.\n\n[half]\![*]\q[Nevermind,OnBlank]"	
+	"\n[half]You have %TOINT(pancakes) pancakes.\n\n[half]\![*]\q[Nevermind,OnBlank]   \![*]\q[Main Menu,OnMainMenu]"	
 }
 
 blank{
@@ -20,17 +20,16 @@ SakuraMenuGreetings : nonoverlap
 OnMainMenu : all
 {
 	inmenu = 1
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\![set,autoscroll,disable]\f[height,%fontheight]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[0]\![set,autoscroll,disable]\f[height,%fontheight]"
 //	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
-	"\![*]\q[Tools,OnToolsMenu]\n"	
-	"\![*]\q[Shinies,OnShiniesMenu]\n"
-	"\![*]\q[Choose Additions,OnAdditionsMenu]\n\n"
-	"\![*]\q[Upgrades,OnUpgradesMenu]\n\n"
+	"\![*]\q[Tools,OnToolsMenu]         \![*]\q[Upgrades,OnUpgradesMenu]\n"	
+	"\![*]\q[Shinies,OnShiniesMenu]       \![*]\q[Additions,OnAdditionsMenu]\n"
+	"\n"
 
 	
 	"\![*]\q[Settings,OnSettingsMenu]\n\n"
@@ -170,13 +169,23 @@ OnSettingsMenu{
 		"Click Type: \![*]\q[Double,OnFlipClickType]"
 	}
 	--
+	"\n"
+	--
 	if goreallowed == 0{
 		"Gore Allowed: \![*]\q[Off,OnFlipGore]"
 	}else{
 		"Gore Allowed: \![*]\q[On,OnFlipGore]"
 	}
 	--
-	"\n%(OnTalkRateDisplay)"
+	"\n"
+	--
+	if columnoverride == 0{
+		"Column Override: \![*]\q[Off,OnFlipColumns]"
+	}else{
+		"Column Override: \![*]\q[On,OnFlipColumns]"
+	}
+	--
+	"\nTalk Rate:\n%(OnTalkRateDisplay)"
 	--
 	"\n\n[half]\![*]\q[Reset,OnReset]"
 	--
@@ -259,6 +268,17 @@ OnFlipGore{
 	OnSettingsMenu
 }
 
+
+OnFlipColumns{
+	if columnoverride == 0{
+		columnoverride = 1
+	}else{
+		columnoverride = 0
+	}
+	OnSettingsMenu
+}
+
+
 OnReset{
 	"\_qAre you sure?\n"
 	--
@@ -317,168 +337,85 @@ OnUpgradesMenu : all {
 
 
 OnUpgradesMenu : all {
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\![set,autoscroll,disable]\f[height,%fontheight]UPGRADES\n\n[half]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\![set,autoscroll,disable]\f[align,center]\f[height,%fontheight]\f[height,+3]\f[bold,1]~UPGRADES~\f[height,-3]\f[bold,0]\n\n"
 	inmenu = 2
-	//SPOONS
-	_this = SpoonUpgradeData[0]
-	if toolsarray[0] >= TOINT(_this[2]){
-		"   SPOONS\n"
-		_current = upgradelevels[0]
-		_next = SpoonUpgradeData[_current]
-		_this = SpoonUpgradeData[_current-1]
-		if _current == ARRAYSIZE(SpoonUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuySpoonUpgrade,%_current]"
+	
+	//\q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i-1)]
+	//\__q[OnUpgradeInfo,%_subdbname,%(_i)]\![*]\__q
+	
+
+	for _i = 0; _i < ARRAYSIZE(UpgradeDatabases); _i++{
+		_database = UpgradeDatabases[_i]
+		//_thisitem = ToolsData[_i]
+		_offset = 17 * ((_i) % 2)
+		
+		
+		_current = upgradelevels[_i]
+		_subdbname = _database[1]
+		_next = EVAL("%_subdbname[%_current]")
+		_this = EVAL("%_subdbname[%(_current-1)]")
+		
+		_unlocked = EVAL("%_database[3]")
+		
+		if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em,@-1.5em]"
+		"\f[align,left]\f[bold,1]  %_database[0]\f[bold,0]\n"
+		
+		if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+
+		if _unlocked == 0{
+		
+			"        ??????????\n[-25]"
+			if checkColumnSetup && _i % 2 == 0{
+				"\n[-50]"
 			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+				"\n"
 			}
 			
 		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuySpoonUpgrade,%_current]"
+			if _current == ARRAYSIZE(EVAL(_database[1])){
+				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
+				"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)] "
+				
+				if checkColumnSetup && _i % 2 == 1{
+					"\n\_l[%(_offset)em,@0]      (Maxed Out)"
+				} else{
+					"\n      (Maxed Out)\n[-200]"
+				}
+		
+				
+				
+			}
+			elseif _this != ""{
+				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
+				if pancakes >= TOINT(_next[3]){
+					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)]\n"
+					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+					"     \__q[OnUpgradeInfo,%_subdbname,%(_current)]\![*]\__q\q[Buy %(_next[0]),%_database[2],%_current]"
+				}else{
+					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)]\n"
+					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+					"     \__q[OnUpgradeInfo,%_subdbname,%(_current)]\![*]\__q\f[color,disable]Buy %(_next[0])\f[color,default]"
+				}
+				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-2.5em]"
+				
+				
 			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+				if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+				if pancakes >= TOINT(_next[3]){
+					"      \![*]\q[Buy %(_next[0]),%_database[2],%_current]"
+				}else{
+					"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
+				}
+				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-1.5em]"
 			}
 		}
 		
+		"\n\n[40]"
+
+	
 	}
 	
-	//EGG
-	_this = EggUpgradeData[0]
-	if toolsarray[1] >= TOINT(_this[2]){
-		"\n\n[half]   EGG\n"
-		_current = upgradelevels[1]
-		_next = EggUpgradeData[_current]
-		_this = EggUpgradeData[_current-1]
-		if _current == ARRAYSIZE(EggUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyEggUpgrade,%_current]"
-			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-			
-		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuyEggUpgrade,%_current]"
-			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-		}
-		
-	}
 	
-	//Pan
-	_this = PanUpgradeData[0]
-	if toolsarray[2] >= TOINT(_this[2]){
-		"\n\n[half]   PAN\n"
-		_current = upgradelevels[2]
-		_next = PanUpgradeData[_current]
-		_this = PanUpgradeData[_current-1]
-		if _current == ARRAYSIZE(PanUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyPanUpgrade,%_current]"
-			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-			
-		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuyPanUpgrade,%_current]"
-			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-		}
-		
-	}
-	
-	//Hat
-	_this = HatUpgradeData[0]
-	if toolsarray[3] >= TOINT(_this[2]){
-		"\n\n[half]   HAT\n"
-		_current = upgradelevels[3]
-		_next = HatUpgradeData[_current]
-		_this = HatUpgradeData[_current-1]
-		if _current == ARRAYSIZE(HatUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyHatUpgrade,%_current]"
-			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-			
-		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuyHatUpgrade,%_current]"
-			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-		}
-		
-	}
-	//Bat
-	_this = BatUpgradeData[0]
-	if toolsarray[4] >= TOINT(_this[2]){
-		"\n\n[half]   BAT\n"
-		_current = upgradelevels[4]
-		_next = BatUpgradeData[_current]
-		_this = BatUpgradeData[_current-1]
-		if _current == ARRAYSIZE(BatUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyBatUpgrade,%_current]"
-			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-			
-		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuyBatUpgrade,%_current]"
-			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-		}
-		
-	}
-	
-	//Googly
-	_this = GooglyUpgradeData[0]
-	if toolsarray[5] >= TOINT(_this[2]){
-		"\n\n[half]   GOOGLY EYES\n"
-		_current = upgradelevels[5]
-		_next = GooglyUpgradeData[_current]
-		_this = GooglyUpgradeData[_current-1]
-		if _current == ARRAYSIZE(GooglyUpgradeData){
-			"      Owns: %(_this[0])       (Maxed Out)"
-		}
-		elseif _this != ""{
-			if pancakes >= TOINT(_next[3]){
-				"      Owns: %(_this[0])\n       \![*]\q[Buy %(_next[0]),OnBuyGooglyUpgrade,%_current]"
-			}else{
-				"      Owns: %(_this[0])\n       \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-			
-		}else{
-			if pancakes >= TOINT(_next[3]){
-				"      \![*]\q[Buy %(_next[0]),OnBuyGooglyUpgrade,%_current]"
-			}else{
-				"      \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
-			}
-		}
-		
-	}
 	
 	
 	
@@ -557,6 +494,76 @@ OnBuyGooglyUpgrade{
 	"%(OnUpgradesMenu)"
 }
 
+OnBuyBalloonUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[6] = TOINT(upgradelevels[6]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+OnBuySummoningUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[7] = TOINT(upgradelevels[7]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+OnBuyPlaqueUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[8] = TOINT(upgradelevels[8]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+OnBuyNeedleUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[9] = TOINT(upgradelevels[9]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+OnBuyBellUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[10] = TOINT(upgradelevels[10]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
+
+
+//refercne1 is index, reference0 is subdbname
+OnUpgradeInfo : all {
+	"\_q"
+	_stage = upgradelevels[reference1]
+	_thisitem = EVAL("%(reference0)[%_stage]")
+	//"%_stage\n%_thisitem"
+	"\f[bold,1]%_thisitem[0] \f[bold,0](Stage %_stage)\n\n[half]"
+	"%_thisitem[7]\n\n[half]"
+	
+	"\n%(nvm)   \![*]\q[Back,OnUpgradesMenu]"
+
+}
+
 
 
  
@@ -574,20 +581,26 @@ OnBuyUpgrade{
 	"%(OnUpgradesMenu)\![unlock,balloonrepaint]"
 }
 
+
+//will use checkColumnSetup
+
+
 OnToolsMenu : all {
 	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\f[height,%fontheight]\![set,autoscroll,disable]"
+	"\f[align,center]\f[height,+3]\f[bold,1]~TOOLS~\f[bold,0]\f[height,-3]\n\f[align,left]"
 	inmenu = 3
 	//HANDLE PHONE
 	_thisitem = ToolsData[0]
 	if toolsarray[0] > 0 {
 		//if the user has at least 1
-			
+		"\f[bold,1]\__q[OnToolInfo,0]\![*]\__q%(toolsarray[0]) Phones\f[bold,0]\n"
+		"   (%TOINT(_thisitem[2]*(toolsarray[0]+1)) apiece)\n"
 		if pancakes >= TOINT(_thisitem[2] * (toolsarray[0]+1)){
 			//can buy more
-			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2]*(toolsarray[0]+1))     (%(toolsarray[0]) Times)\n"
+			"\q[ - ,OnSellTool,1,0] \q[ -- ,OnSellTool,10,0] Buy \q[ + ,OnBuyTool,1,0] \q[ ++ ,OnBuyTool,10,0]\n"
 		}else{
 			//broke
-			"Phone a Friend for %TOINT(_thisitem[2]*(toolsarray[0]+1))     (%(toolsarray[0]) Times)\n"
+			"\q[ - ,OnSellTool,1,0] \q[ -- ,OnSellTool,10,0] Buy \f[color,disable] +   ++ \f[color,default]\n"
 		}
 		
 	}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
@@ -595,45 +608,125 @@ OnToolsMenu : all {
 			"\![*]\q[Phone A Friend,OnPhoneBuy,0] for %TOINT(_thisitem[2])\n"
 		
 	}else{
-		"Can't Afford To Fix Your Phone\n"
+		"\f[bold,1]You Can't Afford To Fix Your Phone\f[bold,0]\n"
 	}
+	if checkColumnSetup; "\_l[15em,1.5em]"
 	
+	
+	//\__q[OnToolInfo,%_i]\![*]\__q
 	
 	//HANDLE REST
 	for _i = 1; _i < ARRAYSIZE(ToolsData); _i++{
 		_thisitem = ToolsData[_i]
+		_nextitem = ToolsData[_i+1]
+		_offset = 15 * (_i % 2)
 		if toolsarray[_i] > 0 {
 			//if the user has at least 1
-				
+				//if the user has at least 1
+			if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+			
+			"\f[bold,1]\__q[OnToolInfo,%_i]\![*]\__q%(toolsarray[_i]) %(_thisitem[0])\f[bold,0]\n"
+			
+			
+			if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+			
+			"    (%TOINT(_thisitem[2]*(toolsarray[_i]+1)) apiece)\n"
+			
 			if pancakes >= TOINT(_thisitem[2] * (toolsarray[_i]+1)){
 				//can buy more
-				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2]*(toolsarray[_i]+1))     (%(toolsarray[_i]) Owned)  (x%FormatTwoDec(pertoolmult[_i]) pancakes)\n"
+				if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+				"\q[ - ,OnSellTool,1,%_i] \q[ -- ,OnSellTool,10,%_i] Buy \q[ + ,OnBuyTool,1,%_i] \q[ ++ ,OnBuyTool,10,%_i]\n\n[half]"
+				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-3.5em]"
 			}else{
 				//broke
-				"Buy %(_thisitem[0]) for %TOINT(_thisitem[2]*(toolsarray[_i]+1))     (%(toolsarray[_i]) Owned)      (x%FormatTwoDec(pertoolmult[_i]) pancakes)\n"
+				if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+				"\q[ - ,OnSellTool,1,%_i] \q[ -- ,OnSellTool,10,%_i] Buy \f[color,disable] +   ++ \f[color,default]\n\n[half]"
+				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-3.5em]"
 			}
+			
 			
 		}elseif pancakes >= TOINT(_thisitem[2]){ //affordable and none
 			//not unlocked
-				"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,%_i] for %TOINT(_thisitem[2])\n"
 			
+				
+				if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+				
+					"\![*]\q[Buy %(_thisitem[0]),OnBuyTool,1,%_i]\n"
+				
+				if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
+					"    (%TOINT(_thisitem[2]*(toolsarray[_i]+1)) pancakes)\n"
+				
+				if  pancakes >= TOINT(_nextitem[2]){
+					if checkColumnSetup && _i % 2 == 0{
+						"\_l[@0,@-2em]"
+					}else{
+						"\n"
+					}
+					
+				}else{
+				//	"\_l[@0,@1em]"
+				}
+				
 		}else{
-			"????\n"
+		//	"????\n"
 		}
 	
 	}
-	"\n[half]%(nvm)    \![*]\q[Refresh,OnToolsMenu]"
+	"\n\n\n[half]%(nvm)    \![*]\q[Refresh,OnToolsMenu]"
 
 }
 
 OnBuyTool{
-	_index = TOINT(reference0)
+	_index = TOINT(reference1)
+	_amt = TOINT(reference0)
 	_thisitem = ToolsData[_index]
-	toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
-	pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+	
+	while _amt > 0 && pancakes > TOINT(_thisitem[2] * toolsarray[_index]){
+			pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+			toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
+			_amt--
+	}
+
 	"%(OnToolsMenu)\![unlock,balloonrepaint]"
 
 }
+
+OnSellTool{
+	_index = TOINT(reference1)
+	_amt = TOINT(reference0)
+	_thisitem = ToolsData[_index]
+	
+	
+	while _amt > 0 && toolsarray[_index] > 0{
+			pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+			toolsarray[_index] = (TOINT(toolsarray[_index]) - 1)
+			_amt--
+	}
+	
+
+	"%(OnToolsMenu)\![unlock,balloonrepaint]"
+
+}
+
+
+
+
+//reference0 is index
+OnToolInfo : all {
+	"\_q"
+	_index = reference0
+	_thisitem =  ToolsData[_index]
+	"\f[bold,1]%_thisitem[0] \f[bold,0](Own: %toolsarray[_index])\n\n[half]"
+	"  \f[italic,1]%_thisitem[5]\f[italic,0]\n\n[half]"
+	
+	"Upgrades are giving this a multiplier of %pertoolmult[_i]."
+	
+	"\n\n%(nvm)   \![*]\q[Back,OnToolsMenu]"
+
+}
+
+
+
 
 
 OnPhoneBuy{

@@ -18,6 +18,20 @@ initOnesArray{
 }
 
 
+UpgradeDatabases : array{
+	"SPOONS,SpoonUpgradeData,OnBuySpoonUpgrade,toolsarray[0]>10"
+	"EGG,EggUpgradeData,OnBuyEggUpgrade,toolsarray[1]>10"
+	"PAN,PanUpgradeData,OnBuyPanUpgrade,toolsarray[2]>10"
+	"HAT,HatUpgradeData,OnBuyHatUpgrade,toolsarray[3]>10"
+	"BAT,BatUpgradeData,OnBuyBatUpgrade,toolsarray[4]>10"
+	"GOOGLY EYES,GooglyUpgradeData,OnBuyGooglyUpgrade,toolsarray[5]>10"
+	"BALLOON,BalloonUpgradeData,OnBuyBalloonUpgrade,toolsarray[6]>10"
+	"SUMMONING,SummoningUpgradeData,OnBuySummoningUpgrade,toolsarray[7]>10"
+	"PLAQUE,PlaqueUpgradeData,OnBuyPlaqueUpgrade,incarnations>10"
+	"NEEDLE,NeedleUpgradeData,OnBuyNeedleUpgrade,incarnations>10"
+	"BELL,BellUpgradeData,OnBuyBellUpgrade,incarnations>10"
+}
+
 
 
 //name,reserved,numofbasetoolunlocks,cost,enabledimg,disabledimg,effect,flavortext
@@ -57,36 +71,36 @@ PanUpgradeData : array{
 
 //same structure as above
 HatUpgradeData : array{
-	"Sunny Hat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.05),Horrendously flimsy."
-	"Hat With Flower,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.1),Made of melted pennies."
-	"Silver Hat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.2),At least this one is normal?"
-	"Gold Hat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Hat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Hat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(2.0),Ascend."
+	"Sunny Hat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(1.05),Horrendously flimsy."
+	"Hat With Flower,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(1.1),Made of melted pennies."
+	"Silver Hat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(1.2),At least this one is normal?"
+	"Gold Hat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Hat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Hat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[3]=TOREAL(2.0),Ascend."
 
 }
 
 
 //same structure as above
 BatUpgradeData : array{
-	"Bat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.05),Horrendously flimsy."
-	"Live Bats The Animal,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.1),Made of melted pennies."
-	"Silver Bat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.2),At least this one is normal?"
-	"Gold Bat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Bat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Bat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(2.0),Ascend."
+	"Bat,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.05),Horrendously flimsy."
+	"Live Bats The Animal,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.1),Made of melted pennies."
+	"Silver Bat,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.2),At least this one is normal?"
+	"Gold Bat,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Bat,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Bat,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[4]=TOREAL(2.0),Ascend."
 
 }
 
 
 //same structure as above
 GooglyUpgradeData : array{
-	"Googly Eyes,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
-	"Copper Googly,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
-	"Silver Googly,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
-	"Gold Googly,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Googly,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Googly,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
+	"Googly Eyes,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Googly,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.1),Made of melted pennies."
+	"Silver Googly,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.2),At least this one is normal?"
+	"Gold Googly,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Googly,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Googly,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[5]=TOREAL(2.0),Ascend."
 
 }
 
@@ -94,12 +108,73 @@ GooglyUpgradeData : array{
 
 //same structure as above
 BalloonUpgradeData : array{
-	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.05),Horrendously flimsy."
-	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.1),Made of melted pennies."
-	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.2),At least this one is normal?"
-	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(2.0),Ascend."
+	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
+	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
+	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+SummoningUpgradeData : array{
+	if goreallowed == 0{
+		"Knife,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.05),Horrendously flimsy."
+		"Copper Knife,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.1),Made of melted pennies."
+		"Silver Knife,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.2),At least this one is normal?"
+		"Gold Knife,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.3),At least this one is normal?"
+		"Bismuth Knife,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.5),At least this one is normal?"
+		"Diamond Knife,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(2.0),Ascend."
+	}else{
+		"Heart,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.05),Horrendously flimsy."
+		"Copper Heart,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.1),Made of melted pennies."
+		"Silver Heart,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.2),At least this one is normal?"
+		"Gold Heart,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.3),At least this one is normal?"
+		"Bismuth Heart,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(1.5),At least this one is normal?"
+		"Diamond Heart,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[7]=TOREAL(2.0),Ascend."
+	
+	}
+	
+
+}
+
+
+
+
+//same structure as above
+PlaqueUpgradeData : array{
+	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
+	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
+	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+NeedleUpgradeData : array{
+	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
+	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
+	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
+
+}
+
+
+//same structure as above
+BellUpgradeData : array{
+	"Balloon,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.05),Horrendously flimsy."
+	"Copper Balloon,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.1),Made of melted pennies."
+	"Silver Balloon,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.2),At least this one is normal?"
+	"Gold Balloon,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.3),At least this one is normal?"
+	"Bismuth Balloon,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(1.5),At least this one is normal?"
+	"Diamond Balloon,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[6]=TOREAL(2.0),Ascend."
 
 }
 
@@ -119,11 +194,11 @@ ToolsData : array{
 	"Phone A Friend,0,10,10,img/phone.png,Ringading!"
 	"Fridge,0,100,25,img/fridge.png,Brrrrrrrrr...atter"
 	"Stove,0,1000,50,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
-	"Wheat Field,0,10000,125,img/field.png,They slowly wave..."
+	"Pancake Garden,0,10000,125,img/field.png,They slowly wave..."
 	"Pancake Batter Shooter,0,100000,200,img/shooter.png,Swing batta batta!"
 	"Weird Looking Trashbot,0,1000000,400,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
 	"Pancake Circuses,0,10000000,750,img/shooter.png,why is it on fire"
-	"Capitalism,0,1000000000,1000,img/trashbot.png,You can even buy it as a concept?"
+	"Pancake Monster,0,1000000000,1000,img/trashbot.png,You can even buy it as a concept?"
 
 }
 

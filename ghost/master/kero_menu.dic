@@ -49,6 +49,8 @@ OnShiniesMenu : all {
 	"\_q\b[2]\![set,autoscroll,disable]"
 	_database = "ShinyData" + origin
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+		_offset = 17 * ((_i) % 2)
+		
 		
 		_thisitem = EVAL("%(_database)[_i]")
 		if _thisitem == ""{
@@ -56,11 +58,13 @@ OnShiniesMenu : all {
 		}
 		if shiniesarray[_i] == 0{
 			_qver = strToQuestionMarks(_thisitem[0])
+			"\![*]"
 			"%_qver\n"
 		}else{
+			"\![*]"
 			"%(_thisitem[0])\n"
 		}
-	
+		if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em,@-1em]"
 	}
 
 }
@@ -69,10 +73,11 @@ OnShiniesMenu : all {
 
 
 OnAdditionsMenu : all{
+	"\b[2]\_q\f[align,center]\f[bold,1]\f[height,+3]~ADDITIONS~\f[height,-3]\n\f[align,left]"
 	inmenu = 0
 	_database = "ShinyData" + origin
 	//SYRUPS
-	"\b[2]\_qSYRUPS%(tallstack)\n"
+	"\n[30]SYRUPS\f[bold,0]%(tallstack)\n\n[half]"
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
 		_thisitem = EVAL("%(_database)[_i]")
 		if _thisitem == ""{
@@ -94,18 +99,22 @@ OnAdditionsMenu : all{
 		}
 	
 	}
-	"\n\n[half]TOPPINGS\n"
+	if checkColumnSetup; "\n\n[half]\_l[15em,1.5em]"
+	"\f[bold,1]TOPPINGS\f[bold,0]"
 	//TOPPINGS
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+		
 		_thisitem = EVAL("%(_database)[_i]")
 		if _thisitem == ""{
 			_thisitem = ShinyDataNormal[_i]
 		}
 		if _thisitem[2] == "Toppings"{
+			
 			if shiniesarray[_i] == 0{
 				_qver = strToQuestionMarks(_thisitem[3])
 				"%_qver\n"
 			}else{
+				if checkColumnSetup; "\n\n[half]\_l[15em,@0]"
 				if topping != _thisitem[4]{
 					"\![*]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),%(_thisitem[4])]\n"
 				}else{
@@ -118,8 +127,6 @@ OnAdditionsMenu : all{
 	
 	}
 		
-	
-	
 	"\n\n[half]%(nvm)    \![*]\q[Back,OnMainMenu]"
 
 }
