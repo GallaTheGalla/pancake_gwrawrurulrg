@@ -192,13 +192,13 @@ UpgradeData  : array{
 //name,specialflag/reserved,basecost,iconlocation,flavortext
 ToolsData : array{
 	"Phone A Friend,0,10,10,img/phone.png,Ringading!"
-	"Fridge,0,100,25,img/fridge.png,Brrrrrrrrr...atter"
-	"Stove,0,1000,50,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
-	"Pancake Garden,0,10000,125,img/field.png,They slowly wave..."
-	"Pancake Batter Shooter,0,100000,200,img/shooter.png,Swing batta batta!"
-	"Weird Looking Trashbot,0,1000000,400,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
-	"Pancake Circuses,0,10000000,750,img/shooter.png,why is it on fire"
-	"Pancake Monster,0,1000000000,1000,img/trashbot.png,You can even buy it as a concept?"
+	"Fridge,0,100,20,img/fridge.png,Brrrrrrrrr...atter"
+	"Stove,0,1000,30,img/stove.png,OH GOSH OH GEEZ IT'S ON FIRE"
+	"Pancake Garden,0,10000,75,img/field.png,They slowly wave..."
+	"Pancake Batter Shooter,0,100000,150,img/shooter.png,Swing batta batta!"
+	"Weird Looking Trashbot,0,1000000,300,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
+	"Pancake Circuses,0,10000000,500,img/shooter.png,why is it on fire"
+	"Pancake Monster,0,1000000000,800,img/trashbot.png,You can even buy it as a concept?"
 
 }
 

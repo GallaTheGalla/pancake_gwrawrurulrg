@@ -4,6 +4,7 @@ OnFirstBoot
 	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
 	stroke = 0
 	LastTalk = ""
+	incarnations = -1
 	
 	OnFirstBoot_VARIABLES
 	
@@ -14,9 +15,11 @@ OnFirstBoot
 OnFirstBoot_VARIABLES{
 	pancakes = 0
 	totalpancakes = 0
-	incarnations = 0
+	
+	incarnations++
 	
 	origin = "Normal"
+	lifeinplastic = RAND(8)
 	
 	//settings
 	clicktype = 0 //0 is single click

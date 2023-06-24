@@ -45,11 +45,13 @@ strToQuestionMarks{
 
 
 OnShiniesMenu : all {
-	inmenu = 0
-	"\_q\b[2]\![set,autoscroll,disable]"
+	inmenu = 5
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[2]\f[height,%fontheight]\![set,autoscroll,disable]"
+	"\f[align,center]\f[height,+3]\f[bold,1]~SHINIES~\f[bold,0]\f[height,-3]\n\f[align,left]"
+	"\n[half]"
 	_database = "ShinyData" + origin
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
-		_offset = 17 * ((_i) % 2)
+		_offset = 15 * ((_i) % 2)
 		
 		
 		_thisitem = EVAL("%(_database)[_i]")
@@ -59,13 +61,33 @@ OnShiniesMenu : all {
 		if shiniesarray[_i] == 0{
 			_qver = strToQuestionMarks(_thisitem[0])
 			"\![*]"
-			"%_qver\n"
+			"%_qver"
 		}else{
-			"\![*]"
-			"%(_thisitem[0])\n"
+			"\__q[OnShinyInfo,%_i]\![*]\__q"
+			"%(_thisitem[0])"
 		}
-		if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em,@-1em]"
+		if checkColumnSetup && _i % 2 == 0 {
+			"\_l[%(_offset)em,@0em]                           "
+		}else{
+			"\n"
+		} 
 	}
+
+}
+
+
+OnShinyInfo : all {
+	"\_q"
+	_database = "ShinyData" + origin
+	_thisitem = EVAL("%(_database)[reference0]")
+	if _thisitem == ""{
+		_thisitem = ShinyDataNormal[reference0]
+	}
+	//"%_stage\n%_thisitem"
+	"\f[bold,1]%_thisitem[0] \f[bold,0]\n\n[half]"
+	"%_thisitem[6]\n\n[half]"
+	
+	"\n%(nvm)   \![*]\q[Back,OnShiniesMenu]"
 
 }
 
@@ -91,7 +113,7 @@ OnAdditionsMenu : all{
 				if syrup != _thisitem[4]{
 					"\![*]\q[%(_thisitem[3]),OnChangeSyrup,%(_thisitem[2]),%(_thisitem[4])]\n"
 				}else{
-					"\![*]\q[%(_thisitem[3]),OnChangeSyrup,%(_thisitem[2]),'']\n"
+					"\![*]\f[color,disable]\q[%(_thisitem[3]),OnChangeSyrup,%(_thisitem[2]),'']\f[color,default]\n"
 				}
 				
 			}

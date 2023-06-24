@@ -388,13 +388,13 @@ OnUpgradesMenu : all {
 			elseif _this != ""{
 				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
 				if pancakes >= TOINT(_next[3]){
-					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)]\n"
+					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current)]\n"
 					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
-					"     \__q[OnUpgradeInfo,%_subdbname,%(_current)]\![*]\__q\q[Buy %(_next[0]),%_database[2],%_current]"
+					"     \__q[OnUpgradeInfo,%_subdbname,%(_current-1)]\![*]\__q\q[Buy %(_next[0]),%_database[2],%_current]"
 				}else{
-					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)]\n"
+					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current)]\n"
 					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
-					"     \__q[OnUpgradeInfo,%_subdbname,%(_current)]\![*]\__q\f[color,disable]Buy %(_next[0])\f[color,default]"
+					"     \__q[OnUpgradeInfo,%_subdbname,%(_current-1)]\![*]\__q\f[color,disable]Buy %(_next[0])\f[color,default]"
 				}
 				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-2.5em]"
 				
