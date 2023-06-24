@@ -52,7 +52,7 @@ OnMouseClick
 			if clicktype == 0{
 				OnClick(1)
 				--
-				"\_q%(shelf)%(tallstack)\b[6]total pancakes: %TOINT(pancakes)"
+				if !checkBalloonOpen; "\_q%(shelf)%(tallstack)\b[6]Total Pancakes: %TOINT(pancakes)"
 			}
 			
 		}

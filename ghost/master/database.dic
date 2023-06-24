@@ -19,29 +19,31 @@ initOnesArray{
 
 
 UpgradeDatabases : array{
-	"SPOONS,SpoonUpgradeData,OnBuySpoonUpgrade,toolsarray[0]>10"
-	"EGG,EggUpgradeData,OnBuyEggUpgrade,toolsarray[1]>10"
-	"PAN,PanUpgradeData,OnBuyPanUpgrade,toolsarray[2]>10"
-	"HAT,HatUpgradeData,OnBuyHatUpgrade,toolsarray[3]>10"
-	"BAT,BatUpgradeData,OnBuyBatUpgrade,toolsarray[4]>10"
-	"GOOGLY EYES,GooglyUpgradeData,OnBuyGooglyUpgrade,toolsarray[5]>10"
-	"BALLOON,BalloonUpgradeData,OnBuyBalloonUpgrade,toolsarray[6]>10"
-	"SUMMONING,SummoningUpgradeData,OnBuySummoningUpgrade,toolsarray[7]>10"
-	"PLAQUE,PlaqueUpgradeData,OnBuyPlaqueUpgrade,incarnations>10"
-	"NEEDLE,NeedleUpgradeData,OnBuyNeedleUpgrade,incarnations>10"
-	"BELL,BellUpgradeData,OnBuyBellUpgrade,incarnations>10"
+	"SPOONS,SpoonUpgradeData,OnBuySpoonUpgrade,toolsarray[0]>=10"
+	"EGG,EggUpgradeData,OnBuyEggUpgrade,toolsarray[1]>=10"
+	"PAN,PanUpgradeData,OnBuyPanUpgrade,toolsarray[2]>=10"
+	"HAT,HatUpgradeData,OnBuyHatUpgrade,toolsarray[3]>=10"
+	"BAT,BatUpgradeData,OnBuyBatUpgrade,toolsarray[4]>=10"
+	"GOOGLY EYES,GooglyUpgradeData,OnBuyGooglyUpgrade,toolsarray[5]>=10"
+	"BALLOON,BalloonUpgradeData,OnBuyBalloonUpgrade,toolsarray[6]>=10"
+	"SUMMONING,SummoningUpgradeData,OnBuySummoningUpgrade,toolsarray[7]>=10"
+	"PLAQUE,PlaqueUpgradeData,OnBuyPlaqueUpgrade,incarnations>=10"
+	"NEEDLE,NeedleUpgradeData,OnBuyNeedleUpgrade,incarnations>=10"
+	"BELL,BellUpgradeData,OnBuyBellUpgrade,incarnations>=10"
 }
 
 
 
 //name,reserved,numofbasetoolunlocks,cost,enabledimg,disabledimg,effect,flavortext
 SpoonUpgradeData : array{
-	"Plastic Spoon Charm,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
-	"Copper Spoon Charm,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
-	"Silver Spoon Charm,0,100,5000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 3),At least this one is normal?"
-	"Gold Spoon Charm,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
-	"Bismuth Spoon Charm,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
-	"Diamond Spoon Charm,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+	"Wooden Spoon,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
+	"Plastic Spoon,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
+	"Copper Spoon,0,100,5000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 3),At least this one is normal?"
+	"Silver Spoon,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
+	"Gold Spoon,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
+	"Cast Iron Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+	"Diamond Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+	"Bismuth Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 
 }
 
@@ -240,13 +242,13 @@ AdditionsInfo{
 
 //name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
 ShinyDataNormal : array{
-	"Call Your Pet,toolsarray[0]>0,N/A,N/A,img,img,Kitty?"
-	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,img,img,Down the streeeet"
-	"Iiiiits TONY!,toolsarray[0]>100,N/A,N/A,img,img,TONY???"
-	"First Pancake,pancakes>0,N/A,N/A,img,img,Start your pancake shop."
+	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,Kitty?"
+	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,0,img,img,Down the streeeet"
+	"Iiiiits TONY!,toolsarray[0]>100,N/A,N/A,0,img,img,TONY???"
+	"First Pancake,pancakes>0,N/A,N/A,0,img,img,Start your pancake shop."
 	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,Cook 50 pancakes."
-	"Spam Caller,toolsarray[0]>=200,N/A,N/A,img,img,Call friends for help 200 times."
-	"Chilly!,toolsarray[1]>=50,N/A,N/A,img,img,Buy 50 whole refrigerators. Why? I wish I knew."
+	"Spam Caller,toolsarray[0]>=200,N/A,N/A,0,img,img,Call friends for help 200 times."
+	"Chilly!,toolsarray[1]>=50,N/A,N/A,img,img,0,Buy 50 whole refrigerators. Why? I wish I knew."
 	"Heating Up,toolsarray[2]>=50,Syrups,Maple,10,img,img,Buy 50 stoves. You could build a robot out of these."
 
 }

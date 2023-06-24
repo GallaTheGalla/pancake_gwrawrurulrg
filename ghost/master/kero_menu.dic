@@ -85,7 +85,7 @@ OnShinyInfo : all {
 	}
 	//"%_stage\n%_thisitem"
 	"\f[bold,1]%_thisitem[0] \f[bold,0]\n\n[half]"
-	"%_thisitem[6]\n\n[half]"
+	"%_thisitem[7]\n\n[half]%_thisitem[8]"
 	
 	"\n%(nvm)   \![*]\q[Back,OnShiniesMenu]"
 

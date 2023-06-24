@@ -4,11 +4,31 @@ OnFirstBoot
 	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
 	stroke = 0
 	LastTalk = ""
-	incarnations = -1
+	incarnations = 0
+	origin = "Normal"
 	
 	OnFirstBoot_VARIABLES
 	
 	"%(shelf)%(tallstack)Take me to your pancakes."
+}
+
+OnFirstBoot_Reset{
+
+	OnFirstBoot_VARIABLES
+	
+	origin = randomOrigin
+	origin = "Raccoon"
+	
+	"%(shelf)%(tallstack)AGAIN! AGAIN! AGAIN!"
+	
+}
+
+
+randomOrigin{
+	"Normal"
+	"Supervillain"
+	"Alien"
+	"Raccoon"
 }
 
 
@@ -18,7 +38,6 @@ OnFirstBoot_VARIABLES{
 	
 	incarnations++
 	
-	origin = "Normal"
 	lifeinplastic = RAND(8)
 	
 	//settings
