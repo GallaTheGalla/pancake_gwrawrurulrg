@@ -73,7 +73,7 @@ shelf{
 		if upgradelevels[_i] > 0{
 			_surf = 95 + _i
 			if _surf == 102 && goreallowed == 0{
-				_res += "\i[%(_surf)%(upgradelevels[_i]-1)1]"	
+				_res += "\i[10250]"	
 			}else{
 				_res += "\i[%(_surf)%(upgradelevels[_i]-1)0]"	
 			}

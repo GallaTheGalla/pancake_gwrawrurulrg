@@ -291,8 +291,8 @@ surface200
 	animation10200.pattern8,start,10200
 	
 	//knife
-	animation10201.interval,never
-	animation10201.pattern0,overlay,102010,0,0,0
+	animation10250.interval,never
+	animation10250.pattern0,overlay,102500,0,0,0
 	
 	//Plaque
 	animation10300.interval,never
