@@ -1,3 +1,6 @@
 .gitignore,nonar,noupdate
 .gitattributes,nonar,noupdate
 dine_in_breakfast/,noupdate
+shell/master/palette_basic.png,nonar,noupdate
+shell/master/palette_bismuth0.png,nonar,noupdate
+shell/master/palette_bismuth1.png,nonar,noupdate
