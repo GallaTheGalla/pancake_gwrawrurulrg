@@ -13,7 +13,7 @@ OnAiTalk
 
 RandomTalk : nonoverlap_pool
 {
-
+	"%(tallstack)This is a test\n%var.req.key\n%var.req.value\nAnd thus it continues."
 	
 }
 
@@ -32,8 +32,8 @@ OnTranslate
 	if SHIORI3FW.BalloonName != "Dine-In Breakfast"{
 		_talk = REPLACE(_talk,"\b[0]","\b[0]")
 		_talk = REPLACE(_talk,"\b[2]","\b[2]")
-		_talk = REPLACE(_talk,"\b[4]","\b[4]")
-		_talk = REPLACE(_talk,"\b[6]","\b[6]")
+		_talk = REPLACE(_talk,"\b[4]","\b[2]")
+		_talk = REPLACE(_talk,"\b[6]","\b[0]")
 	}else{
 		_talk = REPLACE(_talk,"\b[0]","\b[0]")
 		_talk = REPLACE(_talk,"\b[2]","\b[2]")

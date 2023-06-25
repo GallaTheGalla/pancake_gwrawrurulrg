@@ -396,7 +396,7 @@ OnUpgradesMenu : all {
 		}else{
 			if _current == ARRAYSIZE(EVAL(_database[1])){
 				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
-				"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_current-1)] "
+				"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)] "
 				
 				if checkColumnSetup && _i % 2 == 1{
 					"\n\_l[%(_offset)em,@0]      (Maxed Out)"
