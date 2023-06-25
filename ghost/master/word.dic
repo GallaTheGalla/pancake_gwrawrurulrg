@@ -140,6 +140,26 @@ average
 	"ghostly"
 }
 
+backstory
+{
+	"radioactive mutations"
+	"accidentally falling into a vat of chemicals that fundamentally changes you as a person"
+	"the ironic death of a loved one because of your workaholic negligence"
+	"a reoccuring memory of that one playground bully that shoved you into the mud"
+	"being created from the most primordial source of evil"
+	"being unreasonably jealous for no reason"
+	"a long series of misunderstood coincidences that make people think you're the villaain while you're trying to help everyone,\w4 until you reach a breaking point and decide to become the monster they think you are"
+	"hangnails"
+	"being the saint that eventually gets betrayed by figures of authority that once relied on you but now see you as nothing but a threat to their power"
+	"being frozen in ice for %(eons) and then being revived by modern scientists that don't know when to leave well enough alone"
+	"working your entire career to become a superstar only to find out people love to hate you"
+	"losing everything in a fire"
+	"a dangerous,\w4 uncontrollable supernatural ability that drives everyone away from you"
+	"being reincarnated by the Gods over and over and over again until you satisfy their demands"
+	"immortality you can't opt out of"
+}
+
+
 chemicals
 {
 	"chemicals"
@@ -190,6 +210,18 @@ daytime
 	"your will to live"
 	"your love"
 }
+
+eons
+{
+	"100 years"
+	"1,000 years"
+	"generations"
+	"basically the entirety of human history"
+	"the destruction of civilization as you knew it"
+	"3 hours"
+	"3 lifetimes"
+}
+
 
 evillaugh
 {
