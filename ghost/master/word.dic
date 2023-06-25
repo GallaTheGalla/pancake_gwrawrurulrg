@@ -140,6 +140,38 @@ average
 	"ghostly"
 }
 
+chemicals
+{
+	"chemicals"
+	"toxins"
+	"heavy metals"
+	"radiation"
+	"bite marks"
+	"a paint job"
+	"blacklights"
+	"glow-in-the-dark powder"
+	"that moodring stuff"
+	"powdered sugar"
+	"monster blood"
+	"glue"
+}
+
+criminal
+{
+	"criminal"
+	"felon"
+	"hater"
+	"bully"
+	"killer (probably)"
+	"chronic needle loser"
+	"glass shatterer"
+	"noodle eater"
+	"survivor"
+	"horror movie fan"
+	"bad person"
+	"lovable scamp"
+}
+
 daytime
 {
 	"day"
@@ -173,6 +205,20 @@ evillaugh
 	"Hu"
 	"Tee"
 	"Fu"
+}
+
+guns
+{
+	"rayguns"
+	"shrink rays"
+	"shark pits"
+	"snake traps"
+	"trapdoors"
+	"reverse gravity machines"
+	"instant tornadoes"
+	"evil slugs"
+	"voice activated grappling hooks"
+	"really hot knives"
 }
 
 laugh
@@ -214,6 +260,25 @@ moon
 	"River Styx"
 }
 
+onthefloor
+{
+	"on the floor"
+	"at the wall"
+	"out the window"
+	"through the door"
+	"into the trash"
+	"at a bird"
+	"at a child"
+	"onto the roof"
+	"into a box to be forgotten for the next year"
+	"into the toilet"
+	"at the elderly"
+	"into a vat of avid"
+	"into a volcano"
+	"into a grave"
+	"down a hole"
+}
+
 punctuation
 {
 	"!"
@@ -223,4 +288,22 @@ punctuation
 	"!?"
 	"...?"
 	"."
+}
+
+theworld
+{
+	"the world"
+	"the mall"
+	"the neighborhood"
+	"the post office"
+	"the kitchen"
+	"the playground"
+	"the music industry"
+	"every last stray cat in the city"
+	"some unlucky rando's mind"
+	"the all-you-can-eat buffet"
+	"that cornerstore down the road"
+	"responsibility for my cousin's pet lobster"
+	"dishwashing duty"
+	"power over the spatula"
 }
