@@ -159,6 +159,43 @@ daytime
 	"your love"
 }
 
+evillaugh
+{
+	"Bwa"
+	"Aha"
+	"Ah-ha"
+	"Mwa"
+	"Mua"
+	"Oho"
+	"Ohh"
+	"Heh"
+	"Nya"
+	"Hu"
+	"Tee"
+	"Fu"
+}
+
+laugh
+{
+	"ha"
+	"he"
+	"hu"
+	"hee"
+	"fu"
+	"ho"
+	"eh"
+	"we"
+}
+
+laughrand : all
+{
+	_rand = RAND(15) + 1
+	_laugh = laugh
+	for _i = 0; _i < _rand; _i++
+	{
+	_laugh
+	}
+}
 
 moon
 {
