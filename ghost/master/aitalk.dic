@@ -18,13 +18,37 @@ RandomTalk : nonoverlap_pool
 	
 	case origin{
 		when "Normal"{
-			""
+			"\![raise,OnAverageDay]"
+			"%(tb)Sometimes,\w4 you have to spend all %(daytime) in the kitchen.\w8 That's just how it is.\w8"
+			"%(tb)Can't wait until these are finally ready to eat.\w8"
+			"%(tb)How many pancakes is enough?\w8 Surely we need more than %TOINT(pancakes),\w4 right?\w8"
+			"%(tb)Stacking pancakes from here to the %(moon).\w8"
+			"%(tb)Lots of batter for lots of pancakes for lots of breakfasts.\w8"
+			"%(tb)Smells like %(aroma) in here.\w8"
+			"%(tb)Careful,\w4 they're %(hot).\w8"
+			"%(tb)Pan\w4cakes~\w8 Pan\w4cakes~\w8 It's the pancakes so\w2o\w2o\w2o\w2ong~\w8\e:chain=pancakesong"
+			"%(tb)No time to let the batter rest.\w8 There's more pancakes to make.\w8"
 		}
 		when "Raccoon"{
-			""
+			"%(tb)i am maeking panaeks from these egs i got fro m ms baeles trash\nher raush is good"
+			"%(tb)toni? where i smy racheon tony\ntoan is my best frni"
+			"%(tb)i am learnng modor controle "
+			"%(tb)i haet u jordan. fite me"
+			"%(tb)panaeks asre my live becaus otni liks them. \ni dio anything 4 tony"
+			"%(tb)oraegn"
 		}
 		when "Supervillain"{
-			""
+			"%(nb)The only motivator I need is evil.\w8 Other villains,\w4 they all need tragic backstories.\w8 It's ridiculous!\w8 Who wants to deal with %(backstory)!?\w8 Not me!\w8"
+			"\![raise,billionairehateorlove]"
+			"\![raise,billionaireminions]"
+			"%(tb)%(evillaugh)%(laughrand)%(punctuation)"
+			"%(tb)Today,\w4 we take over %(theworld).\w8 Tomorrow?\w8 Who knows.\w8"
+			"%(tb)Needs more %(guns).\w8"
+			"%(tb)Hmm...\w8 %(chemicals) would make these better.\w8"
+			"%(tb)Pancakes...\w8 Absolutely villainous...\w8"
+			"%(tb)Throws a pancake %(onthefloor).\w8"
+			"%(tb)I'm a %(criminal)."
+
 		}
 		when "Grandma"{
 			""
@@ -33,7 +57,16 @@ RandomTalk : nonoverlap_pool
 			""
 		}
 		when "Rebel"{
-			""
+			"%(tb)Speak up,\w4 swing hard,\w4 go down fighting.\w8"
+			"%(tb)I was thinking of getting a tattoo %(tattooof).\w8"
+			"%(tb)\f[bold,1]>:3c\f[bold,0]"
+			"%(tb)I need %(newboots)...\w8"
+			"%(tb)What the %(heck) is even happening over there?\w8 You seeing this?\w8"
+			"%(tb)Sometimes,\w4 I wish I was %(agoat).\w8"
+			"%(tb)You ever go on social media and think to yourself,\w4 '%(heck),\w4 I really hate this %(crap)'?\w8\w8 Yeah...\w8"
+			"%(tb)It feels like a party night.\w8"
+			"%(tb)Anyone seen Tony lately?\w8"
+			"%(tb)No one will notice if I have a little taste of the batter...\w8 >:3c"
 		}
 		
 	}
@@ -98,6 +131,50 @@ OnTranslate
 	
 	TOSTR(_talk)
 }
+
+
+
+OnAverageDay
+{
+	_a = average
+	"%(tb)It's %(AORAN(_a)) day for %(_a) pancakes.\w8"
+}
+
+billionairehateorlove
+{
+	if billionairehate == 0
+	{
+		"%(tb)Billionaires have the right idea,\w4 actually.\w8"
+	}
+	else
+	{
+		"%(tb)I may be evil,\w4 but at least I'm not billionaire evil.\w8"
+	}
+}
+
+billionaireminions
+{
+	if billionairehate == 0
+	{
+		"%(tb)Terrified workers you can easily take advantage of are a key part to success.\w8"
+	}
+	else
+	{
+		"%(tb)There's nothing more important to evil schemes than loyal minions to carry them out!\w8 What's the best way to ensure loyalty?\w8 Why,\w4 ample pay and good benefits,\w4 of course!\w8"
+	}
+}
+
+
+
+pancakesong
+{{CHAIN
+	"%(tb)Pan\w4cakes~\w8 Pan\w4cakes~\w8 Eat them all day lo\w2o\w2o\w2o\w2ong~\w8"
+	"%(tb)Pan\w4cakes~\w8 Pan\w4cakes~\w8 They keep you stro\w2o\w2o\w2o\w2ong~\w8"
+	"%(tb)Pan\w4cakes~\w8 Pan\w4cakes~\w8 They're never wro\w2o\w2o\w2o\w2ong~\w8"
+	"%(tb)Pan\w4cakes~\w8 Pan\w4cakes~\w8 That's the pancakes so\w2o\w2o\w2o\w2ong!\w8\e:chain=end"
+}}CHAIN
+
+
 
 
 

@@ -631,6 +631,17 @@ OnBuyBellUpgrade{
 	"%(OnUpgradesMenu)"
 }
 
+OnBuyOriginUpgrade{
+	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_cubecost = TOINT(_thisupgrade[3])
+	_effect = _thisupgrade[6]
+	pancakes -= _cubecost
+	upgradelevels[11] = TOINT(upgradelevels[11]) + 1
+	--
+	_dummy = EVAL(_effect)
+	"%(OnUpgradesMenu)"
+}
+
 
 
 //refercne1 is index, reference0 is subdbname

@@ -84,7 +84,48 @@ FormatTwoDec{
 
 }
 
+//swearing envelopes
+crap
+{
+	if swearing == 1
+	{
+		"shit"
+	}
+	else
+	{
+		"crap"
+	}
+}
 
+heck
+{
+	if swearing == 1
+	{
+		"fuck"
+	}
+	else
+	{
+		"heck"
+	}
+}
+
+//dialogue envelopes
+agoat
+{
+	"a goat"
+	"a frog"
+	"a swarm of beetles"
+	"an egg"
+	"grass"
+	"pancake"
+	"part of a cult...\w8 but,\w4 like,\w4 a chill one...\w8 not a death one"
+	"more flexible"
+	"butter"
+	"funny"
+	"better at sifting flour before I dump it all into the bowl"
+	"a cat"
+	"gayer"
+}
 
 aroma
 {
@@ -292,6 +333,25 @@ moon
 	"River Styx"
 }
 
+newboots
+{
+	"new boots"
+	"to go thrifting for a new jacket"
+	"more vegan eggs"
+	"a break"
+	"more milk"
+	"a new beanie"
+	"an industrial flashlight"
+	"flares"
+	"to resupply the first-aid kit"
+	"fruit jerky"
+	"to wash my knee brace"
+	"to break in these jeans"
+	"hand sanitizer"
+	"pepper spray"
+	"a helmet"
+}
+
 onthefloor
 {
 	"on the floor"
@@ -320,6 +380,29 @@ punctuation
 	"!?"
 	"...?"
 	"."
+}
+
+tattooof
+{
+	"of a pancake"
+	"of a frying pan"
+	"of a spoon"
+	"of a spatula"
+	"of an egg"
+	"that says 'Trans Rights'"
+	"of the nonbinary flag"
+	"of a baseball bat"
+	"of a clown"
+	"of a cactus"
+	"with googly eyes"
+	"of a raccoon"
+	"for my granny"
+	"with Tony"
+	"of Tony"
+	"of my favorite emoji"
+	"that really expresses my love for chaos"
+	"that shows how much of a gamer I am"
+	"of a penguin riding a dinosaur like a horse"
 }
 
 theworld

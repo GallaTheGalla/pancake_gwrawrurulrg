@@ -381,59 +381,59 @@ surface200
 	animation9500.pattern1,overlay,95000,0,0,0
 	
 	
-	//spoon plastic
+	//spoon plastic pink
 	animation9510.interval,never
 	animation9510.pattern1,overlay,95010,0,0,0
 	
-	//spoon plastic
+	//spoon plastic red
 	animation9511.interval,never
 	animation9511.pattern1,overlay,95020,0,0,0
 	
-	//spoon plastic
+	//spoon plastic orange
 	animation9512.interval,never
 	animation9512.pattern1,overlay,95030,0,0,0
 	
-	//spoon plastic
+	//spoon plastic yellow
 	animation9513.interval,never
 	animation9513.pattern1,overlay,95040,0,0,0
 	
-	//spoon plastic
+	//spoon plastic green
 	animation9514.interval,never
 	animation9514.pattern1,overlay,95050,0,0,0
 	
-	//spoon plastic
+	//spoon plastic cyan
 	animation9515.interval,never
 	animation9515.pattern1,overlay,95060,0,0,0
 	
-	//spoon plastic
+	//spoon plastic blue
 	animation9516.interval,never
 	animation9516.pattern1,overlay,95070,0,0,0
 	
-	//spoon plastic
+	//spoon plastic purple
 	animation9517.interval,never
 	animation9517.pattern1,overlay,95080,0,0,0
 	
-	//spoon
+	//spoon copper
 	animation9520.interval,never
 	animation9520.pattern1,overlay,95090,0,0,0
 	
-	//spoon
+	//spoon silver
 	animation9530.interval,never
 	animation9530.pattern1,overlay,95100,0,0,0
 	
-	//spoon
+	//spoon gold
 	animation9540.interval,never
 	animation9540.pattern1,overlay,95110,0,0,0
 	
-	//spoon
+	//spoon obsidian
 	animation9550.interval,never
 	animation9550.pattern1,overlay,95120,0,0,0
 	
-	//spoon
+	//spoon diamond
 	animation9560.interval,never
 	animation9560.pattern1,overlay,95130,0,0,0
 	
-	//spoon
+	//spoon bismuth
 	animation9570.interval,never
 	animation9570.pattern1,overlay,95140,0,0,0
 	
@@ -444,59 +444,59 @@ surface200
 	animation9600.interval,never
 	animation9600.pattern1,overlay,96000,0,0,0
 	
-	//egg plastic
+	//egg plastic pink
 	animation9610.interval,never
 	animation9610.pattern1,overlay,96010,0,0,0
 	
-	//egg plastic
+	//egg plastic red
 	animation9611.interval,never
 	animation9611.pattern1,overlay,96020,0,0,0
 	
-	//egg plastic
+	//egg plastic orange
 	animation9612.interval,never
 	animation9612.pattern1,overlay,96030,0,0,0
 	
-	//egg plastic
+	//egg plastic yellow
 	animation9613.interval,never
 	animation9613.pattern1,overlay,96040,0,0,0
 	
-	//egg plastic
+	//egg plastic green
 	animation9614.interval,never
 	animation9614.pattern1,overlay,96050,0,0,0
 	
-	//egg plastic
+	//egg plastic cyan
 	animation9615.interval,never
 	animation9615.pattern1,overlay,96060,0,0,0
 	
-	//egg plastic
+	//egg plastic blue
 	animation9616.interval,never
 	animation9616.pattern1,overlay,96070,0,0,0
 	
-	//egg plastic
+	//egg plastic purple
 	animation9617.interval,never
 	animation9617.pattern1,overlay,96080,0,0,0
 	
-	//egg
+	//egg copper
 	animation9620.interval,never
 	animation9620.pattern1,overlay,96090,0,0,0
 	
-	//egg
+	//egg silver
 	animation9630.interval,never
 	animation9630.pattern1,overlay,96100,0,0,0
 	
-	//egg
+	//egg gold
 	animation9640.interval,never
 	animation9640.pattern1,overlay,96110,0,0,0
 	
-	//egg
+	//egg obsidian
 	animation9650.interval,never
 	animation9650.pattern1,overlay,96120,0,0,0
 	
-	//egg
+	//egg diamond
 	animation9660.interval,never
 	animation9660.pattern1,overlay,96130,0,0,0
 	
-	//egg
+	//egg bismuth
 	animation9670.interval,never
 	animation9670.pattern1,overlay,96140,0,0,0
 	
@@ -507,59 +507,59 @@ surface200
 	animation9700.pattern1,overlay,97000,0,0,0
 	
 		
-	//pan plastic
+	//pan plastic pink
 	animation9710.interval,never
 	animation9710.pattern1,overlay,97010,0,0,0
 	
-	//pan plastic
+	//pan plastic red
 	animation9711.interval,never
 	animation9711.pattern1,overlay,97020,0,0,0
 	
-	//pan plastic
+	//pan plastic orange
 	animation9712.interval,never
 	animation9712.pattern1,overlay,97030,0,0,0
 	
-	//pan plastic
+	//pan plastic yellow
 	animation9713.interval,never
 	animation9713.pattern1,overlay,97040,0,0,0
 	
-	//pan plastic
+	//pan plastic green
 	animation9714.interval,never
 	animation9714.pattern1,overlay,97050,0,0,0
 	
-	//pan plastic
+	//pan plastic cyan
 	animation9715.interval,never
 	animation9715.pattern1,overlay,97060,0,0,0
 	
-	//pan plastic
+	//pan plastic blue
 	animation9716.interval,never
 	animation9716.pattern1,overlay,97070,0,0,0
 	
-	//pan plastic
+	//pan plastic purple
 	animation9717.interval,never
 	animation9717.pattern1,overlay,97080,0,0,0
 	
-	//pan
+	//pan copper
 	animation9720.interval,never
 	animation9720.pattern1,overlay,97090,0,0,0
 	
-	//pan
+	//pan silver
 	animation9730.interval,never
 	animation9730.pattern1,overlay,97100,0,0,0
 	
-	//pan
+	//pan gold
 	animation9740.interval,never
 	animation9740.pattern1,overlay,97110,0,0,0
 	
-	//pan
+	//pan obsidian
 	animation9750.interval,never
 	animation9750.pattern1,overlay,97120,0,0,0
 	
-	//pan
+	//pan diamond
 	animation9760.interval,never
 	animation9760.pattern1,overlay,97130,0,0,0
 	
-	//pan
+	//pan bismuth
 	animation9770.interval,never
 	animation9770.pattern1,overlay,97140,0,0,0
 	
@@ -569,59 +569,59 @@ surface200
 	animation9800.interval,never
 	animation9800.pattern1,overlay,98000,0,0,0
 
-	//hat plastic
+	//hat plastic pink
 	animation9810.interval,never
 	animation9810.pattern1,overlay,98010,0,0,0
 	
-	//hat plastic
+	//hat plastic red
 	animation9811.interval,never
 	animation9811.pattern1,overlay,98020,0,0,0
 	
-	//hat plastic
+	//hat plastic orange
 	animation9812.interval,never
 	animation9812.pattern1,overlay,98030,0,0,0
 	
-	//hat plastic
+	//hat plastic yellow
 	animation9813.interval,never
 	animation9813.pattern1,overlay,98040,0,0,0
 	
-	//hat plastic
+	//hat plastic green
 	animation9814.interval,never
 	animation9814.pattern1,overlay,98050,0,0,0
 	
-	//hat plastic
+	//hat plastic cyan
 	animation9815.interval,never
 	animation9815.pattern1,overlay,98060,0,0,0
 	
-	//hat plastic
+	//hat plastic blue
 	animation9816.interval,never
 	animation9816.pattern1,overlay,98070,0,0,0
 	
-	//hat plastic
+	//hat plastic purple
 	animation9817.interval,never
 	animation9817.pattern1,overlay,98080,0,0,0
 	
-	//hat
+	//hat copper
 	animation9820.interval,never
 	animation9820.pattern1,overlay,98090,0,0,0
 	
-	//hat
+	//hat silver
 	animation9830.interval,never
 	animation9830.pattern1,overlay,98100,0,0,0
 	
-	//hat
+	//hat gold
 	animation9840.interval,never
 	animation9840.pattern1,overlay,98110,0,0,0
 	
-	//hat
+	//hat obsidian
 	animation9850.interval,never
 	animation9850.pattern1,overlay,98120,0,0,0
 	
-	//hat
+	//hat diamond
 	animation9860.interval,never
 	animation9860.pattern1,overlay,98130,0,0,0
 	
-	//hat
+	//hat bismuth
 	animation9870.interval,never
 	animation9870.pattern1,overlay,98140,0,0,0
 	
@@ -632,59 +632,59 @@ surface200
 	animation9900.interval,never
 	animation9900.pattern1,overlay,99000,0,0,0
 	
-		//bat plastic
+	//bat plastic pink
 	animation9910.interval,never
 	animation9910.pattern1,overlay,99010,0,0,0
 	
-	//bat plastic
+	//bat plastic red
 	animation9911.interval,never
 	animation9911.pattern1,overlay,99020,0,0,0
 	
-	//bat plastic
+	//bat plastic orange
 	animation9912.interval,never
 	animation9912.pattern1,overlay,99030,0,0,0
 	
-	//bat plastic
+	//bat plastic yellow
 	animation9913.interval,never
 	animation9913.pattern1,overlay,99040,0,0,0
 	
-	//bat plastic
+	//bat plastic green
 	animation9914.interval,never
 	animation9914.pattern1,overlay,99050,0,0,0
 	
-	//bat plastic
+	//bat plastic cyan
 	animation9915.interval,never
 	animation9915.pattern1,overlay,99060,0,0,0
 	
-	//bat plastic
+	//bat plastic blue
 	animation9916.interval,never
 	animation9916.pattern1,overlay,99070,0,0,0
 	
-	//bat plastic
+	//bat plastic purple
 	animation9917.interval,never
 	animation9917.pattern1,overlay,99080,0,0,0
 	
-	//bat
+	//bat copper
 	animation9920.interval,never
 	animation9920.pattern1,overlay,99090,0,0,0
 	
-	//bat
+	//bat silver
 	animation9930.interval,never
 	animation9930.pattern1,overlay,99100,0,0,0
 	
-	//bat
+	//bat gold
 	animation9940.interval,never
 	animation9940.pattern1,overlay,99110,0,0,0
 	
-	//bat
+	//bat obsidian
 	animation9950.interval,never
 	animation9950.pattern1,overlay,99120,0,0,0
 	
-	//bat
+	//bat diamond
 	animation9960.interval,never
 	animation9960.pattern1,overlay,99130,0,0,0
 	
-	//bat
+	//bat bismuth
 	animation9970.interval,never
 	animation9970.pattern1,overlay,99140,0,0,0
 	
@@ -695,59 +695,59 @@ surface200
 	animation10000.interval,never
 	animation10000.pattern1,overlay,100000,0,0,0
 	
-		//googly plastic
+	//googly plastic pink
 	animation10010.interval,never
 	animation10010.pattern1,overlay,100010,0,0,0
 	
-	//googly plastic
+	//googly plastic red
 	animation10011.interval,never
 	animation10011.pattern1,overlay,100020,0,0,0
 	
-	//googly plastic
+	//googly plastic orange
 	animation10012.interval,never
 	animation10012.pattern1,overlay,100030,0,0,0
 	
-	//googly plastic
+	//googly plastic yellow
 	animation10013.interval,never
 	animation10013.pattern1,overlay,100040,0,0,0
 	
-	//googly plastic
+	//googly plastic green
 	animation10014.interval,never
 	animation10014.pattern1,overlay,100050,0,0,0
 	
-	//googly plastic
+	//googly plastic cyan
 	animation10015.interval,never
 	animation10015.pattern1,overlay,100060,0,0,0
 	
-	//googly plastic
+	//googly plastic blue
 	animation10016.interval,never
 	animation10016.pattern1,overlay,100070,0,0,0
 	
-	//googly plastic
+	//googly plastic purple
 	animation10017.interval,never
 	animation10017.pattern1,overlay,100080,0,0,0
 	
-	//googly
+	//googly copper
 	animation10020.interval,never
 	animation10020.pattern1,overlay,100090,0,0,0
 	
-	//googly
+	//googly silver
 	animation10030.interval,never
 	animation10030.pattern1,overlay,100100,0,0,0
 	
-	//googly
+	//googly gold
 	animation10040.interval,never
 	animation10040.pattern1,overlay,100110,0,0,0
 	
-	//googly
+	//googly obsidian
 	animation10050.interval,never
 	animation10050.pattern1,overlay,100120,0,0,0
 	
-	//googly
+	//googly diamond
 	animation10060.interval,never
 	animation10060.pattern1,overlay,100130,0,0,0
 	
-	//googly
+	//googly bismuth
 	animation10070.interval,never
 	animation10070.pattern1,overlay,100140,0,0,0
 	
@@ -758,59 +758,59 @@ surface200
 	animation10100.interval,never
 	animation10100.pattern1,overlay,101000,0,0,0
 	
-	//balloon plastic
+	//balloon plastic pink
 	animation10110.interval,never
 	animation10110.pattern1,overlay,101010,0,0,0
 	
-	//balloon plastic
+	//balloon plastic red
 	animation10111.interval,never
 	animation10111.pattern1,overlay,101020,0,0,0
 	
-	//balloon plastic
+	//balloon plastic orange
 	animation10112.interval,never
 	animation10112.pattern1,overlay,101030,0,0,0
 	
-	//balloon plastic
+	//balloon plastic yellow
 	animation10113.interval,never
 	animation10113.pattern1,overlay,101040,0,0,0
 	
-	//balloon plastic
+	//balloon plastic green
 	animation10114.interval,never
 	animation10114.pattern1,overlay,101050,0,0,0
 	
-	//balloon plastic
+	//balloon plastic cyan
 	animation10115.interval,never
 	animation10115.pattern1,overlay,101060,0,0,0
 	
-	//balloon plastic
+	//balloon plastic blue
 	animation10116.interval,never
 	animation10116.pattern1,overlay,101070,0,0,0
 	
-	//balloon plastic
+	//balloon plastic purple
 	animation10117.interval,never
 	animation10117.pattern1,overlay,101080,0,0,0
 	
-	//balloon
+	//balloon copper
 	animation10120.interval,never
 	animation10120.pattern1,overlay,101090,0,0,0
 	
-	//balloon
+	//balloon silver
 	animation10130.interval,never
 	animation10130.pattern1,overlay,101100,0,0,0
 	
-	//balloon
+	//balloon gold
 	animation10140.interval,never
 	animation10140.pattern1,overlay,101110,0,0,0
 	
-	//balloon
+	//balloon obsidian
 	animation10150.interval,never
 	animation10150.pattern1,overlay,101120,0,0,0
 	
-	//balloon
+	//balloon diamond
 	animation10160.interval,never
 	animation10160.pattern1,overlay,101130,0,0,0
 	
-	//balloon
+	//balloon bismuth
 	animation10170.interval,never
 	animation10170.pattern1,overlay,101140,0,0,0
 	
@@ -829,7 +829,7 @@ surface200
 	animation10200.pattern7,overlay,102000,2000,0,0
 	animation10200.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic pink
 	animation10210.interval,never
 	animation10210.pattern0,overlay,102010,0,0,0
 	animation10210.pattern1,overlay,102011,120,0,0
@@ -841,7 +841,7 @@ surface200
 	animation10210.pattern7,overlay,102010,2000,0,0
 	animation10210.pattern8,start,10210
 	
-	//heart plastic
+	//heart plastic red
 	animation10211.interval,never
 	animation10211.pattern0,overlay,102020,0,0,0
 	animation10211.pattern1,overlay,102021,120,0,0
@@ -853,7 +853,7 @@ surface200
 	animation10211.pattern7,overlay,102020,2000,0,0
 	animation10211.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic orange
 	animation10212.interval,never
 	animation10212.pattern0,overlay,102030,0,0,0
 	animation10212.pattern1,overlay,102031,120,0,0
@@ -865,7 +865,7 @@ surface200
 	animation10212.pattern7,overlay,102030,2000,0,0
 	animation10212.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic yellow
 	animation10213.interval,never
 	animation10213.pattern0,overlay,102040,0,0,0
 	animation10213.pattern1,overlay,102041,120,0,0
@@ -877,7 +877,7 @@ surface200
 	animation10213.pattern7,overlay,102040,2000,0,0
 	animation10213.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic green
 	animation10214.interval,never
 	animation10214.pattern0,overlay,102050,0,0,0
 	animation10214.pattern1,overlay,102051,120,0,0
@@ -889,7 +889,7 @@ surface200
 	animation10214.pattern7,overlay,102050,2000,0,0
 	animation10214.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic cyan
 	animation10215.interval,never
 	animation10215.pattern0,overlay,102060,0,0,0
 	animation10215.pattern1,overlay,102061,120,0,0
@@ -901,7 +901,7 @@ surface200
 	animation10215.pattern7,overlay,102060,2000,0,0
 	animation10215.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic blue
 	animation10216.interval,never
 	animation10216.pattern0,overlay,102070,0,0,0
 	animation10216.pattern1,overlay,102071,120,0,0
@@ -913,7 +913,7 @@ surface200
 	animation10216.pattern7,overlay,102070,2000,0,0
 	animation10216.pattern8,start,10200
 	
-	//heart plastic
+	//heart plastic purple
 	animation10217.interval,never
 	animation10217.pattern0,overlay,102080,0,0,0
 	animation10217.pattern1,overlay,102081,120,0,0
@@ -925,7 +925,7 @@ surface200
 	animation10217.pattern7,overlay,102080,2000,0,0
 	animation10217.pattern8,start,10200
 	
-	//heart
+	//heart copper
 	animation10220.interval,never
 	animation10220.pattern0,overlay,102090,0,0,0
 	animation10220.pattern1,overlay,102091,120,0,0
@@ -937,7 +937,7 @@ surface200
 	animation10220.pattern7,overlay,102090,2000,0,0
 	animation10220.pattern8,start,10200
 	
-	//heart
+	//heart silver
 	animation10230.interval,never
 	animation10230.pattern0,overlay,102100,0,0,0
 	animation10230.pattern1,overlay,102101,120,0,0
@@ -949,7 +949,7 @@ surface200
 	animation10230.pattern7,overlay,102100,2000,0,0
 	animation10230.pattern8,start,10200
 	
-	//heart
+	//heart gold
 	animation10240.interval,never
 	animation10240.pattern0,overlay,102110,0,0,0
 	animation10240.pattern1,overlay,102111,120,0,0
@@ -961,7 +961,7 @@ surface200
 	animation10240.pattern7,overlay,102110,2000,0,0
 	animation10240.pattern8,start,10200
 	
-	//heart
+	//heart obsidian
 	animation10250.interval,never
 	animation10250.pattern0,overlay,102120,0,0,0
 	animation10250.pattern1,overlay,102121,120,0,0
@@ -973,7 +973,7 @@ surface200
 	animation10250.pattern7,overlay,102120,2000,0,0
 	animation10250.pattern8,start,10200
 	
-	//heart
+	//heart diamond
 	animation10260.interval,never
 	animation10260.pattern0,overlay,102130,0,0,0
 	animation10260.pattern1,overlay,102131,120,0,0
@@ -985,7 +985,7 @@ surface200
 	animation10260.pattern7,overlay,102130,2000,0,0
 	animation10260.pattern8,start,10200
 	
-	//heart
+	//heart bismuth
 	animation10270.interval,never
 	animation10270.pattern0,overlay,102140,0,0,0
 	animation10270.pattern1,overlay,102141,120,0,0
@@ -1000,123 +1000,123 @@ surface200
 	
 	
 	//knife -- EXCEPTION FOR NOW, MOVED
-	animation10900.interval,never
-	animation10900.pattern0,overlay,102500,0,0,0
+	animation1010200.interval,never
+	animation1010200.pattern0,overlay,102500,0,0,0
 	
-	//knife plastic
-	animation10910.interval,never
-	animation10910.pattern1,overlay,102510,0,0,0
+	//knife plastic pink
+	animation1010210.interval,never
+	animation1010210.pattern1,overlay,102510,0,0,0
 	
-	//knife plastic
-	animation10911.interval,never
-	animation10911.pattern1,overlay,102520,0,0,0
+	//knife plastic red
+	animation1010211.interval,never
+	animation1010211.pattern1,overlay,102520,0,0,0
 	
-	//knife plastic
-	animation10912.interval,never
-	animation10912.pattern1,overlay,102530,0,0,0
+	//knife plastic orange
+	animation1010212.interval,never
+	animation1010212.pattern1,overlay,102530,0,0,0
 	
-	//knife plastic
-	animation10913.interval,never
-	animation10913.pattern1,overlay,102540,0,0,0
+	//knife plastic yellow
+	animation1010213.interval,never
+	animation1010213.pattern1,overlay,102540,0,0,0
 	
-	//knife plastic
-	animation10914.interval,never
-	animation10914.pattern1,overlay,102550,0,0,0
+	//knife plastic green
+	animation1010214.interval,never
+	animation1010214.pattern1,overlay,102550,0,0,0
 	
-	//knife plastic
-	animation10915.interval,never
-	animation10915.pattern1,overlay,102560,0,0,0
+	//knife plastic cyan
+	animation1010215.interval,never
+	animation1010215.pattern1,overlay,102560,0,0,0
 	
-	//knife plastic
-	animation10916.interval,never
-	animation10916.pattern1,overlay,102570,0,0,0
+	//knife plastic blue
+	animation1010216.interval,never
+	animation1010216.pattern1,overlay,102570,0,0,0
 	
-	//knife plastic
-	animation10917.interval,never
-	animation10917.pattern1,overlay,102580,0,0,0
+	//knife plastic purple
+	animation1010217.interval,never
+	animation1010217.pattern1,overlay,102580,0,0,0
 	
-	//knife
-	animation10920.interval,never
-	animation10920.pattern1,overlay,102590,0,0,0
+	//knife copper
+	animation1010220.interval,never
+	animation1010220.pattern1,overlay,102590,0,0,0
 	
-	//knife
-	animation10930.interval,never
-	animation10930.pattern1,overlay,102600,0,0,0
+	//knife silver
+	animation1010230.interval,never
+	animation1010230.pattern1,overlay,102600,0,0,0
 	
-	//knife
-	animation10940.interval,never
-	animation10940.pattern1,overlay,102610,0,0,0
+	//knife gold
+	animation1010240.interval,never
+	animation1010240.pattern1,overlay,102610,0,0,0
 	
-	//knife
-	animation10950.interval,never
-	animation10950.pattern1,overlay,102620,0,0,0
+	//knife obsidian
+	animation1010250.interval,never
+	animation1010250.pattern1,overlay,102620,0,0,0
 	
-	//knife
-	animation10960.interval,never
-	animation10960.pattern1,overlay,102630,0,0,0
+	//knife diamond
+	animation1010260.interval,never
+	animation1010260.pattern1,overlay,102630,0,0,0
 	
-	//knife
-	animation10970.interval,never
-	animation10970.pattern1,overlay,102640,0,0,0
+	//knife bismuth
+	animation1010270.interval,never
+	animation1010270.pattern1,overlay,102640,0,0,0
 	
 	
 	//Plaque
 	animation10300.interval,never
-	animation10300.pattern1,overlay,100000,0,0,0
+	animation10300.pattern1,overlay,103000,0,0,0
 	
-	//plaque plastic
+	//plaque plastic pink
 	animation10310.interval,never
 	animation10310.pattern1,overlay,103010,0,0,0
 	
-	//plaque plastic
+	//plaque plastic red
 	animation10311.interval,never
 	animation10311.pattern1,overlay,103020,0,0,0
 	
-	//plaque plastic
+	//plaque plastic orange
 	animation10312.interval,never
 	animation10312.pattern1,overlay,103030,0,0,0
 	
-	//plaque plastic
+	//plaque plastic yellow
 	animation10313.interval,never
 	animation10313.pattern1,overlay,103040,0,0,0
 	
-	//plaque plastic
+	//plaque plastic green
 	animation10314.interval,never
 	animation10314.pattern1,overlay,103050,0,0,0
 	
-	//plaque plastic
+	//plaque plastic cyan
 	animation10315.interval,never
 	animation10315.pattern1,overlay,103060,0,0,0
 	
-	//plaque plastic
+	//plaque plastic blue
 	animation10316.interval,never
 	animation10316.pattern1,overlay,103070,0,0,0
 	
-	//plaque plastic
+	//plaque plastic purple
 	animation10317.interval,never
 	animation10317.pattern1,overlay,103080,0,0,0
 	
-	//plaque
+	//plaque copper
 	animation10320.interval,never
 	animation10320.pattern1,overlay,103090,0,0,0
 	
-	//plaque
+	//plaque silver
 	animation10330.interval,never
 	animation10330.pattern1,overlay,103100,0,0,0
 	
-	//plaque
+	//plaque gold
 	animation10340.interval,never
 	animation10340.pattern1,overlay,103110,0,0,0
 	
-	//plaque
+	//plaque obsidian
 	animation10350.interval,never
 	animation10350.pattern1,overlay,103120,0,0,0
 	
-	//plaque
+	//plaque diamond
 	animation10360.interval,never
 	animation10360.pattern1,overlay,103130,0,0,0
 	
-	//plaque
+	//plaque bismuth
 	animation10370.interval,never
 	animation10370.pattern1,overlay,103140,0,0,0
 	
@@ -1127,85 +1127,85 @@ surface200
 	animation10400.pattern2,overlay,104000,5000,0,0
 	animation10400.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic pink
 	animation10410.interval,never
 	animation10410.pattern1,overlay,104010,0,0,0
 	animation10410.pattern2,overlay,104000,5000,0,0
 	animation10410.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic red
 	animation10411.interval,never
 	animation10411.pattern1,overlay,104020,0,0,0
 	animation10411.pattern2,overlay,104020,5000,0,0
 	animation10411.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic orange
 	animation10412.interval,never
 	animation10412.pattern1,overlay,104030,0,0,0
 	animation10412.pattern2,overlay,104030,5000,0,0
 	animation10412.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic yellow
 	animation10413.interval,never
 	animation10413.pattern1,overlay,104040,0,0,0
 	animation10413.pattern2,overlay,104040,5000,0,0
 	animation10413.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic green
 	animation10414.interval,never
 	animation10414.pattern1,overlay,104050,0,0,0
 	animation10414.pattern2,overlay,104050,5000,0,0
 	animation10414.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic cyan
 	animation10415.interval,never
 	animation10415.pattern1,overlay,104060,0,0,0
 	animation10415.pattern2,overlay,104060,5000,0,0
 	animation10415.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic blue
 	animation10416.interval,never
 	animation10416.pattern1,overlay,104070,0,0,0
 	animation10416.pattern2,overlay,104070,5000,0,0
 	animation10416.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle plastic
+	//needle plastic purple
 	animation10417.interval,never
 	animation10417.pattern1,overlay,104080,0,0,0
 	animation10417.pattern2,overlay,104080,5000,0,0
 	animation10417.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle copper
 	animation10420.interval,never
 	animation10420.pattern1,overlay,104090,0,0,0
 	animation10420.pattern2,overlay,104090,5000,0,0
 	animation10420.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle silver
 	animation10430.interval,never
 	animation10430.pattern1,overlay,104100,0,0,0
 	animation10430.pattern2,overlay,104100,5000,0,0
 	animation10430.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle gold
 	animation10440.interval,never
 	animation10440.pattern1,overlay,104110,0,0,0
 	animation10440.pattern2,overlay,104110,5000,0,0
 	animation10440.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle obsidian
 	animation10450.interval,never
 	animation10450.pattern1,overlay,104120,0,0,0
 	animation10450.pattern2,overlay,104120,5000,0,0
 	animation10450.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle diamond
 	animation10460.interval,never
 	animation10460.pattern1,overlay,104130,0,0,0
 	animation10460.pattern2,overlay,104130,5000,0,0
 	animation10460.pattern3,alternativestart,(10497,10498,10499)
 	
-	//needle
+	//needle bismuth
 	animation10470.interval,never
 	animation10470.pattern1,overlay,104140,0,0,0
 	animation10470.pattern2,overlay,104140,5000,0,0
@@ -1217,13 +1217,11 @@ surface200
 	animation10497.pattern3,overlay,104001,5000-20000,0,0
 	animation10497.pattern4,overlay,-1,0,0,0
 	
-	
 	animation10498.interval,never
 	animation10498.pattern1,overlay,104002,0,0,0
 	animation10498.pattern2,overlay,-1,0,0,0
 	animation10498.pattern3,overlay,104002,5000-20000,0,0
 	animation10498.pattern4,overlay,-1,0,0,0
-	
 	
 	animation10499.interval,never
 	animation10499.pattern1,overlay,104003,0,0,0
@@ -1237,64 +1235,432 @@ surface200
 	animation10500.interval,never
 	animation10500.pattern1,overlay,105000,0,0,0
 	
-	//bell plastic
+	//bell plastic pink
 	animation10510.interval,never
 	animation10510.pattern1,overlay,105010,0,0,0
 	
-	//bell plastic
+	//bell plastic red
 	animation10511.interval,never
 	animation10511.pattern1,overlay,105020,0,0,0
 	
-	//bell plastic
+	//bell plastic orange
 	animation10512.interval,never
 	animation10512.pattern1,overlay,105030,0,0,0
 	
-	//bell plastic
+	//bell plastic yellow
 	animation10513.interval,never
 	animation10513.pattern1,overlay,105040,0,0,0
 	
-	//bell plastic
+	//bell plastic green
 	animation10514.interval,never
 	animation10514.pattern1,overlay,105050,0,0,0
 	
-	//bell plastic
+	//bell plastic cyan
 	animation10515.interval,never
 	animation10515.pattern1,overlay,105060,0,0,0
 	
-	//bell plastic
+	//bell plastic blue
 	animation10516.interval,never
 	animation10516.pattern1,overlay,105070,0,0,0
 	
-	//bell plastic
+	//bell plastic purple
 	animation10517.interval,never
 	animation10517.pattern1,overlay,105080,0,0,0
 	
-	//bell
+	//bell copper
 	animation10520.interval,never
 	animation10520.pattern1,overlay,105090,0,0,0
 	
-	//bell
+	//bell silver
 	animation10530.interval,never
 	animation10530.pattern1,overlay,105100,0,0,0
 	
-	//bell
+	//bell gold
 	animation10540.interval,never
 	animation10540.pattern1,overlay,105110,0,0,0
 	
-	//bell
+	//bell obsidian
 	animation10550.interval,never
 	animation10550.pattern1,overlay,105120,0,0,0
 	
-	//bell
+	//bell diamond
 	animation10560.interval,never
 	animation10560.pattern1,overlay,105130,0,0,0
 	
-	//bell
+	//bell bismuth
 	animation10570.interval,never
 	animation10570.pattern1,overlay,105140,0,0,0
 	
 	
+	//Normal Origin
+	animation10600.interval,never
+	animation10600.pattern1,overlay,106000,0,0,0
 
+	//normal plastic pink
+	animation10610.interval,never
+	animation10610.pattern1,overlay,106010,0,0,0
+	
+	//normal plastic red
+	animation10611.interval,never
+	animation10611.pattern1,overlay,106020,0,0,0
+	
+	//normal plastic orange
+	animation10612.interval,never
+	animation10612.pattern1,overlay,106030,0,0,0
+	
+	//normal plastic yellow
+	animation10613.interval,never
+	animation10613.pattern1,overlay,106040,0,0,0
+	
+	//normal plastic green
+	animation10614.interval,never
+	animation10614.pattern1,overlay,106050,0,0,0
+	
+	//normal plastic cyan
+	animation10615.interval,never
+	animation10615.pattern1,overlay,106060,0,0,0
+	
+	//normal plastic blue
+	animation10616.interval,never
+	animation10616.pattern1,overlay,106070,0,0,0
+	
+	//normal plastic purple
+	animation10617.interval,never
+	animation10617.pattern1,overlay,106080,0,0,0
+	
+	//normal copper
+	animation10620.interval,never
+	animation10620.pattern1,overlay,106090,0,0,0
+	
+	//normal silver
+	animation10630.interval,never
+	animation10630.pattern1,overlay,106100,0,0,0
+	
+	//normal gold
+	animation10640.interval,never
+	animation10640.pattern1,overlay,106110,0,0,0
+	
+	//normal obsidian
+	animation10650.interval,never
+	animation10650.pattern1,overlay,106120,0,0,0
+	
+	//normal diamond
+	animation10660.interval,never
+	animation10660.pattern1,overlay,106130,0,0,0
+	
+	//normal bismuth
+	animation10670.interval,never
+	animation10670.pattern1,overlay,106140,0,0,0
+	
+	
+	
+	//Grandma Origin
+	animation1010600.interval,never
+	animation1010600.pattern1,overlay,107000,0,0,0
+
+	//Grandma plastic pink
+	animation1010610.interval,never
+	animation1010610.pattern1,overlay,107010,0,0,0
+	
+	//Grandma plastic red
+	animation1010611.interval,never
+	animation1010611.pattern1,overlay,107020,0,0,0
+	
+	//Grandma plastic orange
+	animation1010612.interval,never
+	animation1010612.pattern1,overlay,107030,0,0,0
+	
+	//Grandma plastic yellow
+	animation1010613.interval,never
+	animation1010613.pattern1,overlay,107040,0,0,0
+	
+	//Grandma plastic green
+	animation1010614.interval,never
+	animation1010614.pattern1,overlay,107050,0,0,0
+	
+	//Grandma plastic cyan
+	animation1010615.interval,never
+	animation1010615.pattern1,overlay,107060,0,0,0
+	
+	//Grandma plastic blue
+	animation1010616.interval,never
+	animation1010616.pattern1,overlay,107070,0,0,0
+	
+	//Grandma plastic purple
+	animation1010617.interval,never
+	animation1010617.pattern1,overlay,107080,0,0,0
+	
+	//Grandma copper
+	animation1010620.interval,never
+	animation1010620.pattern1,overlay,107090,0,0,0
+	
+	//Grandma silver
+	animation1010630.interval,never
+	animation1010630.pattern1,overlay,107100,0,0,0
+	
+	//Grandma gold
+	animation1010640.interval,never
+	animation1010640.pattern1,overlay,107110,0,0,0
+	
+	//Grandma obsidian
+	animation1010650.interval,never
+	animation1010650.pattern1,overlay,107120,0,0,0
+	
+	//Grandma diamond
+	animation1010660.interval,never
+	animation1010660.pattern1,overlay,107130,0,0,0
+	
+	//Grandma bismuth
+	animation1010670.interval,never
+	animation1010670.pattern1,overlay,107140,0,0,0
+	
+	
+	
+	//Pancake Origin
+	animation1110600.interval,never
+	animation1110600.pattern1,overlay,108000,0,0,0
+
+	//Pancake plastic pink
+	animation1110610.interval,never
+	animation1110610.pattern1,overlay,108010,0,0,0
+	
+	//Pancake plastic red
+	animation1110611.interval,never
+	animation1110611.pattern1,overlay,108020,0,0,0
+	
+	//Pancake plastic orange
+	animation1110612.interval,never
+	animation1110612.pattern1,overlay,108030,0,0,0
+	
+	//Pancake plastic yellow
+	animation1110613.interval,never
+	animation1110613.pattern1,overlay,108040,0,0,0
+	
+	//Pancake plastic green
+	animation1110614.interval,never
+	animation1110614.pattern1,overlay,108050,0,0,0
+	
+	//Pancake plastic cyan
+	animation1110615.interval,never
+	animation1110615.pattern1,overlay,108060,0,0,0
+	
+	//Pancake plastic blue
+	animation1110616.interval,never
+	animation1110616.pattern1,overlay,108070,0,0,0
+	
+	//Pancake plastic purple
+	animation1110617.interval,never
+	animation1110617.pattern1,overlay,108080,0,0,0
+	
+	//Pancake copper
+	animation1110620.interval,never
+	animation1110620.pattern1,overlay,108090,0,0,0
+	
+	//Pancake silver
+	animation1110630.interval,never
+	animation1110630.pattern1,overlay,108100,0,0,0
+	
+	//Pancake gold
+	animation1110640.interval,never
+	animation1110640.pattern1,overlay,108110,0,0,0
+	
+	//Pancake obsidian
+	animation1110650.interval,never
+	animation1110650.pattern1,overlay,108120,0,0,0
+	
+	//Pancake diamond
+	animation1110660.interval,never
+	animation1110660.pattern1,overlay,108130,0,0,0
+	
+	//Pancake bismuth
+	animation1110670.interval,never
+	animation1110670.pattern1,overlay,108140,0,0,0
+	
+	
+	
+	//Supervillain Origin
+	animation1210600.interval,never
+	animation1210600.pattern1,overlay,109000,0,0,0
+
+	//Supervillain plastic pink
+	animation1210610.interval,never
+	animation1210610.pattern1,overlay,109010,0,0,0
+	
+	//Supervillain plastic red
+	animation1210611.interval,never
+	animation1210611.pattern1,overlay,109020,0,0,0
+	
+	//Supervillain plastic orange
+	animation1210612.interval,never
+	animation1210612.pattern1,overlay,109030,0,0,0
+	
+	//Supervillain plastic yellow
+	animation1210613.interval,never
+	animation1210613.pattern1,overlay,109040,0,0,0
+	
+	//Supervillain plastic green
+	animation1210614.interval,never
+	animation1210614.pattern1,overlay,109050,0,0,0
+	
+	//Supervillain plastic cyan
+	animation1210615.interval,never
+	animation1210615.pattern1,overlay,109060,0,0,0
+	
+	//Supervillain plastic blue
+	animation1210616.interval,never
+	animation1210616.pattern1,overlay,109070,0,0,0
+	
+	//Supervillain plastic purple
+	animation1210617.interval,never
+	animation1210617.pattern1,overlay,109080,0,0,0
+	
+	//Supervillain copper
+	animation1210620.interval,never
+	animation1210620.pattern1,overlay,109090,0,0,0
+	
+	//Supervillain silver
+	animation1210630.interval,never
+	animation1210630.pattern1,overlay,109100,0,0,0
+	
+	//Supervillain gold
+	animation1210640.interval,never
+	animation1210640.pattern1,overlay,109110,0,0,0
+	
+	//Supervillain obsidian
+	animation1210650.interval,never
+	animation1210650.pattern1,overlay,109120,0,0,0
+	
+	//Supervillain diamond
+	animation1210660.interval,never
+	animation1210660.pattern1,overlay,109130,0,0,0
+	
+	//Supervillain bismuth
+	animation1210670.interval,never
+	animation1210670.pattern1,overlay,109140,0,0,0
+	
+	
+	
+	//Raccoon Origin
+	animation1310600.interval,never
+	animation1310600.pattern1,overlay,110000,0,0,0
+
+	//Raccoon plastic pink
+	animation1310610.interval,never
+	animation1310610.pattern1,overlay,110010,0,0,0
+	
+	//Raccoon plastic red
+	animation1310611.interval,never
+	animation1310611.pattern1,overlay,110020,0,0,0
+	
+	//Raccoon plastic orange
+	animation1310612.interval,never
+	animation1310612.pattern1,overlay,110030,0,0,0
+	
+	//Raccoon plastic yellow
+	animation1310613.interval,never
+	animation1310613.pattern1,overlay,110040,0,0,0
+	
+	//Raccoon plastic green
+	animation1310614.interval,never
+	animation1310614.pattern1,overlay,110050,0,0,0
+	
+	//Raccoon plastic cyan
+	animation1310615.interval,never
+	animation1310615.pattern1,overlay,110060,0,0,0
+	
+	//Raccoon plastic blue
+	animation1310616.interval,never
+	animation1310616.pattern1,overlay,110070,0,0,0
+	
+	//Raccoon plastic purple
+	animation1310617.interval,never
+	animation1310617.pattern1,overlay,110080,0,0,0
+	
+	//Raccoon copper
+	animation1310620.interval,never
+	animation1310620.pattern1,overlay,110090,0,0,0
+	
+	//Raccoon silver
+	animation1310630.interval,never
+	animation1310630.pattern1,overlay,110100,0,0,0
+	
+	//Raccoon gold
+	animation1310640.interval,never
+	animation1310640.pattern1,overlay,110110,0,0,0
+	
+	//Raccoon obsidian
+	animation1310650.interval,never
+	animation1310650.pattern1,overlay,110120,0,0,0
+	
+	//Raccoon diamond
+	animation1310660.interval,never
+	animation1310660.pattern1,overlay,110130,0,0,0
+	
+	//Raccoon bismuth
+	animation1310670.interval,never
+	animation1310670.pattern1,overlay,110140,0,0,0
+	
+	
+	
+	//Rebel Origin
+	animation1410600.interval,never
+	animation1410600.pattern1,overlay,111000,0,0,0
+
+	//Rebel plastic pink
+	animation1410610.interval,never
+	animation1410610.pattern1,overlay,111010,0,0,0
+	
+	//Rebel plastic red
+	animation1410611.interval,never
+	animation1410611.pattern1,overlay,111020,0,0,0
+	
+	//Rebel plastic orange
+	animation1410612.interval,never
+	animation1410612.pattern1,overlay,111030,0,0,0
+	
+	//Rebel plastic yellow
+	animation1410613.interval,never
+	animation1410613.pattern1,overlay,111040,0,0,0
+	
+	//Rebel plastic green
+	animation1410614.interval,never
+	animation1410614.pattern1,overlay,111050,0,0,0
+	
+	//Rebel plastic cyan
+	animation1410615.interval,never
+	animation1410615.pattern1,overlay,111060,0,0,0
+	
+	//Rebel plastic blue
+	animation1410616.interval,never
+	animation1410616.pattern1,overlay,111070,0,0,0
+	
+	//Rebel plastic purple
+	animation1410617.interval,never
+	animation1410617.pattern1,overlay,111080,0,0,0
+	
+	//Rebel copper
+	animation1410620.interval,never
+	animation1410620.pattern1,overlay,111090,0,0,0
+	
+	//Rebel silver
+	animation1410630.interval,never
+	animation1410630.pattern1,overlay,111100,0,0,0
+	
+	//Rebel gold
+	animation1410640.interval,never
+	animation1410640.pattern1,overlay,111110,0,0,0
+	
+	//Rebel obsidian
+	animation1410650.interval,never
+	animation1410650.pattern1,overlay,111120,0,0,0
+	
+	//Rebel diamond
+	animation1410660.interval,never
+	animation1410660.pattern1,overlay,111130,0,0,0
+	
+	//Rebel bismuth
+	animation1410670.interval,never
+	animation1410670.pattern1,overlay,111140,0,0,0
 }
 
 

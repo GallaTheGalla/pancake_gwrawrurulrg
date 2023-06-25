@@ -82,7 +82,29 @@ shelf{
 			if _surf == 102{
 				//_res += "\i[10950]"	
 				if goreallowed == 0{
-					_surf = "109"
+					_surf = "10102"
+				}
+				if upgradelevels[_i] == 2{
+					_res += "\i[%(_surf)%(upgradelevels[_i]-1)%(lifeinplastic)]"	
+				}else{
+					_res += "\i[%(_surf)%(upgradelevels[_i]-1)0]"	
+				}
+			}
+			if _surf == 106{
+				if origin == "Grandma"{
+					_surf = "10106"
+				}
+				if origin == "Pancake"{
+					_surf = "11106"
+				}
+				if origin == "Supervillain"{
+					_surf = "12106"
+				}
+				if origin == "Raccoon"{
+					_surf = "13106"
+				}
+				if origin == "Rebel"{
+					_surf = "14106"
 				}
 				if upgradelevels[_i] == 2{
 					_res += "\i[%(_surf)%(upgradelevels[_i]-1)%(lifeinplastic)]"	
