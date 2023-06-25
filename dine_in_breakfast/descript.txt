@@ -20,7 +20,7 @@ validrect.top,15
 validrect.right,-15
 validrect.bottom,-15
 
-wordwrappoint.x,-10
+wordwrappoint.x,-26
 wordwrappoint.y,0
 
 font.name,hello-world.ttf

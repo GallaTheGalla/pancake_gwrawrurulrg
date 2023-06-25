@@ -213,3 +213,14 @@ moon
 	"end of the rainbow"
 	"River Styx"
 }
+
+punctuation
+{
+	"!"
+	"!!!"
+	"..."
+	"...!"
+	"!?"
+	"...?"
+	"."
+}
