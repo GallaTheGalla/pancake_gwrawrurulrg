@@ -1,7 +1,7 @@
 charset,UTF-8
 type,ghost
 
-name,Pancake GWRAWRUULRG
+name,Pancake GWRAWRURULRG
 directory,pancake_gwrawrurulrg
 
 balloon.directory,dine_in_breakfast
