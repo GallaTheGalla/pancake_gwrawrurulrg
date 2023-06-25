@@ -75,6 +75,7 @@ OnShiniesMenu : all {
 			"\n"
 	//	} 
 	}
+	"\n\n[half]%(nvm)"
 
 }
 
@@ -98,7 +99,7 @@ OnShinyInfo : all {
 
 
 OnAdditionsMenu : all{
-	"\C\![lock,balloonrepaint]\c\_q\b[2]\f[align,center]\f[bold,1]\f[height,+3]~ADDITIONS~\f[height,-3]\n\f[align,left]"
+	"\C\![lock,balloonrepaint]\c\_q\b[2]\f[height,%fontheight]\f[align,center]\f[bold,1]\f[height,+3]~ADDITIONS~\f[height,-3]\n\f[align,left]"
 	inmenu = 0
 	_database = "ShinyData" + origin
 	//SYRUPS
@@ -126,6 +127,7 @@ OnAdditionsMenu : all{
 	}
 	if checkColumnSetup; "\n\n[half]\_l[15em,1.5em]"
 	"\f[bold,1]TOPPINGS\f[bold,0]"
+	if checkColumnSetup == 0; "\n"
 	//TOPPINGS
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
 		

@@ -114,6 +114,8 @@ OnInitialize
 	//if !ISVAR("NewVariable"); NewVariable = 0
 	//This means that it will only set the new variable if the user doesn't already have it, so that their variables don't get overwritten
 	
+	version = "V1.0.0"
+	
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
 		LastTalk = ""

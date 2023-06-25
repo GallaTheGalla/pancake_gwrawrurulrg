@@ -36,7 +36,7 @@ OnMainMenu : all
 	
 	"\![*]\q[Settings,OnSettingsMenu]     \![*]\q[Nevermind,OnBlank]\n\n"
 
-	"\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %TOINT(pancakes) Per Click: %FormatTwoDec(clickmultiplier)\n%FormatTwoDec(getSecCakes) pancakes per sec\n%(phoneFriendAmt(toolsarray[0])) helping click"
+	"\f[align,center]~~~~~~~~~~~~~~~~~\nPancakes: %TOINT(pancakes) Per Click: %FormatTwoDec(clickmultiplier)\n%FormatTwoDec(getSecCakes) pancakes per sec\n%(phoneFriendAmt(toolsarray[0])) helping click\n%(version)"
 	"\e"
 }
 
@@ -160,7 +160,7 @@ OnTalkRateChange
 
 
 OnSettingsMenu{
-	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[0]\![set,autoscroll,disable]"
+	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[0]\![set,autoscroll,disable]\f[height,%fontheight]"
 	--
 	"Font Size:                  \q[ - ,OnDecFont]%fontheight\q[ + ,OnIncFont] \n"
 	--
@@ -851,10 +851,10 @@ OnBuyTool{
 	_amt = TOINT(reference0)
 	_thisitem = ToolsData[_index]
 	
-	while _amt > 0 && pancakes > TOINT(_thisitem[2] * toolsarray[_index]){
-			toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
-			pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
-			_amt--
+	while _amt > 0 && pancakes > TOINT(_thisitem[2] * (toolsarray[_index])+1) {
+		toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
+		pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
+		_amt--
 	}
 
 	"%(OnToolsMenu)\![unlock,balloonrepaint]%(checkAchievements)"
@@ -869,9 +869,9 @@ OnSellTool{
 	
 	
 	while _amt > 0 && toolsarray[_index] > 0{
-			pancakes += TOINT(_thisitem[2] * toolsarray[_index])
-			toolsarray[_index] = (TOINT(toolsarray[_index]) - 1)
-			_amt--
+		pancakes += TOINT(_thisitem[2] * toolsarray[_index])
+		toolsarray[_index] = (TOINT(toolsarray[_index]) - 1)
+		_amt--
 	}
 	
 
@@ -892,7 +892,7 @@ OnToolInfo : all {
 	if _index == 0{
 		"Each click is worth %FormatTwoDec(clickmultiplier)."
 	}else{
-		"Upgrades are giving this a multiplier of %FormatTwoDec(pertoolmult[_index])."
+		"Upgrades are giving this a multiplier of %FormatTwoDec(pertoolmult[_index]+pertoolincarnationmult[_index])."
 	}
 	
 	

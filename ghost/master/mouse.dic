@@ -16,7 +16,7 @@ OnMouseDoubleClick
 				OnClick(1)
 				handclicks++
 				--
-				"\_q%(tallstack)total pancakes: %TOINT(pancakes)"
+				"\_q%(tb)%(tallstack)total pancakes: %TOINT(pancakes)"
 			}
 			
 		}
@@ -144,7 +144,7 @@ getSecCakes{
 	_res = 0
 	for _i = 1; _i < ARRAYSIZE(ToolsData); _i++{
 		_info = ToolsData[_i]
-		_res += toolsarray[_i] * TOREAL(_info[3]/10)  * pertoolmult[_i]
+		_res += toolsarray[_i] * TOREAL(_info[3]/10)  * (pertoolmult[_i] + pertoolincarnationmult[_i])
 	
 	}
 	_res
