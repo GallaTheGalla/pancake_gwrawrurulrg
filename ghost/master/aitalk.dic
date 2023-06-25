@@ -15,6 +15,31 @@ RandomTalk : nonoverlap_pool
 {
 	"%(tallstack)This is a test\n%var.req.key\n%var.req.value\nAnd thus it continues."
 	
+	
+	
+	
+	
+	if shinydialogues == 1{
+	
+	
+		for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
+			_database = "ShinyData" + origin
+			_size = ARRAYSIZE(EVAL(_database))
+			_thisitem = EVAL("%(_database)[_i]")
+			if _thisitem == ""{
+				_thisitem = ShinyDataNormal[_i]
+				_thisitem = EVAL("%(_database)[RAND(_size)]")
+			}
+			
+			if shiniesarray[_i] == 1{
+				_thisitem[7]
+			}
+		
+		}
+
+	
+	}
+	
 }
 
 
@@ -28,7 +53,7 @@ OnTranslate
 {
 	_talk = "\f[height,%fontheight]" + reference0
 	
-	
+		_talk = REPLACE(_talk,"[cm]",",")
 	if SHIORI3FW.BalloonName != "Dine-In Breakfast"{
 		_talk = REPLACE(_talk,"\b[0]","\b[0]")
 		_talk = REPLACE(_talk,"\b[2]","\b[2]")
@@ -52,3 +77,7 @@ OnTranslate
 	
 	TOSTR(_talk)
 }
+
+
+
+

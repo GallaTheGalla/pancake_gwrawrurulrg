@@ -162,39 +162,65 @@ OnTalkRateChange
 OnSettingsMenu{
 	"\C\![lock,balloonrepaint]\c\_q%(shelf)%(tallstack)\b[0]\![set,autoscroll,disable]"
 	--
-	"Font Size: \q[ - ,OnDecFont]%fontheight\q[ + ,OnIncFont] \n"
+	"Font Size:                  \q[ - ,OnDecFont]%fontheight\q[ + ,OnIncFont] \n"
 	--
 	if clicktype == 0{
-		"Click Type: \![*]\q[Single,OnFlipClickType]"
+		"Click Type:                 \![*]\q[Single,OnFlipClickType]"
 	}else{
-		"Click Type: \![*]\q[Double,OnFlipClickType]"
+		"Click Type:                 \![*]\q[Double,OnFlipClickType]"
 	}
 	--
 	"\n"
 	--
-	if goreallowed == 0{
-		"Gore Allowed: \![*]\q[Off,OnFlipGore]"
+	if swearing == 0{
+		"Swearing:                   \![*]\q[Off,OnFlipSwear]"
 	}else{
-		"Gore Allowed: \![*]\q[On,OnFlipGore]"
+		"Swearing:                   \![*]\q[On,OnFlipSwear]"
 	}
+	--
+	"\n"
+	--
+	
+	if goreallowed == 0{
+		"Gore Allowed:               \![*]\q[Off,OnFlipGore]"
+	}else{   
+		"Gore Allowed:               \![*]\q[On,OnFlipGore]"
+	}
+	--
+	"\n"
+	--
+	if shinydialogues == 0{
+		"Shinies as Randomtalk:      \![*]\q[Off,OnFlipShinyDia]"
+	}else{
+		"Shinies as Randomtalk:      \![*]\q[On,OnFlipShinyDia]"
+	}
+	--
+	"\n"
+	--
+	if billionairehate == 0{
+		"Do You Hate Billionaires?:  \![*]\q[No.,OnFlipBill]"
+	}else{
+		"Do You Hate Billionaires?:  \![*]\q[Yes??,OnFlipBill]"
+	}
+	
 	--
 	"\n"
 	--
 	if columnoverride == 0{
-		"Column Override: \![*]\q[Off,OnFlipColumns]"
+		"Column Override:            \![*]\q[Off,OnFlipColumns]"
 	}else{
-		"Column Override: \![*]\q[On,OnFlipColumns]"
+		"Column Override:            \![*]\q[On,OnFlipColumns]"
 	}
 	--
 	"\nTalk Rate:\n%(OnTalkRateDisplay)"
 	--
-	"\n\![*]\q[Hard Reset to 0,OnHardReset]\n"
+	"\n[half]\![*]\q[Hard Reset to 0,OnHardReset]\n"
 	--
 	if incarnations > 1{
 		"(You're on run number %incarnations.)"
 	}
 	--
-	"\n\n[half]%(nvm)     \![*]\q[Back,OnMainMenu]"
+	"\n\n[half]\![*]\q[Nevermind,OnBlank]     \![*]\q[Back,OnMainMenu]"
 	
 
 }
@@ -269,6 +295,32 @@ OnFlipGore{
 	OnSettingsMenu
 }
 
+OnFlipBill{
+	if billionairehate == 0{
+		billionairehate = 1
+	}else{
+		billionairehate = 0
+	}
+	OnSettingsMenu
+}
+
+OnFlipShinyDia{
+	if shinydialogues == 0{
+		shinydialogues = 1
+	}else{
+		shinydialogues = 0
+	}
+	OnSettingsMenu
+}
+
+OnFlipSwear{
+	if swearing == 0{
+		swearing = 1
+	}else{
+		swearing = 0
+	}
+	OnSettingsMenu
+}
 
 OnFlipColumns{
 	if columnoverride == 0{
@@ -712,7 +764,7 @@ OnToolsMenu : all {
 		}
 	
 	}
-	"\n\n%(nvm)    \![*]\q[Refresh,OnToolsMenu]"
+	"\n\n\n[half]%(nvm)    \![*]\q[Refresh,OnToolsMenu]"
 
 }
 
@@ -722,12 +774,13 @@ OnBuyTool{
 	_thisitem = ToolsData[_index]
 	
 	while _amt > 0 && pancakes > TOINT(_thisitem[2] * toolsarray[_index]){
-			pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
 			toolsarray[_index] = (TOINT(toolsarray[_index]) + 1)
+			pancakes -= TOINT(_thisitem[2] * toolsarray[_index])
 			_amt--
 	}
 
-	"%(OnToolsMenu)\![unlock,balloonrepaint]"
+	"%(OnToolsMenu)\![unlock,balloonrepaint]%(checkAchievements)"
+	
 
 }
 
@@ -812,7 +865,7 @@ AchievementPopup{
 	}
 	if shiniesarray[_index] == 0{
 		shiniesarray[_index] += 1
-		"\C%(shelf)\b[6]Congratulations! You've earned the %(_thisitem[0]) shiny!\x\0"
+		"\C%(shelf)\b[6]Congrats! Unlocked: %(_thisitem[0])\n\n[half]%(_thisitem[7])\w8\w8\x\0"
 	}
 	
 }

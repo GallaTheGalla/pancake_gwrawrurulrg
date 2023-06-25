@@ -7,7 +7,7 @@ tallstack{
 	"\0\s[100]"
 	--
 	_res = ""
-	for _i = 0; _i < 10; _i++{
+	for _i = 0; _i < 22; _i++{
 		_this = 30 + _i
 		_this = "%_this"
 		
@@ -68,7 +68,7 @@ shelf{
 	//charms
 	//for each item
 	_res = ""
-	for _i = 0; _i < 8; _i++ {
+	for _i = 0; _i < 12; _i++ {
 		//if it is owned
 		if upgradelevels[_i] > 0{
 			_surf = 95 + _i

@@ -34,7 +34,10 @@ strToQuestionMarks{
 	_res = ""
 	_start = _argv[0]
 	for _i = 0; _i < STRLEN(_start); _i++{
-		if SUBSTR(_start,_i,1) == " "{
+		if SUBSTR(_start,_i,2) == "\n"{
+			_res += "\n"
+			_i++
+		}elseif SUBSTR(_start,_i,1) == " "{
 			_res += " "
 		}else{
 			_res += "?"
@@ -51,7 +54,7 @@ OnShiniesMenu : all {
 	"\n[half]"
 	_database = "ShinyData" + origin
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
-		_offset = 15 * ((_i) % 2)
+	//	_offset = 20 * ((_i) % 2)
 		
 		
 		_thisitem = EVAL("%(_database)[_i]")
@@ -66,11 +69,11 @@ OnShiniesMenu : all {
 			"\__q[OnShinyInfo,%_i]\![*]\__q"
 			"%(_thisitem[0])"
 		}
-		if checkColumnSetup && _i % 2 == 0 {
-			"\_l[%(_offset)em,@0em]                           "
-		}else{
+	//	if checkColumnSetup && _i % 2 == 0 {
+	//		"\_l[%(_offset)em,@0em]                                "
+	//	}else{
 			"\n"
-		} 
+	//	} 
 	}
 
 }
@@ -95,11 +98,11 @@ OnShinyInfo : all {
 
 
 OnAdditionsMenu : all{
-	"\b[2]\_q\f[align,center]\f[bold,1]\f[height,+3]~ADDITIONS~\f[height,-3]\n\f[align,left]"
+	"\C\![lock,balloonrepaint]\c\_q\b[2]\f[align,center]\f[bold,1]\f[height,+3]~ADDITIONS~\f[height,-3]\n\f[align,left]"
 	inmenu = 0
 	_database = "ShinyData" + origin
 	//SYRUPS
-	"\n[30]SYRUPS\f[bold,0]%(tallstack)\n\n[half]"
+	"\n[30]SYRUPS\f[bold,0]%(tallstack)"
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
 		_thisitem = EVAL("%(_database)[_i]")
 		if _thisitem == ""{
@@ -140,7 +143,7 @@ OnAdditionsMenu : all{
 				if topping != _thisitem[4]{
 					"\![*]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),%(_thisitem[4])]\n"
 				}else{
-					"\![*]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),'']\n"
+					"\![*]\f[color,disable]\q[%(_thisitem[3]),OnChangeTopping,%(_thisitem[2]),'']\f[color,default]\n"
 				}
 				
 			}

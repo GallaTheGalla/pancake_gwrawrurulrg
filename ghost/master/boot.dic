@@ -6,10 +6,21 @@ OnFirstBoot
 	LastTalk = ""
 	incarnations = 0
 	origin = "Normal"
+	handclicks = 0
+
+	//settings
+	clicktype = 0 //0 is single click
+	fontheight = "+0" //relative
+	goreallowed = 0
+	billionairehate = 1
+	swearing = 0
+	shinydialogues = 1
+	
+	columnoverride = 0
 	
 	OnFirstBoot_VARIABLES
 	
-	"%(shelf)%(tallstack)Take me to your pancakes."
+	"%(shelf)%(tallstack)%(nb)It's a typical breakfast time,\w4 and you're in the kitchen.\w8\w8\n\nAfter rummaging through the cabinets,\w4 you decide to make pancakes.\w8\w8\w8\w8\n\nBetter get started.\w8\w8\x"
 }
 
 OnFirstBoot_Reset{
@@ -17,18 +28,58 @@ OnFirstBoot_Reset{
 	OnFirstBoot_VARIABLES
 	
 	origin = randomOrigin
-	origin = "Raccoon"
 	
-	"%(shelf)%(tallstack)AGAIN! AGAIN! AGAIN!"
+	"%(shelf)%(tallstack)"
+	--
+	case origin{
+		when "Normal"{
+			"%(nb)It's a typical breakfast time,\w4 and you're in the kitchen.\w8\w8\n\nAfter rummaging through the cabinets,\w4 you decide to make pancakes.\w8\w8\w8\w8\n\nBetter get started.\w8\w8\x"
+		}
+		when "Raccoon"{
+			""
+		}
+		when "Normal"{
+			""
+		}
+		when "Raccoon"{
+			""
+		}
+		when "Normal"{
+			""
+		}
+		when "Raccoon"{
+			""
+		}
+		when "Normal"{
+			""
+		}
+		when "Raccoon"{
+			""
+		}
+		when "Normal"{
+			""
+		}
+		when "Raccoon"{
+			""
+		}
+	}
 	
 }
 
 
-randomOrigin{
+randomOrigin : pool {
 	"Normal"
 	"Supervillain"
-	"Alien"
 	"Raccoon"
+	"Grandma"
+	"Pancake"
+	if incarnations > 10{
+		"Alien"
+		"Occult"
+		"Rebel"
+		"Househusband"
+	}
+
 }
 
 
@@ -40,12 +91,7 @@ OnFirstBoot_VARIABLES{
 	
 	lifeinplastic = RAND(8)
 	
-	//settings
-	clicktype = 0 //0 is single click
-	fontheight = "+0" //relative
-	goreallowed = 0
-	
-	columnoverride = 0
+
 	
 	clickmultiplier = 1.0
 	clickmultbonus = 0.0
@@ -53,7 +99,7 @@ OnFirstBoot_VARIABLES{
 	upgradearray = initZeroArray(10)
 	toolsarray = initZeroArray(10)
 	
-	shiniesarray = initZeroArray(50)
+	shiniesarray = initZeroArray(90)
 	upgradelevels = initZeroArray(15)
 	
 	//fridgemult = 1

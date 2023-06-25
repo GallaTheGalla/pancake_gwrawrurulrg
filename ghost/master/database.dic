@@ -41,7 +41,7 @@ SpoonUpgradeData : array{
 	"Copper Spoon,0,100,5000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 3),At least this one is normal?"
 	"Silver Spoon,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 	"Gold Spoon,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
-	"Cast Iron Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+	"Obsidian Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	"Diamond Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	"Bismuth Spoon,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 
@@ -50,11 +50,13 @@ SpoonUpgradeData : array{
 //same structure as above
 EggUpgradeData : array{
 	"An Egg,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.05),Horrendously flimsy."
-	"Copper Egg,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.1),Made of melted pennies."
-	"Eggilouasrgibsfdas,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.2),At least this one is normal?"
-	"shit it hatched,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.3),At least this one is normal?"
-	"this. this is a goose,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.5),At least this one is normal?"
-	"A PHOENIX????,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(2.0),Ascend."
+	"Plastic Egg,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.1),Made of melted pennies."
+	"Copper Egg,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.2),At least this one is normal?"
+	"Silver Egg,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.3),At least this one is normal?"
+	"Gold Egg,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.4),At least this one is normal?"
+	"Obsidian Egg,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.6),At least this one is normal?"
+	"Diamond Egg,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(1.8),At least this one is normal?"
+	"Bismuth Egg,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[1]=TOREAL(2.0),Ascend."
 
 }
 
@@ -62,11 +64,13 @@ EggUpgradeData : array{
 //same structure as above
 PanUpgradeData : array{
 	"Pan,0,10,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.05),Horrendously flimsy."
-	"Pansexual,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.1),Made of melted pennies."
+	"Plastic Pan,0,50,1000,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.1),It's going to melt???"
 	"Silver Pan,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.2),At least this one is normal?"
 	"Gold Pan,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.3),At least this one is normal?"
-	"Bismuth Pan,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.5),At least this one is normal?"
-	"Diamond Pan,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(2.0),Ascend."
+	"Obsidian Pan,0,10650,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.4),At least this one is normal?"
+	"Gold Pan,0,256300,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.6),At least this one is normal?"
+	"Diamond Pan,0,4007756753,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(1.8),At least this one is normal?"
+	"Bismuth Pan,0,6666666,500,img/spoon.png,img/spoon.png,pertoolmult[2]=TOREAL(2.0),Ascend."
 
 }
 
@@ -239,7 +243,7 @@ AdditionsInfo{
 
 }
 
-
+/*
 //name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
 ShinyDataNormal : array{
 	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,Kitty?"
@@ -253,6 +257,64 @@ ShinyDataNormal : array{
 
 }
 
+*/
+
+//name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
+ShinyDataNormal : array{
+	"First Pancake,pancakes>0,N/A,N/A,0,img,img,First is the worst[cm] second is the best!,Have more than 0 pancakes."
+	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,How many pancakes does it take to build a ladder?,Have more than 50 pancakes."
+	"Clickmaster,handclicks>50,N/A,N/A,0,img,img,Remember to take breaks!,Click more than 50 times."
+	"Cookie Clicker Misses You,handclicks>100,N/A,N/A,20,img,img,Pancakes[cm] cookies[cm] basically the same thing.,Click more than 100 times."
+	"Isn't This An Ukagaka,handclicks>=500,N/A,N/A,20,img,img,Yes[cm] now stop asking silly questions.,Click 500 or more times."
+	"I Think You're Using An Autoclicker,handclicks>1000,N/A,N/A,0,img,img,Is that legal? Do you have a license for that?,Click 1000 or more times."
+	"CHEATER (or surprisingly dedicated),handclicks>=10000,N/A,N/A,20,img,img,Definitely take a break[cm] though.,Click 10000 or more times."
+	
+	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,Sometimes[cm] animals are the only ones you can count on...,Have more than 0 phones."
+	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,0,img,img,It takes a village to raise a pancake.,Have more than 10 phones."
+	"Something About Tony,toolsarray[0]>100,Toppings,Butter,0,img,img,Teach me[cm] Tony.,Have more than 100 phones."
+	"Got The Family Plan,toolsarray[0]>1000,N/A,N/A,0,img,img,This is some serious networking.,Have more than 1000 phones."
+	
+	"Chilly,toolsarray[1]>0,N/A,N/A,0,img,img,Sometimes there are pancakes in here...,Have more than 0 fridges."
+	"How Does The Light Work?,toolsarray[1]>10,N/A,N/A,0,img,img,Some mysteries aren't meant to be solved.,Have more than 10 fridges."
+	"Is. Is It Full Of Eggs.,toolsarray[1]>100,N/A,N/A,0,img,img,Answer: yes.,Have more than 100 fridges."
+	"Do You Really Need This?,toolsarray[1]>1000,N/A,N/A,0,img,img,Answer: also yes.,Have more than 1000 fridges."
+	
+	"Now We're Cooking With Fire,toolsarray[2]>0,N/A,N/A,0,img,img,If you thought these pancakes were good before[cm] watch this!,Have more than 0 stoves."
+	"Heating Up,toolsarray[2]>10,N/A,N/A,0,img,img,Ow I burnt myself.,Have more than 10 stoves."
+	"Is This A Fire Hazard?,toolsarray[2]>100,N/A,N/A,0,img,img,It's probably fine.,Have more than 100 stoves."
+	"What Are You Building And Are You Sure It's Pancakes,toolsarray[2]>1000,N/A,N/A,0,img,img,This may be too much fire for one pancake maker.,Have more than 1000 stoves."
+	
+	"Pancake Flowers...?,toolsarray[3]>0,N/A,N/A,0,img,img,They grew from the seed packet like this[cm] I swear.,Have more than 0 gardens."
+	"How Does This Work? They're Fully Baked,toolsarray[3]>10,N/A,N/A,0,img,img,Seriously[cm] they're warm and everything...,Have more than 10 gardens."
+	"Why Do They Get So Big,toolsarray[3]>100,N/A,N/A,0,img,img,Are they looking at me...?,Have more than 100 gardens."
+	"Honestly A Little Intimidated,toolsarray[3]>1000,N/A,N/A,0,img,img,They're definitely looking at me.,Have more than 1000 gardens."
+	
+	"Swing Batter,toolsarray[4]>0,N/A,N/A,0,img,img,Oh[cm] oh no[cm] it got everywhere.,Have more than 0 shooters."
+	"Take Me Out To The Batter Game,toolsarray[4]>10,N/A,N/A,0,img,img,Buy me some pancakes and more pancakes,Have more than 10 shooters."
+	"Ready For The Big Game,toolsarray[4]>100,N/A,N/A,0,img,img,We've been practicing all season!,Have more than 100 shooters."
+	"Grand Slam,toolsarray[4]>1000,N/A,N/A,0,img,img,Some say the batter is still flying to this day.,Have more than 1000 shooters."
+	
+	"Is That An Egg Carton,toolsarray[5]>0,N/A,N/A,0,img,img,Or maybe an ice cube tray???,Have more than 0 bots."
+	"Why Are These Built Like This,toolsarray[5]>10,N/A,N/A,0,img,img,There's so much tape...,Have more than 10 bots."
+	"How are they so efficient!?,toolsarray[5]>100,N/A,N/A,0,img,img,Their legs are toothpicks! They don't even have fingers!,Have more than 100 bots."
+	"A WHOLE ARMY!?,toolsarray[5]>1000,N/A,N/A,0,img,img,They learned how to replicate. It's all over now.,Have more than 1000 bots."
+	
+	"The Circus Is In Town!,toolsarray[6]>0,N/A,N/A,0,img,img,All the performers are made of pancakes.,Have more than 0 circuses."
+	"May I Buy Popcorn,toolsarray[6]>10,N/A,N/A,0,img,img,The popcorn is made of pancakes.,Have more than 10 circuses."
+	"I Bought A Balloon[cm] I Hope There's No Needle To– ah dangit,toolsarray[6]>100,N/A,N/A,0,img,img,That was the last one[cm] too.,Have more than 100 circuses."
+	"The Hit Movie UP,toolsarray[6]>1000,N/A,N/A,0,img,img,Turns out there were more balloons in the back.,Have more than 1000 circuses."
+	
+	"What Did You Summon?,toolsarray[7]>0,N/A,N/A,0,img,img,I thought it was supposed to make pancakes[cm] not be made of pancakes.,Have more than 0 monsters."
+	"Wait[cm] Another One?,toolsarray[7]>10,N/A,N/A,0,img,img,How many of these did we make!?,Have more than 10 monsters."
+	"They're Drooling On Me...,toolsarray[7]>100,N/A,N/A,0,img,img,...Is that maple syrup?,Have more than 100 monsters."
+	"All Hail The Pancake Monsters,toolsarray[7]>1000,N/A,N/A,0,img,img,They cry if you don't hype them up,Have more than 1000 monsters."
+	
+	"Rinse And Repeat,incarnations>1,N/A,N/A,0,img,img,The cycle of life is round... like a pancake...,Reincarnate at least once."
+	"Hail Those Who Have Come Before,incarnations>=10,N/A,N/A,0,img,img,The cycle of history is round... like a pancake...,Reincarnate 10 or more times."
+	"Shoulders Of Giants,incarnations>=25,N/A,N/A,0,img,img,The cycle of the universe is round... like a pancake...,Reincarnate 25 or more times."
+
+}
+
 
 ShinyDataSupervillain : array{
 	"Call Your Evil Pet,toolsarray[0]>0,N/A,N/A,img,img,YOUR PIRHANA"
@@ -263,5 +325,62 @@ ShinyDataSupervillain : array{
 	""
 	""
 	""
+
+}
+
+
+//name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
+ShinyDataRaccoon : array{
+	"First Pancake,pancakes>0,N/A,N/A,0,img,img,i am so gud at this :),Have more than 0 pancakes."
+	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,my factori will florish.pass me maei trahs,Have more than 50 pancakes."
+	"Clickmaster,handclicks>50,N/A,N/A,0,img,img,my lidl hands are foir moving anad pessing things,Click more than 50 times."
+	"Cookie Clicker Misses You,handclicks>100,N/A,N/A,20,img,img,i am smaking butons.i am haeving  awonderufgl nite,Click more than 100 times."
+	"Isn't This An Ukagaka,handclicks>=500,Toppings,Butter,20,img,img,was an uklagaca? dos it maek panackes?,Click 500 or more times."
+	"I Think You're Using An Autoclicker,handclicks>100,N/A,N/A,0,img,img,racahweons do not cheet. no. no i am hnot. spot laing why would mai face chet,Click 1000 or more times."
+	"CHEATER (or surprisingly dedicated),handclicks>=10000,N/A,N/A,20,img,img,no i di d noet do it. i didnt kill her. o hi mark,Click 10000 or more times."
+	
+	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,helo i am racon (call me),Have more than 0 phones."
+	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,0,img,img,i hav manei racoon frien,Have more than 10 phones."
+	"Something About Tony,toolsarray[0]>100,N/A,N/A,0,img,img,this rachon. is tony. i lov him he helps me baek pancaeks,Have more than 100 phones."
+	"Got The Family Plan,toolsarray[0]>1000,N/A,N/A,0,img,img,my liddl fingers . ar fore pressing thes butoons. i call my rachoaen frinesn,Have more than 1000 phones."
+	
+	"Chilly,toolsarray[1]>0,N/A,N/A,0,img,img,i eat trash. i donut let things molde\ni aem not a heithan,Have more than 0 fridges."
+	"How Does The Light Work?,toolsarray[1]>10,N/A,N/A,0,img,img,i SAID AEI PRESD BUTOSN.,Have more than 10 fridges."
+	"Is. Is It Full Of Eggs.,toolsarray[1]>100,N/A,N/A,0,img,img,ye. i ackhcualay reely liek eggs\ntastyes,Have more than 100 fridges."
+	"Do You Really Need This?,toolsarray[1]>1000,N/A,N/A,0,img,img,yae. i do,Have more than 1000 fridges."
+	
+	"Now We're Cooking With Fire,toolsarray[2]>0,N/A,N/A,0,img,img,i am saef 2 be trusted aeou nf heate a nutrenmgkdfaklOW,Have more than 0 stoves."
+	"Heating Up,toolsarray[2]>10,N/A,N/A,0,img,img,yeas i loev FIRE!111!!!! pleas send more,Have more than 10 stoves."
+	"Is This A Fire Hazard?,toolsarray[2]>100,N/A,N/A,0,img,img,arsun1,Have more than 100 stoves."
+	"What Are You Building And Are You Sure It's Pancakes,toolsarray[2]>1000,N/A,N/A,0,img,img,i am building rahcoesn thinsg,Have more than 1000 stoves."
+	
+	"Pancake Flowers...?,toolsarray[3]>0,N/A,N/A,0,img,img,i need 2 feed my famili jordan,Have more than 0 gardens."
+	"How Does This Work? They're Fully Baked,toolsarray[3]>10,N/A,N/A,0,img,img,do naugth question it\ni am a rackaen,Have more than 10 gardens."
+	"Why Do They Get So Big,toolsarray[3]>100,N/A,N/A,0,img,img,whan the pancaek is hi in the skie like a piza pye,Have more than 100 gardens."
+	"Honestly A Little Intimidated,toolsarray[3]>1000,N/A,N/A,0,img,img,i like 2 run at nite,Have more than 1000 gardens."
+	
+	"Swing Batter,toolsarray[4]>0,N/A,N/A,0,img,img,why. why it is going so faur awai\ncome back batter????,Have more than 0 shooters."
+	"Take Me Out To The Batter Game,toolsarray[4]>10,N/A,N/A,0,img,img,i. i canoot reach the swithc. mus shoot,Have more than 10 shooters."
+	"Ready For The Big Game,toolsarray[4]>100,N/A,N/A,0,img,img,i climbed inot the machien and learnt 2 fly,Have more than 100 shooters."
+	"Grand Slam,toolsarray[4]>1000,N/A,N/A,0,img,img,pleas send help i do not kno how 2 get down from this thee-- EKWLGBGBKLGA;FBDFHV,Have more than 1000 shooters."
+	
+	"Is That An Egg Carton,toolsarray[5]>0,N/A,N/A,0,img,img,robot maek rakon stronger,Have more than 0 bots."
+	"Why Are These Built Like This,toolsarray[5]>10,N/A,N/A,0,img,img,im tal now and i can maek so many pankaek w my robaotoic arms,Have more than 10 bots."
+	"How are they so efficient!?,toolsarray[5]>100,N/A,N/A,0,img,img,thei canoot have better hans than mein. somehou it works still. i haev thumbs,Have more than 100 bots."
+	"A WHOLE ARMY!?,toolsarray[5]>1000,N/A,N/A,0,img,img,yew are nothins to RACHAOEN OEVORAKLORD.,Have more than 1000 bots."
+	
+	"The Circus Is In Town!,toolsarray[6]>0,N/A,N/A,0,img,img,let us plai an hav fun\ntogether. join me.\npancaek,Have more than 0 circuses."
+	"May I Buy Popcorn,toolsarray[6]>10,N/A,N/A,0,img,img,o ok. i haev discovareed entertaoinmet\ndo not litter eher it is audonatuakkry ,Have more than 10 circuses."
+	"I Bought A Balloon[cm] I Hope There's No Needle To– ah dangit,toolsarray[6]>100,N/A,N/A,0,img,img,Tcoaircuses and acrnivals prodooc so much trash,Have more than 100 circuses."
+	"The Hit Movie UP,toolsarray[6]>1000,N/A,N/A,0,img,img,why did jordane strap me 2 so mani balon,Have more than 1000 circuses."
+	
+	"What Did You Summon?,toolsarray[7]>0,N/A,N/A,0,img,img,o\nheheheheheehhehHHEhhEHehhehHEhHEHEHEHEhe\ni am racoesn an i am trustworthi and can be trusted around nives,Have more than 0 monsters."
+	"Wait[cm] Another One?,toolsarray[7]>10,N/A,N/A,0,img,img,thaey do my bidding. rise. rise. riSE,Have more than 10 monsters."
+	"They're Drooling On Me...,toolsarray[7]>100,N/A,N/A,0,img,img,help i am 2 sticki 2 make pancaeks\nmy robot is noot mofing,Have more than 100 monsters."
+	"All Hail The Pancake Monsters,toolsarray[7]>1000,N/A,N/A,0,img,img,help me i haev started melting\ni am ebcoming 1,Have more than 1000 monsters."
+	
+	"Rinse And Repeat,incarnations>1,N/A,N/A,0,img,img,aent u glad yew have me now\ni amm glad 2 be here,Reincarnate at least once."
+	"Hail Those Who Have Come Before,incarnations>=10,N/A,N/A,0,img,img,i am broud oif mai ancestors. now i mnaek pancak,Reincarnate 10 or more times."
+	"Shoulders Of Giants,incarnations>=25,N/A,N/A,0,img,img,i wila make robots 2 be tal. do not need theise thank u,Reincarnate 25 or more times."
 
 }
