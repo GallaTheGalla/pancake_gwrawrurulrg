@@ -83,3 +83,96 @@ FormatTwoDec{
 	
 
 }
+
+
+
+aroma
+{
+	"pancakes"
+	"butter"
+	"milk"
+	"batter"
+	"maple syrup"
+	"breakfast"
+	"obsession"
+	"eggs"
+	"sugar"
+	"baking powder"
+	"salt"
+	"dish soap"
+	"vanilla"
+	"hard work"
+	"food"
+	"carpal tunnel"
+	"heaven"
+	"charcoal"
+	"smoke"
+	"snacks for later"
+}
+
+average
+{
+	"average"
+	"good"
+	"bad"
+	"great"
+	"fantastic"
+	"terrible"
+	"miserable"
+	"beautiful"
+	"horrific"
+	"depressing"
+	"merry"
+	"gay"
+	"stinky"
+	"wobbly"
+	"squirmy"
+	"buttery"
+	"sticky"
+	"hungry"
+	"breakfasty"
+	"brunchy"
+	"boring"
+	"mid"
+	"clicky"
+	"idle"
+	"spooky"
+	"ghostly"
+}
+
+daytime
+{
+	"day"
+	"morning"
+	"afternoon"
+	"evening"
+	"night"
+	"week"
+	"month"
+	"year"
+	"decade"
+	"century"
+	"of the next 5 minutes"
+	"of your life"
+	"your energy"
+	"your will to live"
+	"your love"
+}
+
+
+moon
+{
+	"moon"
+	"stars"
+	"sun"
+	"sky"
+	"clouds"
+	"stratosphere"
+	"Milky Way"
+	"ceiling"
+	"roof"
+	"treetops"
+	"top of that giraffe over there"
+	"end of the rainbow"
+	"River Styx"
+}
