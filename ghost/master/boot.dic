@@ -18,6 +18,8 @@ OnFirstBoot
 	
 	columnoverride = 0
 	
+	pertoolincarnationmult = initOnesArray(13)
+	
 	OnFirstBoot_VARIABLES
 	
 	"%(shelf)%(tallstack)%(nb)It's a typical breakfast time,\w4 and you're in the kitchen.\w8\w8\n\nAfter rummaging through the cabinets,\w4 you decide to make pancakes.\w8\w8\w8\w8\n\nBetter get started.\w8\w8\x"
@@ -26,6 +28,8 @@ OnFirstBoot
 OnFirstBoot_Reset{
 
 	OnFirstBoot_VARIABLES
+	_index = TOINT(_argv[0])
+	pertoolincarnationmult[_index] = pertoolincarnationmult[_index]  + TOREAL(_argv[1])
 	
 	origin = randomOrigin
 	
@@ -77,6 +81,8 @@ OnFirstBoot_VARIABLES{
 	//capitalismmult = 1
 	
 	pertoolmult = initOnesArray(13)
+	
+	
 	
 	
 	
@@ -132,7 +138,7 @@ OnBoot
 			"%(nb)It is a wonderful evening, \w6and your grandson has just returned from college for the summer. \w8That's okay though, \w6because you enjoy the company. \w8Now you're actually making meals, \w6too, \w6since you can share them with somebody. \w8You'll do your best.\w4.\w4. so long as he doesn't beat you \f[italics,1]that\f[italics,0] bad in Rummikub. \w8\n\nOkay, \w6let's cook.\w4.\w4. pancakes are a good breakfast!"
 		}
 		when "Pancake"{
-			""
+			"%(nb)hello? \w8\w8you've been made. \w8welcome to the world. \w8you are a pancakes. \w8your brethren? \w8brethren.\w8.\w8. pancakes. \w8yes. \w8you're just a pancakes. \w8its a waffle waffle world out there, \w6and you are a pancakes. \w8the pan is where you live. \w8you have now gained opposable thumbs and a third person camera. \w8it is time. \w8you must add to your a pancakes and become the golden brown strength you know you are. \n\n\w8FLIP ME\w8\x"
 		}
 		when "Rebel"{
 			"%(nb)The squad's got a full day of disobediance today,\w4 so let's make sure we're all ready.\w8\w8 Water,\w4 masks,\w4 signs,\w4 burner phones,\w4 all at the ready.\w8\w8\n\nAll that's left is to get everyone nice and fed.\w8\w8 Ain't much better than a good 3 AM pancake.\w8\w8\x"

@@ -422,3 +422,123 @@ theworld
 	"dishwashing duty"
 	"power over the spatula"
 }
+
+
+
+pancakenoise{
+	"sizzling"
+	"bubbling"
+	"laughing with the heat of a thousand stoves"
+	"weeping"
+	"ssssssssssssssssssssss"
+	"popping"
+	"dripping"
+	"cooking"
+	"whisking"
+	"flopping"
+	"flipping"
+}
+
+pancakeingredient{
+	"flour"
+	"an egg"
+	"water"
+	"butter"
+	"berries"
+	"cinnamon"
+	"fruit"
+	"batter"
+	"love"
+	"eldritch blood"
+}
+
+virtue{
+	"strength"
+	"love"
+	"power"
+	"honesty"
+	"truth"
+	"poetry"
+	"an ukagaka fan"
+	"rotating"
+	"a goblin"
+	"wisdom"
+	"wisdom teeth"
+	"warmth"
+	"the cool knowledge of the world"
+	"intelligence"
+	"patience"
+	"kindness"
+	"happiness"
+	"self-control"
+
+}
+
+
+weirdshape{
+	"Rummikub tiles"
+	"Majhong tiles"
+	"Uno cards"
+	"SkipBo cards"
+	"sandwiches"
+	"skeletons"
+	"bells"
+	"Mickey Mouse"
+	"your great grandbabies"
+	"fruit"
+	"yourself"
+	"a phone"
+	"a fridge"
+	"a stove"
+	"a sunflower"
+	"a tennis ball shooter"
+	"a circus"
+	"an egg"
+	"a pancake monster"
+	"a weird robot"
+	"a needle"
+	"a spoon"
+	"cool sunglasses"
+	"a raygun"
+	"the universe"
+	"a goose"
+	"a goose with three heads"
+	
+
+}
+
+
+raccoonhands{
+	"grabbeis"
+	"grabns"
+	"mai thunsb"
+	"fineger"
+	"fingees"
+	"thoombs"
+
+}
+
+raccoonactivities{
+	"runnaiogbn"
+	"running"
+	"digign"
+	"tahsing"
+	"trahsing"
+	"diinbving"
+	"baeking PANCAEKS"
+	"eatuingh"
+	"spitinhg gofd with %(raccoonhands)"
+	"lookiongd respectrufly"
+	"loking disrespcutfuli"
+	"steeling"
+	"takjiudg thinsdg"
+	"spinging"
+	"washign cottotn candi"
+	"-- wheres mai coton candee"
+	"screaming"
+	"laffing"
+	"time travelinhg 2 befroe u ewrw born"
+
+}
+
+

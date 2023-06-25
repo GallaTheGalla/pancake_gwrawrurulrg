@@ -36,6 +36,10 @@ RandomTalk : nonoverlap_pool
 			"%(tb)i haet u jordan. fite me"
 			"%(tb)panaeks asre my live becaus otni liks them. \ni dio anything 4 tony"
 			"%(tb)oraegn"
+			"%(tb)i wail add %(pancakeingredient). ye this is nesworthi"
+			"%(tb)me and toni are goin 2 go %(raccoonactivities)"
+			"%(tb)these %(raccoonhands) are 4 %(raccoonactivities)"
+			"%(tb)i love mai %(raccoonhands)"
 		}
 		when "Supervillain"{
 			"%(nb)The only motivator I need is evil.\w8 Other villains,\w4 they all need tragic backstories.\w8 It's ridiculous!\w8 Who wants to deal with %(backstory)!?\w8 Not me!\w8"
@@ -51,10 +55,36 @@ RandomTalk : nonoverlap_pool
 
 		}
 		when "Grandma"{
-			""
+			"%(tb)Your son invited you out to lunch. \w8You have pancakes to be making, though. "
+			"%(tb)You consider waffles. \w8They're hardy and filing, \w6but they don't hit like pancakes do."
+			"%(tb)You broke a plate. \w8Your pancakes were too good for it, \w6anyway."
+			"%(tb)You were tired after a long day. \w8You learned that pancakes are great conversationalists, \w6unlike your grandson. "
+			"%(tb)Your grandson created a machine to throw pancakes %(onthefloor). \w8You don't know how you feel about this. "
+			"%(tb)You had your grandson make pancakes shaped like %(weirdshape). \w8They are even more delicious like this."
+			"%(tb)What's so weird about a pancake with %(pancakeingredient) shaped like %(weirdshape)? "
+			"%(tb)You are going to need to lie down after this."
+			"%(tb)Ow, \w6your back."
+			"%(tb)It's probably time to make another doctor appointment. \w8No, \w6this isn't because of how many pancakes you've been eating!"
+			"%(tb)These kids need to get off your lawn."
+			"%(tb)You want to go dig in the garden. \w8It needs more pancakes."
+			"%(tb)You think about pancakes and %(virtue). "
+			"%(tb)Your pancakes will be remembered at least for %(eons). \w8This is probably longer than your grandson will remember them."
 		}
 		when "Pancake"{
-			""
+			"%(tb)"
+			--
+			"can you hear it %(pancakenoise)?"
+			"%(pancakeingredient) and %(pancakeingredient)"
+			"know that you are strength. you are also a pancakes"
+			"you fell %(onthefloor). you do not think much of it\nyou are a pancakes"
+			"%(pancakeingredient)%(punctuation) \w8%(pancakenoise)\n\w8%(pancakenoise)"
+			"the most important ingredient is love. \w8close second is %(pancakeingredient). "
+			"you are doing the best you can. you are a pancakes"
+			"you are %(virtue) and you are pancakes. \w8let no one dim your flame"
+			"once upon a time there was a pancakes\nthe pancakes were %(virtue) and they were %(pancakenoise)"
+			"you add yourself to the batter%(punctuation)"
+			"you will befriend all of the people. this is virtue. you love every %(criminal)"
+			"you befriend a %(randomOrigin)\nthey need to know the virtues of a pancakes"
 		}
 		when "Rebel"{
 			"%(tb)Speak up,\w4 swing hard,\w4 go down fighting.\w8"
@@ -86,7 +116,12 @@ RandomTalk : nonoverlap_pool
 			}
 			
 			if shiniesarray[_i] == 1{
-				_thisitem[7]
+				if STRLEN(_thisitem[7]) < 75{
+					"%(tb)%_thisitem[7]"
+				}else{
+					"%(nb)%_thisitem[7]"
+				}
+				
 			}
 		
 		}

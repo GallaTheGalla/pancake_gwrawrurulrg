@@ -27,12 +27,17 @@ UpgradeDatabases : array{
 	"GOOGLY EYES,GooglyUpgradeData,OnBuyGooglyUpgrade,toolsarray[5]>=10"
 	"BALLOON,BalloonUpgradeData,OnBuyBalloonUpgrade,toolsarray[6]>=10"
 	"SUMMONING,SummoningUpgradeData,OnBuySummoningUpgrade,toolsarray[7]>=10"
-	"PLAQUE,PlaqueUpgradeData,OnBuyPlaqueUpgrade,incarnations>=1"
-	"NEEDLE,NeedleUpgradeData,OnBuyNeedleUpgrade,incarnations>=2"
-	"BELL,BellUpgradeData,OnBuyBellUpgrade,incarnations>=3"
-	"ORIGIN,OriginUpgradeData,OnBuyOriginUpgrade,incarnations>=4"
+	"PLAQUE,PlaqueUpgradeData,OnBuyPlaqueUpgrade,checkAllTools"
+	"NEEDLE,NeedleUpgradeData,OnBuyNeedleUpgrade,handclicks>50"
+	"BELL,BellUpgradeData,OnBuyBellUpgrade,incarnations>=2"
+	"ORIGIN,OriginUpgradeData,OnBuyOriginUpgrade,incarnations>=3"
 }
 
+
+checkAllTools{
+	toolsarray[0] > 0 && toolsarray[1] > 0 && toolsarray[2] > 0 && toolsarray[3] > 0 && toolsarray[4] > 0 && toolsarray[5] > 0 && toolsarray[6] > 0 && toolsarray[7] > 0
+
+}
 
 
 //name,reserved,numofbasetoolunlocks,cost,enabledimg,disabledimg,effect,flavortext
@@ -211,8 +216,8 @@ OriginUpgradeData : array{
 		"Silver Picture,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Picture,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Picture,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Picture,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Picture,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Picture,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Picture,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}elseif origin == "Pancake"{
 		"Bag of Flour,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
 		"Plastic Flour,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
@@ -220,8 +225,8 @@ OriginUpgradeData : array{
 		"Silver Flour,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Flour,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Flour,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Flour,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Flour,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Flour,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Flour,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}elseif origin == "Supervillain"{
 		"Evil Raygun,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
 		"Plastic Raygun,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
@@ -229,8 +234,8 @@ OriginUpgradeData : array{
 		"Silver Raygun,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Raygun,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Raygun,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Raygun,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Raygun,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Raygun,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Raygun,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}elseif origin == "Raccoon"{
 		"Empty Tincan,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
 		"Plastic Tincan,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
@@ -238,8 +243,8 @@ OriginUpgradeData : array{
 		"Silver Tincan,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Tincan,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Tincan,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Tincan,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Tincan,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Tincan,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Tincan,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}elseif origin == "Rebel"{
 		"Cool Sunglasses,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
 		"Plastic Sunglasses,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
@@ -247,8 +252,8 @@ OriginUpgradeData : array{
 		"Silver Sunglasses,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Sunglasses,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Sunglasses,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Sunglasses,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Sunglasses,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Sunglasses,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Sunglasses,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}else{
 		"Rubber Spatula,0,10,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 1),Horrendously flimsy."
 		"Plastic Spatula,0,50,1000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 2),Made of melted pennies."
@@ -256,8 +261,8 @@ OriginUpgradeData : array{
 		"Silver Spatula,0,200,10000,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Gold Spatula,0,500000,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 5),At least this one is normal?"
 		"Obsidian Spatula,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Diamond Spatula,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
-		"Bismuth Spatula,0,66666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Diamond Spatula,0,666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
+		"Bismuth Spatula,0,6666666666,500,img/spoon.png,img/spoon.png,clickmultiplier=TOREAL(clickmultiplier + 10),Ascend."
 	}
 
 }
@@ -280,8 +285,8 @@ ToolsData : array{
 	"Pancake Garden,0,10000,75,img/field.png,They slowly wave..."
 	"Pancake Batter Shooter,0,100000,150,img/shooter.png,Swing batta batta!"
 	"Weird Looking Trashbot,0,1000000,300,img/trashbot.png,Beep boop bduududududuuduudududuuduroarg <DIALUP NOISES>"
-	"Pancake Circuses,0,10000000,500,img/shooter.png,why is it on fire"
-	"Pancake Monster,0,1000000000,800,img/trashbot.png,You can even buy it as a concept?"
+	"Pancake Circuses,0,10000000,500,img/shooter.png,Why is it on fire? That's pretty in tents."
+	"Pancake Monster,0,1000000000,800,img/trashbot.png,You've finally done it. Look at this beauty."
 
 }
 
@@ -307,11 +312,6 @@ CallFriendShinyData : array{
 */
 
 //Shinies all origin specific overloads
-
-Origins : array{
-	"Normal"
-	"Supervillain"
-}
 
 //category, name, 
 AdditionsInfo{
@@ -626,57 +626,57 @@ ShinyDataGrandma : array{
 
 //name, reserved, unlock condition, unlock category, unlock interval, unlocked img, locked img, flavortext
 ShinyDataPancake : array{
-	"First Pancake,pancakes>0,N/A,N/A,0,img,img,First is the worst[cm] second is the best!,Have more than 0 pancakes."
-	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,How many pancakes does it take to build a ladder?,Have more than 50 pancakes."
-	"Clickmaster,handclicks>50,N/A,N/A,0,img,img,Remember to take breaks!,Click more than 50 times."
-	"Cookie Clicker Misses You,handclicks>100,N/A,N/A,20,img,img,Pancakes[cm] cookies[cm] basically the same thing.,Click more than 100 times."
-	"Isn't This An Ukagaka,handclicks>=500,N/A,N/A,20,img,img,Yes[cm] now stop asking silly questions.,Click 500 or more times."
-	"I Think You're Using An Autoclicker,handclicks>1000,N/A,N/A,0,img,img,Is that legal? Do you have a license for that?,Click 1000 or more times."
-	"CHEATER (or surprisingly dedicated),handclicks>=10000,N/A,N/A,20,img,img,Definitely take a break[cm] though.,Click 10000 or more times."
+	"First Pancake,pancakes>0,N/A,N/A,0,img,img,pancakes,Have more than 0 pancakes."
+	"Moving Up,pancakes>=50,Toppings,Butter,20,img,img,you'd wonder where all these other pancakes are coming from[cm] but[cm] you're just a pancakes,Have more than 50 pancakes."
+	"Clickmaster,handclicks>50,N/A,N/A,0,img,img,%(pancakeingredient),Click more than 50 times."
+	"Cookie Clicker Misses You,handclicks>100,N/A,N/A,20,img,img,no. no cookies. only a pancakes,Click more than 100 times."
+	"Isn't This An Ukagaka,handclicks>=500,N/A,N/A,20,img,img,bubble bubble,Click 500 or more times."
+	"I Think You're Using An Autoclicker,handclicks>1000,N/A,N/A,0,img,img,ssssssss,Click 1000 or more times."
+	"CHEATER (or surprisingly dedicated),handclicks>=10000,N/A,N/A,20,img,img,consider a whisk instead,Click 10000 or more times."
 	
-	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,Sometimes[cm] animals are the only ones you can count on...,Have more than 0 phones."
-	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,0,img,img,It takes a village to raise a pancake.,Have more than 10 phones."
-	"Something About Tony,toolsarray[0]>100,Syrups,Maple,10,img,img,Teach me[cm] Tony.,Have more than 100 phones."
-	"Got The Family Plan,toolsarray[0]>1000,N/A,N/A,0,img,img,This is some serious networking.,Have more than 1000 phones."
+	"Call Your Pet,toolsarray[0]>0,N/A,N/A,0,img,img,its also a pancakes,Have more than 0 phones."
+	"In The Neighborhood,toolsarray[0]>10,N/A,N/A,0,img,img,you are getting good at adding to your a pancakes\nnow they also use the phone,Have more than 10 phones."
+	"Something About Tony,toolsarray[0]>100,Syrups,Maple,10,img,img,tony. thats a good name for a pancakes,Have more than 100 phones."
+	"Got The Family Plan,toolsarray[0]>1000,N/A,N/A,0,img,img,a pancakes is hivemind,Have more than 1000 phones."
 	
-	"Chilly,toolsarray[1]>0,N/A,N/A,0,img,img,Sometimes there are pancakes in here...,Have more than 0 fridges."
-	"How Does The Light Work?,toolsarray[1]>10,N/A,N/A,0,img,img,Some mysteries aren't meant to be solved.,Have more than 10 fridges."
-	"Is. Is It Full Of Eggs.,toolsarray[1]>100,N/A,N/A,0,img,img,Answer: yes.,Have more than 100 fridges."
-	"Do You Really Need This?,toolsarray[1]>1000,N/A,N/A,0,img,img,Answer: also yes.,Have more than 1000 fridges."
+	"Chilly,toolsarray[1]>0,N/A,N/A,0,img,img,do not let your a pancakes go bad,Have more than 0 fridges."
+	"How Does The Light Work?,toolsarray[1]>10,N/A,N/A,0,img,img,do not forget about me,Have more than 10 fridges."
+	"Is. Is It Full Of Eggs.,toolsarray[1]>100,N/A,N/A,0,img,img,it is all the better for a pancakes,Have more than 100 fridges."
+	"Do You Really Need This?,toolsarray[1]>1000,N/A,N/A,0,img,img,you must stay fresh. remain tasty. never die,Have more than 1000 fridges."
 	
-	"Now We're Cooking With Fire,toolsarray[2]>0,N/A,N/A,0,img,img,If you thought these pancakes were good before[cm] watch this!,Have more than 0 stoves."
-	"Heating Up,toolsarray[2]>10,N/A,N/A,0,img,img,Ow I burnt myself.,Have more than 10 stoves."
-	"Is This A Fire Hazard?,toolsarray[2]>100,N/A,N/A,0,img,img,It's probably fine.,Have more than 100 stoves."
-	"What Are You Building And Are You Sure It's Pancakes,toolsarray[2]>1000,N/A,N/A,0,img,img,This may be too much fire for one pancake maker.,Have more than 1000 stoves."
+	"Now We're Cooking With Fire,toolsarray[2]>0,N/A,N/A,0,img,img,cozy. ,Have more than 0 stoves."
+	"Heating Up,toolsarray[2]>10,N/A,N/A,0,img,img,too cozy. hot,Have more than 10 stoves."
+	"Is This A Fire Hazard?,toolsarray[2]>100,N/A,N/A,0,img,img,oh no you are on fire,Have more than 100 stoves."
+	"What Are You Building And Are You Sure It's Pancakes,toolsarray[2]>1000,N/A,N/A,0,img,img,you are a pancakes,Have more than 1000 stoves."
 	
-	"Pancake Flowers...?,toolsarray[3]>0,N/A,N/A,0,img,img,They grew from the seed packet like this[cm] I swear.,Have more than 0 gardens."
-	"How Does This Work? They're Fully Baked,toolsarray[3]>10,N/A,N/A,0,img,img,Seriously[cm] they're warm and everything...,Have more than 10 gardens."
-	"Why Do They Get So Big,toolsarray[3]>100,N/A,N/A,0,img,img,Are they looking at me...?,Have more than 100 gardens."
-	"Honestly A Little Intimidated,toolsarray[3]>1000,N/A,N/A,0,img,img,They're definitely looking at me.,Have more than 1000 gardens."
+	"Pancake Flowers...?,toolsarray[3]>0,N/A,N/A,0,img,img,you do not question it. you are at least one pancake,Have more than 0 gardens."
+	"How Does This Work? They're Fully Baked,toolsarray[3]>10,N/A,N/A,0,img,img,yes you are baked. you are a pancakes,Have more than 10 gardens."
+	"Why Do They Get So Big,toolsarray[3]>100,N/A,N/A,0,img,img,the a pancakes grow. garden,Have more than 100 gardens."
+	"Honestly A Little Intimidated,toolsarray[3]>1000,N/A,N/A,0,img,img,the a pancakes enjoys the a gardens. grow. grow strong,Have more than 1000 gardens."
 	
-	"Swing Batter,toolsarray[4]>0,N/A,N/A,0,img,img,Oh[cm] oh no[cm] it got everywhere.,Have more than 0 shooters."
-	"Take Me Out To The Batter Game,toolsarray[4]>10,N/A,N/A,0,img,img,Buy me some pancakes and more pancakes,Have more than 10 shooters."
-	"Ready For The Big Game,toolsarray[4]>100,N/A,N/A,0,img,img,We've been practicing all season!,Have more than 100 shooters."
-	"Grand Slam,toolsarray[4]>1000,N/A,N/A,0,img,img,Some say the batter is still flying to this day.,Have more than 1000 shooters."
+	"Swing Batter,toolsarray[4]>0,N/A,N/A,0,img,img,onto the pan. become cook,Have more than 0 shooters."
+	"Take Me Out To The Batter Game,toolsarray[4]>10,N/A,N/A,0,img,img,bubble bubble toil and trouble. fire burn and a pancakes bubble,Have more than 10 shooters."
+	"Ready For The Big Game,toolsarray[4]>100,N/A,N/A,0,img,img,take pancakes out to the ball game. take a pancakes over the field,Have more than 100 shooters."
+	"Grand Slam,toolsarray[4]>1000,N/A,N/A,0,img,img,you're probably wondering how you got this far. but you're a pancakes,Have more than 1000 shooters."
 	
-	"Is That An Egg Carton,toolsarray[5]>0,N/A,N/A,0,img,img,Or maybe an ice cube tray???,Have more than 0 bots."
-	"Why Are These Built Like This,toolsarray[5]>10,N/A,N/A,0,img,img,There's so much tape...,Have more than 10 bots."
-	"How are they so efficient!?,toolsarray[5]>100,N/A,N/A,0,img,img,Their legs are toothpicks! They don't even have fingers!,Have more than 100 bots."
-	"A WHOLE ARMY!?,toolsarray[5]>1000,N/A,N/A,0,img,img,They learned how to replicate. It's all over now.,Have more than 1000 bots."
+	"Is That An Egg Carton,toolsarray[5]>0,N/A,N/A,0,img,img,egg,Have more than 0 bots."
+	"Why Are These Built Like This,toolsarray[5]>10,N/A,N/A,0,img,img,egg on face foot in pancakes,Have more than 10 bots."
+	"How are they so efficient!?,toolsarray[5]>100,N/A,N/A,0,img,img,wriggling wriggling wriggling,Have more than 100 bots."
+	"A WHOLE ARMY!?,toolsarray[5]>1000,N/A,N/A,0,img,img,wriggle until the crust sets. golden brown. bubbles never go down. may those who oppose you never take you. be strong[cm] my pancake. be strong. you will be tender to those who love you and foul to those who seek to cause you harm. you're a pancakes,Have more than 1000 bots."
 	
-	"The Circus Is In Town!,toolsarray[6]>0,N/A,N/A,0,img,img,All the performers are made of pancakes.,Have more than 0 circuses."
-	"May I Buy Popcorn,toolsarray[6]>10,N/A,N/A,0,img,img,The popcorn is made of pancakes.,Have more than 10 circuses."
-	"I Bought A Balloon[cm] I Hope There's No Needle To– ah dangit,toolsarray[6]>100,N/A,N/A,0,img,img,That was the last one[cm] too.,Have more than 100 circuses."
-	"The Hit Movie UP,toolsarray[6]>1000,N/A,N/A,0,img,img,Turns out there were more balloons in the back.,Have more than 1000 circuses."
+	"The Circus Is In Town!,toolsarray[6]>0,N/A,N/A,0,img,img,when the beating stops and the flour settles,Have more than 0 circuses."
+	"May I Buy Popcorn,toolsarray[6]>10,N/A,N/A,0,img,img,all the freaks of batter will have nothing but the grill lines across their faces to show for the effort.,Have more than 10 circuses."
+	"I Bought A Balloon[cm] I Hope There's No Needle To– ah dangit,toolsarray[6]>100,N/A,N/A,0,img,img,as they overcook and fear none\n they will finally begin to see the sun.,Have more than 100 circuses."
+	"The Hit Movie UP,toolsarray[6]>1000,N/A,N/A,0,img,img,pockets of air and the scent of pancake warfare\npeople dance in the moonlight\nthey do not question what they have or what they have done\nthey simply bubble and have their fun,Have more than 1000 circuses."
 	
-	"What Did You Summon?,toolsarray[7]>0,N/A,N/A,0,img,img,I thought it was supposed to make pancakes[cm] not be made of pancakes.,Have more than 0 monsters."
-	"Wait[cm] Another One?,toolsarray[7]>10,N/A,N/A,0,img,img,How many of these did we make!?,Have more than 10 monsters."
-	"They're Drooling On Me...,toolsarray[7]>100,N/A,N/A,0,img,img,...Is that maple syrup?,Have more than 100 monsters."
-	"All Hail The Pancake Monsters,toolsarray[7]>1000,N/A,N/A,0,img,img,They cry if you don't hype them up,Have more than 1000 monsters."
+	"What Did You Summon?,toolsarray[7]>0,N/A,N/A,0,img,img,do not forget the liquid. water is an important ingredient. do not add too much or a pancakes will be thin,Have more than 0 monsters."
+	"Wait[cm] Another One?,toolsarray[7]>10,N/A,N/A,0,img,img,you are many. you are a pancakes.\nmay your a children rise\nlike bread in the oven and never fail or go down. \nyou are full of batter and you are full of love,Have more than 10 monsters."
+	"They're Drooling On Me...,toolsarray[7]>100,N/A,N/A,0,img,img,it is not drool my player\nit is maple syrup\nall the better for stacking your layers\ndo not ever give up,Have more than 100 monsters."
+	"All Hail The Pancake Monsters,toolsarray[7]>1000,N/A,N/A,0,img,img,you have risen from your slumber\neyes finally behold the world\nyou are power. you are strength\nyou are a pancakes,Have more than 1000 monsters."
 	
-	"Rinse And Repeat,incarnations>1,N/A,N/A,0,img,img,The cycle of life is round... like a pancake...,Reincarnate at least once."
-	"Hail Those Who Have Come Before,incarnations>=10,N/A,N/A,0,img,img,The cycle of history is round... like a pancake...,Reincarnate 10 or more times."
-	"Shoulders Of Giants,incarnations>=25,N/A,N/A,0,img,img,The cycle of the universe is round... like a pancake...,Reincarnate 25 or more times."
+	"Rinse And Repeat,incarnations>1,N/A,N/A,0,img,img,sometimes you crawl into the trash. but you need to know that you are not trash. you are a piece of wonderful a pancakes. sometimes you mess up the batter. sometimes you have to try again. but that doesn't mean that you are bad[cm] or that you have failed. you simply learn from the past and keep doing your a pancakes,Reincarnate at least once."
+	"Hail Those Who Have Come Before,incarnations>=10,N/A,N/A,0,img,img,for all the a pancakes in your past\nand all that you will pancake in the future\nwe will raise a glass\nand live with hard earned sutures\n\ngood luck my pancakes,Reincarnate 10 or more times."
+	"Shoulders Of Giants,incarnations>=25,N/A,N/A,0,img,img,the stack grows tall\nas the light falls dim\ndo not ever give up\nno, you will never give in,Reincarnate 25 or more times."
 
 }
 

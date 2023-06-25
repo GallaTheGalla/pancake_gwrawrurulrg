@@ -333,17 +333,80 @@ OnFlipColumns{
 
 
 OnReset{
-	"\_qAre you sure?\n"
+	"\_qAre you sure?\n\n[half]"
 	--
-	"\n\![*]\q[Reset,OnResetConfirm]"
+	if toolsarray[7] > 0{
+		--
+		"Reset with a boost of +.15 to...\n[half]"
+		--
+		"\n\![*]\q[Phones,OnResetConfirm,0,.15]"
+		--
+		"\n\![*]\q[Fridges,OnResetConfirm,1,.15]"
+		--
+		"\n\![*]\q[Stoves,OnResetConfirm,2,.15]"
+		--
+		"\n\![*]\q[Gardens,OnResetConfirm,3,.15]"
+		--
+		"\n\![*]\q[Shooters,OnResetConfirm,4,.15]"
+		--
+		"\n\![*]\q[Bots,OnResetConfirm,5,.15]"
+		--
+		"\n\![*]\q[Circuses,OnResetConfirm,6,.15]"
+		--
+		"\n\![*]\q[Monsters,OnResetConfirm,7,.15]"
+		
+	}elseif toolsarray[6] > 0{
+		--
+		"Reset with a boost of +.1 to...\n[half]"
+		--
+		"\n\![*]\q[Phones,OnResetConfirm,0,.10]"
+		--
+		"\n\![*]\q[Fridges,OnResetConfirm,1,.10]"
+		--
+		"\n\![*]\q[Stoves,OnResetConfirm,2,.10]"
+		--
+		"\n\![*]\q[Gardens,OnResetConfirm,3,.10]"
+		--
+		"\n\![*]\q[Shooters,OnResetConfirm,4,.10]"
+		--
+		"\n\![*]\q[Bots,OnResetConfirm,5,.10]"
+		--
+		"\n\![*]\q[Circuses,OnResetConfirm,6,.10]"
+		--
+		"\n\![*]\q[Monsters,OnResetConfirm,7,.10]"
+	}elseif toolsarray[5] > 0{
+		
+		--
+		"Reset with a boost of +.05 to...\n[half]"
+		--
+		"\n\![*]\q[Phones,OnResetConfirm,0,.05]"
+		--
+		"\n\![*]\q[Fridges,OnResetConfirm,1,.05]"
+		--
+		"\n\![*]\q[Stoves,OnResetConfirm,2,.05]"
+		--
+		"\n\![*]\q[Gardens,OnResetConfirm,3,.05]"
+		--
+		"\n\![*]\q[Shooters,OnResetConfirm,4,.05]"
+		--
+		"\n\![*]\q[Bots,OnResetConfirm,5,.05]"
+		--
+		"\n\![*]\q[Circuses,OnResetConfirm,6,.05]"
+		--
+		"\n\![*]\q[Monsters,OnResetConfirm,7,.05]"
+	}else{
+		--
+		"\n\![*]\q[Reset,OnResetConfirm]"
+	}
+	
 	--
-	"\n\n[half]%(nvm)     \![*]\q[Back,OnMainMenu]"
+	"\n%(nvm)     \![*]\q[Back,OnMainMenu]"
 	
 }
 
 OnResetConfirm{
 	
-	OnFirstBoot_Reset
+	OnFirstBoot_Reset(reference0,reference1)
 
 }
 
@@ -542,7 +605,7 @@ OnBuyPanUpgrade{
 }
 
 OnBuyHatUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = HatUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -554,7 +617,7 @@ OnBuyHatUpgrade{
 
 
 OnBuyBatUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = BatUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -566,7 +629,7 @@ OnBuyBatUpgrade{
 
 
 OnBuyGooglyUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = GooglyUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -577,7 +640,7 @@ OnBuyGooglyUpgrade{
 }
 
 OnBuyBalloonUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = BalloonUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -588,7 +651,7 @@ OnBuyBalloonUpgrade{
 }
 
 OnBuySummoningUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = SummoningUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -599,7 +662,7 @@ OnBuySummoningUpgrade{
 }
 
 OnBuyPlaqueUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = PlaqueUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -610,7 +673,7 @@ OnBuyPlaqueUpgrade{
 }
 
 OnBuyNeedleUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = NeedleUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -621,7 +684,7 @@ OnBuyNeedleUpgrade{
 }
 
 OnBuyBellUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = BellUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
@@ -632,7 +695,7 @@ OnBuyBellUpgrade{
 }
 
 OnBuyOriginUpgrade{
-	_thisupgrade = PanUpgradeData[TOINT(reference0)]
+	_thisupgrade = OriginUpgradeData[TOINT(reference0)]
 	_cubecost = TOINT(_thisupgrade[3])
 	_effect = _thisupgrade[6]
 	pancakes -= _cubecost
