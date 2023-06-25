@@ -38,30 +38,19 @@ OnFirstBoot_Reset{
 		when "Raccoon"{
 			""
 		}
-		when "Normal"{
+		when "Supervillain"{
+			"%(nb)It's a typical masterplot scheming time when the thought strikes you:\w8\w8\n\nWhat could be more alluring,\w4 more deceitful,\w4 than pancakes?\w8\w8\n\nIt's the perfect cover,\w4 really.\w8\w8 With pancakes to offer,\w4 who would ever suspect you?\w8\w8\n\nIt's time to do some evil.\w8\w8"
+		}
+		when "Grandma"{
 			""
 		}
-		when "Raccoon"{
+		when "Pancake"{
 			""
 		}
-		when "Normal"{
-			""
+		when "Rebel"{
+			"%(nb)The squad's got a full day of disobediance today,\w4 so let's make sure we're all ready.\w8\w8 Water,\w4 masks,\w4 signs,\w4 burner phones,\w4 all at the ready.\w8\w8\n\nAll that's left is to get everyone nice and fed.\w8\w8 Ain't much better than a good 3 AM pancake.\w8\w8\x"
 		}
-		when "Raccoon"{
-			""
-		}
-		when "Normal"{
-			""
-		}
-		when "Raccoon"{
-			""
-		}
-		when "Normal"{
-			""
-		}
-		when "Raccoon"{
-			""
-		}
+		
 	}
 	
 }
@@ -74,10 +63,10 @@ randomOrigin : pool {
 	"Grandma"
 	"Pancake"
 	if incarnations > 10{
-		"Alien"
-		"Occult"
+	//	"Alien"
+	//	"Occult"
 		"Rebel"
-		"Househusband"
+	//	"Househusband"
 	}
 
 }

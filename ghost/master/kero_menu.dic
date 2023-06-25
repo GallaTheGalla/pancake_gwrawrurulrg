@@ -102,7 +102,7 @@ OnAdditionsMenu : all{
 	inmenu = 0
 	_database = "ShinyData" + origin
 	//SYRUPS
-	"\n[30]SYRUPS\f[bold,0]%(tallstack)"
+	"\n[30]SYRUPS\f[bold,0]%(tallstack)\n\n[half]"
 	for _i = 0; _i < ARRAYSIZE(ShinyDataNormal); _i++{
 		_thisitem = EVAL("%(_database)[_i]")
 		if _thisitem == ""{

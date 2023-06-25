@@ -448,7 +448,8 @@ OnUpgradesMenu : all {
 		}else{
 			if _current == ARRAYSIZE(EVAL(_database[1])){
 				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
-				"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)] "
+				//"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)] "
+				"     Owns: %(_this[0]) "
 				
 				if checkColumnSetup && _i % 2 == 1{
 					"\n\_l[%(_offset)em,@0]      (Maxed Out)"
@@ -462,13 +463,16 @@ OnUpgradesMenu : all {
 			elseif _this != ""{
 				if checkColumnSetup && _i % 2 == 0; "\_l[%(_offset)em]"
 				if pancakes >= TOINT(_next[3]){
-					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)]\n"
+				//	"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)]\n"
+					"     Owns: %(_this[0])\n"
 					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
-					"     \__q[OnNextUpgradeInfo,%_subdbname,%(_i)]\![*]\__q\q[Buy %(_next[0]),%_database[2],%_current]"
+				//	"     \__q[OnNextUpgradeInfo,%_subdbname,%(_i)]\![*]\__q\q[Buy %(_next[0]),%_database[2],%_current]"
+					"     \![*]\q[Buy %(_next[0]),%_database[2],%_current]"
 				}else{
 					"     Owns: \q[%(_this[0]),OnUpgradeInfo,%_subdbname,%(_i)]\n"
 					if checkColumnSetup && _i % 2 == 1; "\_l[%(_offset)em]"
-					"     \__q[OnNextUpgradeInfo,%_subdbname,%(_i)]\![*]\__q\f[color,disable]Buy %(_next[0])\f[color,default]"
+					//"     \__q[OnNextUpgradeInfo,%_subdbname,%(_i)]\![*]\__q\f[color,disable]Buy %(_next[0])\f[color,default]"
+					"     \![*]\f[color,disable]Buy %(_next[0])\f[color,default]"
 				}
 				if checkColumnSetup && _i % 2 == 0;"\_l[@0,@-2.5em]"
 				

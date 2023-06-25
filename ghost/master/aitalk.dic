@@ -13,9 +13,30 @@ OnAiTalk
 
 RandomTalk : nonoverlap_pool
 {
-	"%(tallstack)This is a test\n%var.req.key\n%var.req.value\nAnd thus it continues."
+	//"%(tallstack)This is a test\n%var.req.key\n%var.req.value\nAnd thus it continues."
 	
 	
+	case origin{
+		when "Normal"{
+			""
+		}
+		when "Raccoon"{
+			""
+		}
+		when "Supervillain"{
+			""
+		}
+		when "Grandma"{
+			""
+		}
+		when "Pancake"{
+			""
+		}
+		when "Rebel"{
+			""
+		}
+		
+	}
 	
 	
 	

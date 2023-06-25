@@ -8,8 +8,15 @@ tallstack{
 	--
 	_res = ""
 	for _i = 0; _i < 22; _i++{
-		_this = 30 + _i
-		_this = "%_this"
+		_this = 0
+		if _i >= 10{
+			_this = "3" + _i
+			_this = "%_this"
+		}else{
+			_this = 30 + _i
+			_this = "%_this"
+		}
+		
 		
 		if pancakes >= POW(10,_i){
 			_res += "\i[" + _this + "00]"
