@@ -43,8 +43,8 @@ RandomTalk : nonoverlap_pool
 		}
 		when "Supervillain"{
 			"%(nb)The only motivator I need is evil.\w8 Other villains,\w4 they all need tragic backstories.\w8 It's ridiculous!\w8 Who wants to deal with %(backstory)!?\w8 Not me!\w8"
-			"\![raise,billionairehateorlove]"
-			"\![raise,billionaireminions]"
+			"\![raise,OnBillionaireHateOrLove]"
+			"\![raise,OnBillionaireMinions]"
 			"%(tb)%(evillaugh)%(laughrand)%(punctuation)"
 			"%(tb)Today,\w4 we take over %(theworld).\w8 Tomorrow?\w8 Who knows.\w8"
 			"%(tb)Needs more %(guns).\w8"
@@ -177,7 +177,7 @@ OnAverageDay
 	"%(tb)It's %(AORAN(_a)) day for %(_a) pancakes.\w8"
 }
 
-billionairehateorlove
+OnBillionaireHateOrLove
 {
 	if billionairehate == 0
 	{
@@ -189,7 +189,7 @@ billionairehateorlove
 	}
 }
 
-billionaireminions
+OnBillionaireMinions
 {
 	if billionairehate == 0
 	{
