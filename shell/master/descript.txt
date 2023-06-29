@@ -7,3 +7,6 @@ craftmanurl,https://github.com/GallaTheGalla/pancake_gwrawrurulrg
 
 seriko.alignmenttodesktop,free
 seriko.use_self_alpha,1
+
+sakura.balloon.offsetx,-5
+sakura.balloon.offsety,-205
