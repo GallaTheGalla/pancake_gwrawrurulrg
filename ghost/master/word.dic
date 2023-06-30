@@ -294,6 +294,35 @@ guns
 	"really hot knives"
 }
 
+hot
+{
+	"hot"
+	"burning"
+	"boiling"
+	"cold"
+	"freezing"
+	"chilly"
+	"dry"
+	"sandy"
+	"wet"
+	"damp"
+	"spongy"
+	"chewy"
+	"plastic"
+	"raw"
+	"sticky"
+	"buttery"
+	"not vegan"
+	"not gluten free"
+	"stackable"
+	"floppy"
+	"spicy"
+	"stale"
+	"yummy"
+	"stuffed"
+	"flippable"
+}
+
 laugh
 {
 	"ha"
